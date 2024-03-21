@@ -29,3 +29,7 @@ However, there are a number of good practices that can be applied to research so
 
 This guide provides an overview of each of these practices, as well as links to further resources that can help you to implement them in your own research software projects.
 
+---  
+
+As a self-referential example, this guide is written in markdown and rendered using mkdocs. The build process is autoamtically kicked off with github actions when a change is pulled into the main branch.  The source code for this guide is available on GitHub at [ICR-RSE-Group/good-practice](https://github.com/ICR-RSE-Group/good-practice)
+
