@@ -12,9 +12,12 @@ Project Processes
 - Using a package manager
 - Using a code review process
 
+---  
+
 Project Practices
-- Defining the scope of the project through tests
-- Demonstrating proof of correctness through tests
-- The 3 tier user model
+
+- Defining the scope of the project through tests  
+- Demonstrating proof of correctness through tests  
+- The 3 tier user model  
 
 
