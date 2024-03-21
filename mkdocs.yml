@@ -1,8 +1,6 @@
 site_name: Research Software Good Practice @ ICR
 nav:
-  - Home: index.md
-  
-
+  - Home: index.md  
 theme:
   name: material
   logo: assets/icr_svg_logo.svg  
