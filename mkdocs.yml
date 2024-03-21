@@ -1,4 +1,4 @@
-site_name: Research Software Good Practice @ ICR
+site_name: Research Software Good Practice
 nav:
   - Home: index.md  
 theme:
