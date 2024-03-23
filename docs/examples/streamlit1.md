@@ -154,11 +154,22 @@ https://squidfunk.github.io/mkdocs-material/reference/diagrams/
 ``` mermaid
 graph LR
   A[Start] --> B{Error?};
-  B -->|Yes]| C[Hmm...];
+  B -->|Yes| C[Hmm...];
   C --> D[Debug];
   D --> B;
   B ---->|No| E[Yay!];
 ```
+
+``` mermaid
+graph LR
+  A[Start] --> B{Error?};
+  B -->|Yes| C[Hmm...];
+  C --> D[Debug];
+  D --> B;
+  B ---->|No| E[Yay!];
+  click B "https://www.github.com" "This is a tooltip for a link"
+```
+
 
 ``` mermaid
 sequenceDiagram
@@ -174,7 +185,7 @@ sequenceDiagram
 ```
 
 ``` mermaid
-flowchart
+flowchart LR
     A-->B
     B-->C
     C-->D
