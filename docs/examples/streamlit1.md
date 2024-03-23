@@ -188,7 +188,6 @@ gitGraph
     commit id: "8"
     checkout main
     commit id: "9"
-    click "1" "https://www.github.com" "This is a tooltip for a link"
 ```
 
 
