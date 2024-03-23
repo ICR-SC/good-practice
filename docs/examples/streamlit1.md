@@ -151,14 +151,6 @@ Simply put, other messages may precede messages published as a result of your co
 
 https://squidfunk.github.io/mkdocs-material/reference/diagrams/
 
-``` mermaid
-graph LR
-  A[Start] --> B{Error?};
-  B -->|Yes| C[Hmm...];
-  C --> D[Debug];
-  D --> B;
-  B ---->|No| E[Yay!];
-```
 
 ``` mermaid
 graph LR
@@ -168,29 +160,8 @@ graph LR
   D --> B;
   B ---->|No| E[Yay!];
   click B "https://www.github.com" "This is a tooltip for a link"
+  style A fill:#f9f,stroke:#333,stroke-width:4px
+  style B fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
 ```
 
 
-``` mermaid
-sequenceDiagram
-  autonumber
-  Alice->>John: Hello John, how are you?
-  loop Healthcheck
-      John->>John: Fight against hypochondria
-  end
-  Note right of John: Rational thoughts!
-  John-->>Alice: Great!
-  John->>Bob: How about you?
-  Bob-->>John: Jolly good!
-```
-
-``` mermaid
-flowchart LR
-    A-->B
-    B-->C
-    C-->D
-    click A callback "Tooltip for a callback"
-    click B "https://www.github.com" "This is a tooltip for a link"
-    click C call callback() "Tooltip for a callback"
-    click D href "https://www.github.com" "This is a tooltip for a link"
-```
