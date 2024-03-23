@@ -1,7 +1,16 @@
 site_name: Research Software Good Practice
 nav:
   - Home: home.md  
-  - Index: index.md  
+  - Index: index.md        
+  - Project:
+    - 'Continuous Integration': 'good/cicd.md'
+    - 'Version control': 'good/version.md'    
+    - 'Packaging and deploying': 'good/packaging.md'
+    - 'Using AI' : good/ai.md
+  - Languages:
+    - 'Python good practices': 'good/python.md'
+  - Examples:
+    - 'Making this streamlit webapp': 'examples/streamlit1.md'    
 theme:
   name: material
   logo: assets/icr_svg_logo.svg  
