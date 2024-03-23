@@ -1,9 +1,12 @@
-1. Make basic struct of
-- requiremnts.txt
-- citation.cff
-- app dir
-- app/static dir
+# Making this application a streamlit app
 
+1. Make basic struct of
+```
+    - requirements.txt
+    - citation.cff
+    - app dir
+    - app/static dir
+```
 
 2. Add a basic streamlit app to app dir
 - app/home.py
@@ -65,9 +68,24 @@ for idx in df.index:
                             xanchor='auto',
                             yanchor='auto'))
 fig.show()
-```
+
 
 8. Design a basic dataframe to use for a similar example
+It needs
+    - a name, which we can use to make the url, 
+    - a level, eg beginners etc
+    - a position on the chart
+    - a type for the hue
+```
+resource,level,position,kind
+good-practice-intro,0,0,doc
+python-lib-example",1,1.1,follow-along
+python-streamlit-example,1,1.2,follow-along
+r-lib-example,1,2.1,follow-along
+r-shiny-example,1,2.2,follow-along
+vscode-intro",0,3,tools
+python-for-hpc,3,1.3,doc
+```
 
 
 9. Add this example to the streamlit app
@@ -113,3 +131,31 @@ Deployment option 2
 9. Add a basic Dockerfile to app dir
 10. Add a basic .github/workflows to app dir
 
+
+::: warning
+*here be dragons*
+:::
+
+> [!EXAMPLE]
+> this is an example
+
+> [!NOTE]
+> This is a note
+
+> [!NOTE]
+> Beside results initiated by a command (synchronous) you can get asynchronous results initiated by rule trigger, telemetry event, commands from other source or changed device values.    
+Simply put, other messages may precede messages published as a result of your commands.
+
+> [!EXAMPLE] A `tele/%topic%/STATUS` message (sent every 300 seconds by default) may appear exactly after you issue `Power off` command and before you receive `stat/%topic%/RESULT = {"POWER":"OFF"}` message.
+
+
+https://squidfunk.github.io/mkdocs-material/reference/diagrams/
+
+``` mermaid
+graph LR
+  A[Start] --> B{Error?};
+  B -->|Yes| C[Hmm...];
+  C --> D[Debug];
+  D --> B;
+  B ---->|No| E[Yay!];
+```
