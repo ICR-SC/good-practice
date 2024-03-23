@@ -176,7 +176,7 @@ sequenceDiagram
 ``` mermaid
 sequenceDiagram
   autonumber
-  [Alice](lnk.md)->>John: Hello John, how are you?
+  click B "http://www.github.com" "This is a tooltip for a link" _blank->>John: Hello John, how are you?
   loop Healthcheck
       John->>John: Fight against hypochondria
   end
