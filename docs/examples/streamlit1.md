@@ -154,7 +154,7 @@ https://squidfunk.github.io/mkdocs-material/reference/diagrams/
 ``` mermaid
 graph LR
   A[Start] --> B{Error?};
-  B -->|Yes| C[Hmm...];
+  B -->|[Yes](link.md)| C[Hmm...];
   C --> D[Debug];
   D --> B;
   B ---->|No| E[Yay!];
