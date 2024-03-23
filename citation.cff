@@ -1,0 +1,11 @@
+cff-version: 0.1.0
+message: "If you use this software, please cite it as below."
+authors:
+- family-names: "Alcraft"
+  given-names: "Rachel"
+  orcid: "https://orcid.org/0000-0003-2674-6321"
+title: "Research Software Good Practice: A website at the ICR to demonstrate Research Software Good Praictice
+version: 0.1.0
+doi: 10.5281/zenodo.10251232
+date-released: 29-Apr-2022
+url: "https://software.icr.ac.uk/app/good-practice"
