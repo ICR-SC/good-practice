@@ -174,7 +174,7 @@ sequenceDiagram
 ```
 
 ``` mermaid
-flowchart LR
+flowchart
     A-->B
     B-->C
     C-->D
