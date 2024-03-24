@@ -34,8 +34,8 @@ flowchart TD
   EB --> |Python| PA[Python overview];
   PA --> PEP8[Python language standards];  
   PEP8 --> PINTRO1[Intro to python in person];
-  PINTRO1 --> PINTRO2[Intro to python online];
-  PINTRO2 --> PC[A python package];
+  PINTRO1 --- PINTRO2[Intro to python online];
+  PINTRO1 --> PC[A python package];
   PC --> PD[A python webapp];
   EB --> |R| RA[R language standards];
   RA --> RB[Intro to R];
