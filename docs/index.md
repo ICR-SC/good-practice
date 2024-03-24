@@ -16,9 +16,12 @@ graph TD
   H --> I[Using a package manager];
   I --> J[Using a code review process];
   J --> K[Is it FAIR?];
-  B ---->|Advanced| K;
-  PA[Python] --> PB{Beginner?};
+  B ---->|Advanced| K;  
   A --> EB{Language?};
+  EB --> |Python| PA[A python package];
+  PA --> PB[A python webapp];
+  EB --> |R| RA[An R package];
+  RA --> RB[An R-shiny webapp];
   click B "https://www.github.com" "This is a tooltip for a link"
   style A fill:#f9f,stroke:#333,stroke-width:4px
   style B fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
