@@ -1,6 +1,8 @@
 # Research Software Good Practice
 
-## Index
+## Resources
+
+Click on the resources below or go to the [full index](index.md) for more information.
 
 ``` mermaid
 graph LR
@@ -12,8 +14,6 @@ graph LR
   style HOW fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
   style TRAIN fill:#ffff99,stroke:#ff6600,stroke-width:1px,color:#33334d
 ```
-
-Click on the resources below or go to the [full index](index.md) for more information.
 
 ``` mermaid
 graph TD  
@@ -34,9 +34,9 @@ graph TD
   PA --> PB[A python webapp];
   EB --> |R| RA[An R package];
   RA --> RB[An R-shiny webapp];
-  A --> TA{Tools};
-  click K1 "https://www.github.com" "This is a tooltip for a link"
+  A --> TA{Tools};  
   style A fill:#ff3399,stroke:#333,stroke-width:1px,color:#99ff99
+  click A "https://icr-rse-group.github.io/good-practice/home/" "RS Good Practice"
   style PA fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
   style PB fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
   style RA fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
