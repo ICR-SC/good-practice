@@ -18,6 +18,7 @@ graph TD
   J --> K[Is it FAIR?];
   B ---->|Advanced| K;
   PA[Python] --> PB{Beginner?};
+  A --> EB{Language?};
   click B "https://www.github.com" "This is a tooltip for a link"
   style A fill:#f9f,stroke:#333,stroke-width:4px
   style B fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
