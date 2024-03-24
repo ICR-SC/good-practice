@@ -8,9 +8,8 @@ graph TD
   K1[Key: Internal Document] --> K2[Key: External Resource];
   K2 --> K3[Internal Training];
   K3 --> K4[Internal how-to guides];
-  k4 --> A[Reasearch Software Good Practice];
+  K4 --> A[Reasearch Software Good Practice];
   A --> B{Process};
-  A[Reasearch Software Good Practice] --> B{Processes};
   B -->|Beginner| C[Using version control];
   C --> D[Using virtual environments];
   D --> E[Writing clean, readable code];
@@ -21,20 +20,20 @@ graph TD
   H --> I[Using a package manager];
   I --> J[Using a code review process];
   J --> K[Is it FAIR?];
-  B ---->|Advanced| K;  
+  B ---->|Advanced| K;
   A --> EB{Languages};
   EB --> |Python| PA[A python package];
   PA --> PB[A python webapp];
   EB --> |R| RA[An R package];
   RA --> RB[An R-shiny webapp];
   A --> TA{Tools};
-  click B "https://www.github.com" "This is a tooltip for a link"
-  style A fill:#f9f,stroke:#333,stroke-width:4px
-  style B fill:#ffcce6,stroke:#ff6600,stroke-width:2px,color:#4d4dff
+  click K1 "https://www.github.com" "This is a tooltip for a link"
+  style A fill:#ff3399,stroke:#333,stroke-width:1px
   style K1 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff
-  style K2 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff
-  style K3 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff
-  style K4 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff
+  style K2 fill:#ffcce6,stroke:#ff6600,stroke-width:2px,color:#4d4dff
+  style K3 fill:#66ccff,stroke:#ff6600,stroke-width:2px,color:#4d4dff
+  style K4 fill:#ffff99,stroke:#ff6600,stroke-width:2px,color:#4d4dff
+  
 ```
 
 https://squidfunk.github.io/mkdocs-material/reference/diagrams/
