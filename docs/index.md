@@ -18,7 +18,7 @@ Click on the resources below or go to the [full index](index.md) for more inform
 
 ``` mermaid
 graph TD  
-  A[Reasearch Software Good Practice] --> B{Process};
+  A[Reasearch Software Good Practice] --> B{Processes};
   B -->|Beginner| C[Using version control];
   C --> D[Using virtual environments];
   D --> E[Writing clean, readable code];
@@ -37,11 +37,11 @@ graph TD
   RA --> RB[An R-shiny webapp];
   A --> TA{Tools};
   click K1 "https://www.github.com" "This is a tooltip for a link"
-  style A fill:#ff3399,stroke:#333,stroke-width:1px
-  style K1 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff
-  style K2 fill:#ffcce6,stroke:#ff6600,stroke-width:2px,color:#4d4dff
-  style K3 fill:#66ccff,stroke:#ff6600,stroke-width:2px,color:#4d4dff
-  style K4 fill:#ffff99,stroke:#ff6600,stroke-width:2px,color:#4d4dff
+  style A fill:#ff3399,stroke:#333,stroke-width:1px,color:#99ff99
+  style K1 fill:#bbf,stroke:#f66,stroke-width:1px,color:#fff
+  style K2 fill:#ffcce6,stroke:#ff6600,stroke-width:1px,color:#4d4dff
+  style K3 fill:#66ccff,stroke:#ff6600,stroke-width:1px,color:#4d4dff
+  style K4 fill:#ffff99,stroke:#ff6600,stroke-width:1px,color:#4d4dff
   
 ```
 
