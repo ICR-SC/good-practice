@@ -2,14 +2,23 @@
 
 ## Index
 
-
 ``` mermaid
-graph TD
+graph LR
   K1[Key: Internal Document] --> K2[Key: External Resource];
   K2 --> K3[Internal Training];
   K3 --> K4[Internal how-to guides];
   K4 --> A[Reasearch Software Good Practice];
-  A --> B{Process};
+  style K1 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff
+  style K2 fill:#ffcce6,stroke:#ff6600,stroke-width:2px,color:#4d4dff
+  style K3 fill:#66ccff,stroke:#ff6600,stroke-width:2px,color:#4d4dff
+  style K4 fill:#ffff99,stroke:#ff6600,stroke-width:2px,color:#4d4dff
+```
+
+Click on the resources below or go to the [full index](index.md) for more information.
+
+``` mermaid
+graph TD  
+  A[Reasearch Software Good Practice] --> B{Process};
   B -->|Beginner| C[Using version control];
   C --> D[Using virtual environments];
   D --> E[Writing clean, readable code];
