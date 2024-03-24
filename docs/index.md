@@ -19,7 +19,7 @@ flowchart LR
 ```
 
 ``` mermaid
-graph TD  
+flowchart TD  
   A[Reasearch Software Good Practice] --> B{Processes};
   B -->|Beginner| C[Using version control];
   C --> D[Using virtual environments];
