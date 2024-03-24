@@ -7,7 +7,7 @@ Click on the resources below or go to the [full index](index.md) for more inform
 **Keys:**  
 ``` mermaid
 flowchart LR
-  EX[Key: External resource]  --- IN[Internal article];
+  EX[External resource]  --- IN[Internal article];
   IN --- HOW[Internal how-to guides];
   HOW --- TRAIN[Internal Training];  
   style EX fill:#bbf,stroke:#f66,stroke-width:1px,color:#33334d
@@ -31,17 +31,25 @@ flowchart TD
   J --> K[Is it FAIR?];
   B ---->|Advanced| K;
   A --> EB{Languages};
-  EB --> |Python| PA[A python package];
-  PA --> PB[A python webapp];
-  EB --> |R| RA[An R package];
-  RA --> RB[An R-shiny webapp];
-  A --> TA{Tools};  
+  EB --> |Python| PA[Python language standards];
+  PA --> PB[Intro to python];
+  PB --> PC[A python package];
+  PC --> PD[A python webapp];
+  EB --> |R| RA[R language standards];
+  RA --> RB[Intro to R];
+  RB --> RC[An R package];
+  RC --> RD[An R-shiny webapp];
+  A --> TA{Tools};
   style A fill:#ff3399,stroke:#333,stroke-width:1px,color:#99ff99
   click A "https://icr-rse-group.github.io/good-practice/about/" "RS Good Practice"
-  style PA fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
-  style PB fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
-  style RA fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
-  style RB fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
+  style PA fill:#ffcce6,stroke:#ff6600,stroke-width:1px,color:#33334d
+  style PB fill:#ffff99,stroke:#ff6600,stroke-width:1px,color:#33334d
+  style PC fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
+  style PD fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
+  style RA fill:#ffcce6,stroke:#ff6600,stroke-width:1px,color:#33334d
+  style RB fill:#ffff99,stroke:#ff6600,stroke-width:1px,color:#33334d
+  style RC fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
+  style RD fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
 ```
 
 https://squidfunk.github.io/mkdocs-material/reference/diagrams/
