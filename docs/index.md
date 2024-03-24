@@ -17,9 +17,9 @@ graph LR
 
 ``` mermaid
 graph LR
-  A[Start] --> B{Beginner?};
+  A[Reasearch Software Good Practice] --> B{Beginner?};
   B -->|Yes| C[Using version control];
-  C --> D[Debug];
+  C --> D[Using virtual environments]; 
   D --> B;
   B ---->|No| E[Yay!];
   click B "https://www.github.com" "This is a tooltip for a link"
@@ -28,18 +28,18 @@ graph LR
 ```
 
 ``` mermaid
-graph LR
-  A[Start] --> B{Beginner?};
+graph TD
+  A[Reasearch Software Good Practice] --> B{Beginner?};
   B -->|Yes| C[Using version control];
-  C -->| D[Using virtual environments];
-  D -->| E[Writing clean, readable code];
-  E -->| F[Writing tests];
+  C --> D[Using virtual environments];
+  D --> E[Writing clean, readable code];
+  E --> F[Writing tests];
   B ---->|Intermediate| F;
-  F -->| G[Documenting the software];
-  G -->| H[Using continuous integration];
-  H -->| I[Using a package manager];
-  I -->| J[Using a code review process];
-  J -->| K[Is it FAIR?];
+  F --> G[Documenting the software];
+  G --> H[Using continuous integration];
+  H --> I[Using a package manager];
+  I --> J[Using a code review process];
+  J --> K[Is it FAIR?];
   B ---->|Advanced| K;
   click B "https://www.github.com" "This is a tooltip for a link"
   style A fill:#f9f,stroke:#333,stroke-width:4px
