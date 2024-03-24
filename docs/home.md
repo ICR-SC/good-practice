@@ -1,6 +1,6 @@
 # Research Software Good Practice
 
-Research software development differs from standard software development in some core ways. This guide aims to provide a set of good practices that can be applied to research software development to ensure that the software is of high quality, maintainable, reusable and importantly - reproduceable.
+Research software development differs from standard software development in some core ways. This guide aims to provide a set of good practices that can be applied to research software development to ensure that the software is of high quality, maintainable, reusable and importantly - reproducible.
 
 Key differences include:
 

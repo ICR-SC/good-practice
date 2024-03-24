@@ -4,30 +4,6 @@
 
 
 ``` mermaid
-graph LR
-  A[Start] --> B{Error?};
-  B -->|Yes| C[Hmm...];
-  C --> D[Debug];
-  D --> B;
-  B ---->|No| E[Yay!];
-  click B "https://www.github.com" "This is a tooltip for a link"
-  style A fill:#f9f,stroke:#333,stroke-width:4px
-  style B fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
-```
-
-``` mermaid
-graph LR
-  A[Reasearch Software Good Practice] --> B{Beginner?};
-  B -->|Yes| C[Using version control];
-  C --> D[Using virtual environments]; 
-  D --> B;
-  B ---->|No| E[Yay!];
-  click B "https://www.github.com" "This is a tooltip for a link"
-  style A fill:#f9f,stroke:#333,stroke-width:4px
-  style B fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
-```
-
-``` mermaid
 graph TD
   A[Reasearch Software Good Practice] --> B{Beginner?};
   B -->|Yes| C[Using version control];
@@ -41,6 +17,7 @@ graph TD
   I --> J[Using a code review process];
   J --> K[Is it FAIR?];
   B ---->|Advanced| K;
+  PA[Python] --> PB{Beginner?};
   click B "https://www.github.com" "This is a tooltip for a link"
   style A fill:#f9f,stroke:#333,stroke-width:4px
   style B fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
