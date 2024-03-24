@@ -7,10 +7,10 @@ graph LR
   K1[Key: External resource]  --> K2[Key: Internal article];
   K2 --> K3[Internal how-to guides];
   K3 --> K4[Internal Training];
-  style K1 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff
-  style K2 fill:#ffcce6,stroke:#ff6600,stroke-width:2px,color:#4d4dff
-  style K3 fill:#b3ffb3,stroke:#ff6600,stroke-width:2px,color:#4d4dff
-  style K4 fill:#ffff99,stroke:#ff6600,stroke-width:2px,color:#4d4dff
+  style K1 fill:#bbf,stroke:#f66,stroke-width:1px,color:#33334d
+  style K2 fill:#ffcce6,stroke:#ff6600,stroke-width:1px,color:#33334d
+  style K3 fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
+  style K4 fill:#ffff99,stroke:#ff6600,stroke-width:1px,color:#33334d
 ```
 
 Click on the resources below or go to the [full index](index.md) for more information.
