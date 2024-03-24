@@ -17,10 +17,6 @@ graph LR
   I -->| J[Using a code review process];
   J -->| K[Is it FAIR?];
   B ---->|Advanced| K;
-  PA[Python] --> PB[A python package];
-  PB --> PC[A python app];
-  RA[R] --> RB[An R package];
-  RB --> RC[An R app];
   click B "https://www.github.com" "This is a tooltip for a link"
   style A fill:#f9f,stroke:#333,stroke-width:4px
   style B fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
