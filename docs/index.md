@@ -31,8 +31,9 @@ flowchart TD
   J --> K[Is it FAIR?];
   B ---->|Advanced| K;
   A --> EB{Languages};
-  EB --> |Python| PA[Python language standards];
-  PA --> PB[Intro to python];
+  EB --> |Python| PA[Python overview];
+  PA --> PEP8[Python language standards];
+  PEP8 --> PB[Intro to python];
   PB --> PC[A python package];
   PC --> PD[A python webapp];
   EB --> |R| RA[R language standards];
@@ -43,6 +44,8 @@ flowchart TD
   style A fill:#ff3399,stroke:#333,stroke-width:1px,color:#99ff99
   click A "https://icr-rse-group.github.io/good-practice/about/" "RS Good Practice"
   style PA fill:#ffcce6,stroke:#ff6600,stroke-width:1px,color:#33334d
+  click PA "https://icr-rse-group.github.io/good-practice/good/python/" "Python Overview"
+  style PEP8 fill:#bbf,stroke:#f66,stroke-width:1px,color:#33334d
   style PB fill:#ffff99,stroke:#ff6600,stroke-width:1px,color:#33334d
   style PC fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
   style PD fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
