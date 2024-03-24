@@ -4,13 +4,12 @@
 
 ``` mermaid
 graph LR
-  K1[Key: Internal Document] --> K2[Key: External Resource];
-  K2 --> K3[Internal Training];
-  K3 --> K4[Internal how-to guides];
-  K4 --> A[Reasearch Software Good Practice];
+  K1[Key: External resource]  --> K2[Key: Internal article];
+  K2 --> K3[Internal how-to guides];
+  K3 --> K4[Internal Training];
   style K1 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff
   style K2 fill:#ffcce6,stroke:#ff6600,stroke-width:2px,color:#4d4dff
-  style K3 fill:#66ccff,stroke:#ff6600,stroke-width:2px,color:#4d4dff
+  style K3 fill:#b3ffb3,stroke:#ff6600,stroke-width:2px,color:#4d4dff
   style K4 fill:#ffff99,stroke:#ff6600,stroke-width:2px,color:#4d4dff
 ```
 
@@ -38,11 +37,6 @@ graph TD
   A --> TA{Tools};
   click K1 "https://www.github.com" "This is a tooltip for a link"
   style A fill:#ff3399,stroke:#333,stroke-width:1px,color:#99ff99
-  style K1 fill:#bbf,stroke:#f66,stroke-width:1px,color:#fff
-  style K2 fill:#ffcce6,stroke:#ff6600,stroke-width:1px,color:#4d4dff
-  style K3 fill:#66ccff,stroke:#ff6600,stroke-width:1px,color:#4d4dff
-  style K4 fill:#ffff99,stroke:#ff6600,stroke-width:1px,color:#4d4dff
-  
 ```
 
 https://squidfunk.github.io/mkdocs-material/reference/diagrams/
