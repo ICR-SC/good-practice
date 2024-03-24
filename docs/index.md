@@ -4,11 +4,14 @@
 
 Click on the resources below or go to the [full index](index.md) for more information.
 
+**Keys:**  
 ``` mermaid
-graph LR
-  EX[Key: External resource]  --> IN[Key: Internal article];
-  IN --> HOW[Internal how-to guides];
-  HOW --> TRAIN[Internal Training];
+flowchart LR
+  EX[Key: External resource]  --- IN[Internal article];
+  IN --- HOW[Internal how-to guides];
+  HOW --- TRAIN[Internal Training];
+  HOW --- MD["`This **is** _Markdown_`"]
+  MD --- MD2["`[about](about.md)"]
   style EX fill:#bbf,stroke:#f66,stroke-width:1px,color:#33334d
   style IN fill:#ffcce6,stroke:#ff6600,stroke-width:1px,color:#33334d
   style HOW fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
@@ -36,7 +39,7 @@ graph TD
   RA --> RB[An R-shiny webapp];
   A --> TA{Tools};  
   style A fill:#ff3399,stroke:#333,stroke-width:1px,color:#99ff99
-  click A "https://icr-rse-group.github.io/good-practice/home/" "RS Good Practice"
+  click A "https://icr-rse-group.github.io/good-practice/about/" "RS Good Practice"
   style PA fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
   style PB fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
   style RA fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
