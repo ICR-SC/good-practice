@@ -5,8 +5,13 @@
 
 ``` mermaid
 graph TD
-  A[Reasearch Software Good Practice] --> B{Beginner?};
-  B -->|Yes| C[Using version control];
+  K1[Key: Internal Document] --> K2[Key: External Resource];
+  K2 --> K3[Internal Training];
+  K3 --> K4[Internal how-to guides];
+  k4 --> A[Reasearch Software Good Practice];
+  A --> B{Process};
+  A[Reasearch Software Good Practice] --> B{Processes};
+  B -->|Beginner| C[Using version control];
   C --> D[Using virtual environments];
   D --> E[Writing clean, readable code];
   E --> F[Writing tests];
@@ -17,14 +22,19 @@ graph TD
   I --> J[Using a code review process];
   J --> K[Is it FAIR?];
   B ---->|Advanced| K;  
-  A --> EB{Language?};
+  A --> EB{Languages};
   EB --> |Python| PA[A python package];
   PA --> PB[A python webapp];
   EB --> |R| RA[An R package];
   RA --> RB[An R-shiny webapp];
+  A --> TA{Tools};
   click B "https://www.github.com" "This is a tooltip for a link"
   style A fill:#f9f,stroke:#333,stroke-width:4px
-  style B fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff,stroke-dasharray: 5 5
+  style B fill:#ffcce6,stroke:#ff6600,stroke-width:2px,color:#4d4dff
+  style K1 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff
+  style K2 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff
+  style K3 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff
+  style K4 fill:#bbf,stroke:#f66,stroke-width:2px,color:#fff
 ```
 
 https://squidfunk.github.io/mkdocs-material/reference/diagrams/
