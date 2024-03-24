@@ -4,13 +4,13 @@
 
 ``` mermaid
 graph LR
-  K1[Key: External resource]  --> K2[Key: Internal article];
-  K2 --> K3[Internal how-to guides];
-  K3 --> K4[Internal Training];
-  style K1 fill:#bbf,stroke:#f66,stroke-width:1px,color:#33334d
-  style K2 fill:#ffcce6,stroke:#ff6600,stroke-width:1px,color:#33334d
-  style K3 fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
-  style K4 fill:#ffff99,stroke:#ff6600,stroke-width:1px,color:#33334d
+  EX[Key: External resource]  --> IN[Key: Internal article];
+  IN --> HOW[Internal how-to guides];
+  HOW --> TRAIN[Internal Training];
+  style EX fill:#bbf,stroke:#f66,stroke-width:1px,color:#33334d
+  style IN fill:#ffcce6,stroke:#ff6600,stroke-width:1px,color:#33334d
+  style HOW fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
+  style Train fill:#ffff99,stroke:#ff6600,stroke-width:1px,color:#33334d
 ```
 
 Click on the resources below or go to the [full index](index.md) for more information.
@@ -37,6 +37,10 @@ graph TD
   A --> TA{Tools};
   click K1 "https://www.github.com" "This is a tooltip for a link"
   style A fill:#ff3399,stroke:#333,stroke-width:1px,color:#99ff99
+  style PA fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
+  style PB fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
+  style RA fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
+  style RB fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
 ```
 
 https://squidfunk.github.io/mkdocs-material/reference/diagrams/
