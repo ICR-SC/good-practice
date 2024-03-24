@@ -9,9 +9,7 @@ Click on the resources below or go to the [full index](index.md) for more inform
 flowchart LR
   EX[Key: External resource]  --- IN[Internal article];
   IN --- HOW[Internal how-to guides];
-  HOW --- TRAIN[Internal Training];
-  HOW --- MD["`This **is** _Markdown_`"]
-  MD --- MD2["`[about](about.md)"]
+  HOW --- TRAIN[Internal Training];  
   style EX fill:#bbf,stroke:#f66,stroke-width:1px,color:#33334d
   style IN fill:#ffcce6,stroke:#ff6600,stroke-width:1px,color:#33334d
   style HOW fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
