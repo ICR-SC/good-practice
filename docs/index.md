@@ -10,7 +10,7 @@ graph LR
   style EX fill:#bbf,stroke:#f66,stroke-width:1px,color:#33334d
   style IN fill:#ffcce6,stroke:#ff6600,stroke-width:1px,color:#33334d
   style HOW fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
-  style Train fill:#ffff99,stroke:#ff6600,stroke-width:1px,color:#33334d
+  style TRAIN fill:#ffff99,stroke:#ff6600,stroke-width:1px,color:#33334d
 ```
 
 Click on the resources below or go to the [full index](index.md) for more information.
