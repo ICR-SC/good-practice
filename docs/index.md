@@ -58,6 +58,7 @@ flowchart TD
   style RB fill:#ffff99,stroke:#ff6600,stroke-width:1px,color:#33334d
   style RC fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
   style RD fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
+  click EB "https://cran.r-project.org/web/packages/devtools/readme/README.html" "R packaging good practice"
 ```
 
 https://squidfunk.github.io/mkdocs-material/reference/diagrams/
