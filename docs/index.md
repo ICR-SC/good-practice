@@ -130,6 +130,8 @@ https://www.youtube.com/watch?v=FOULV9Xij_8
 
 Clickable scatter: https://community.plotly.com/t/is-it-possible-to-add-a-hyperlink-to-data-points-in-a-scatter-plot/28343/5
 
+https://zenodo.org/communities/hirse/records?q=&l=list&p=1&s=10&sort=newest
+
 
 
 
