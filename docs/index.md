@@ -35,7 +35,8 @@ flowchart TD
   PA --> PEP8[Python language standards];  
   PEP8 --> PINTRO1[Intro to python in person];
   PINTRO1 --- PINTRO2[Intro to python online];
-  PINTRO1 --> PC[A python package];
+  PINTRO1 --> STYLE[Better code: Type hints and linting];
+  STYLE --> PC[A python package];
   PC --> PD[A python webapp];
   EB --> |R| RA[R language standards];
   RA --> RB[Intro to R];
@@ -50,6 +51,7 @@ flowchart TD
   click PEP8 "https://peps.python.org/pep-0008/" "PEP8"
   style PINTRO1 fill:#ffff99,stroke:#ff6600,stroke-width:1px,color:#33334d
   click PINTRO1 "https://training.icr.ac.uk/coursed.php?course=544" "Intro to Python"
+  style STYLE fill:#ffff99,stroke:#ff6600,stroke-width:1px,color:#33334d
   style PINTRO2 fill:#ffff99,stroke:#ff6600,stroke-width:1px,color:#33334d
   click PINTRO2 "https://training.icr.ac.uk/coursed.php?course=1189" "Intro to Python"
   style PC fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
