@@ -13,6 +13,8 @@ Some key points from PEP 8 include:
 - Use descriptive variable and function names
 - Use comments to explain complex code
 
+Additionally, use [type hints](https://mypy.readthedocs.io/en/latest/cheat_sheet_py3.html)
+
 ## Documentation
 Documentation is an essential part of software development, as it helps other developers understand your code and how to use it. Python has a built-in documentation system called [docstrings](https://www.python.org/dev/peps/pep-0257/), which allows you to write documentation directly in your code.
 
