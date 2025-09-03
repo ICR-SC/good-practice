@@ -1,138 +1,48 @@
 # Research Software Good Practice
 
-Research software development differs from standard software development [in some core ways](about.md). This guide aims to provide a set of good practices that can be applied to research software development to ensure that the software is of high quality, maintainable, reusable and importantly - reproducible.
+Research software development differs from standard software development [in some core ways](## What are the challenges in Research Software?). These guides aims to provide a set of good practices that can be applied to research software development to ensure that the software is of high quality, maintainable, reusable and importantly - reproducible.
 
-Click on the resources below for more information, or browse the resources in the sidebar.
+The ICR runs some courses on research software development best practices, covering training through the [carpentries organisation](), usually in-person and can be found on our training website. We also run series of webinars:
+- [Good-Pratice in Research Software](## Good Practice in Research Software - webinar series)
+- **Vibe coding good practice in VSCode** - coming soon in Feb 2026
 
-**Keys:**  
-``` mermaid
-flowchart LR
-  EX[External resource]  --- IN[Internal article];
-  IN --- HOW[Internal how-to guides];
-  HOW --- TRAIN[Internal Training];  
-  style EX fill:#bbf,stroke:#f66,stroke-width:1px,color:#33334d
-  style IN fill:#ffcce6,stroke:#ff6600,stroke-width:1px,color:#33334d
-  style HOW fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
-  style TRAIN fill:#ffff99,stroke:#ff6600,stroke-width:1px,color:#33334d
-```
 
-``` mermaid
-flowchart TD  
-  A[Reasearch Software Good Practice] --> B{Processes};
-  B -->|Beginner| C[Using version control];
-  C --> D[Using virtual environments];
-  D --> E[Writing clean, readable code];
-  E --> F[Writing tests];
-  B ---->|Intermediate| F;
-  F --> G[Documenting the software];
-  G --> H[Using continuous integration];
-  H --> I[Using a package manager];
-  I --> J[Using a code review process];
-  J --> K[Is it FAIR?];
-  B ---->|Advanced| K;
-  A --> EB{Languages};
-  EB --> |Python| PA[Python overview];
-  PA --> PEP8[Python language standards];  
-  PEP8 --> PINTRO1[Intro to python in person];
-  PINTRO1 --- PINTRO2[Intro to python online];
-  PINTRO1 --> STYLE[Better code: Type hints and linting];
-  STYLE --> PC[A python package];
-  PC --> PD[A python webapp];
-  EB --> |R| RA[R language standards];
-  RA --> RB[Intro to R];
-  RB --> RC[An R package];
-  RC --> RD[An R-shiny webapp];
-  A --> TA{Tools};
-  style A fill:#ff3399,stroke:#333,stroke-width:1px,color:#99ff99
-  click A "https://icr-rse-group.github.io/good-practice/about/" "RS Good Practice"
-  style PA fill:#ffcce6,stroke:#ff6600,stroke-width:1px,color:#33334d
-  click PA "https://icr-rse-group.github.io/good-practice/good/python/" "Python Overview"
-  style PEP8 fill:#bbf,stroke:#f66,stroke-width:1px,color:#33334d
-  click PEP8 "https://peps.python.org/pep-0008/" "PEP8"
-  style PINTRO1 fill:#ffff99,stroke:#ff6600,stroke-width:1px,color:#33334d
-  click PINTRO1 "https://training.icr.ac.uk/coursed.php?course=544" "Intro to Python"
-  style STYLE fill:#ffff99,stroke:#ff6600,stroke-width:1px,color:#33334d
-  style PINTRO2 fill:#ffff99,stroke:#ff6600,stroke-width:1px,color:#33334d
-  click PINTRO2 "https://training.icr.ac.uk/coursed.php?course=1189" "Intro to Python"
-  style PC fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
-  style PD fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
-  style RA fill:#ffcce6,stroke:#ff6600,stroke-width:1px,color:#33334d
-  style RB fill:#ffff99,stroke:#ff6600,stroke-width:1px,color:#33334d
-  style RC fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
-  style RD fill:#b3ffb3,stroke:#ff6600,stroke-width:1px,color:#33334d
-  click EB "https://cran.r-project.org/web/packages/devtools/readme/README.html" "R packaging good practice"
-```
+## Good Practice in Research Software - webinar series
 
-https://squidfunk.github.io/mkdocs-material/reference/diagrams/
-https://mermaid.js.org/syntax/gitgraph.html
+## What are the challenges in Research Software?
 
-### Project Processes
+Research software development differs from standard software development in some core ways. This guide aims to provide a set of good practices that can be applied to research software development to ensure that the software is of high quality, maintainable, reusable and importantly - reproducible.
 
+Key differences include:
+
+- Research software is often developed in a more exploratory manner with no known ground truth. This means that the requirements of the software and the test outcomes are not always clear at the outset. The software and test environment may need to be adapted as the research progresses.
+
+- Research software is often developed by researchers who may not have a background in software development. This can lead to software that is not well-structured, poorly documented, and difficult to maintain.
+
+- Research software is often developed as a means to an end, rather than as an end in itself. This can lead to software that is not well-tested, and that may not be suitable for reuse by others.
+
+- Research software is often developed in a time-constrained environment, with researchers under pressure to produce results quickly. This can lead to software that is not well-designed, and that may not be scalable or maintainable in the long term.
+
+- Research software is often developed in a collaborative environment, with multiple researchers working on the same codebase. This can lead to issues with code quality, consistency, and maintainability.
+
+- A demonstration of correctness is often required for research software for a research paper. This is an ouput of the software that differs from traditional sofwtare (where the software itself is the output).
+
+Given these challenges, it can be difficult to apply standard software development practices to research software.
+
+However, there are a number of good practices that can be applied to research software development to ensure that the software is of high quality, maintainable, and reusable. These practices include:
 - Using version control
-- Using virtual environments
 - Writing clean, readable code
 - Writing tests
-- Documenting the software (https://realpython.com/python-project-documentation-with-mkdocs/)
-- Is it FAIR https://www.researchsoft.org/blog/2024-03/
+- Documenting the software
 - Using continuous integration
 - Using a package manager
 - Using a code review process
 
----  
-
-### Languages
-- Python
-- R
-- Matlab
-- C++
-- C#
+This guide provides an overview of each of these practices, as well as links to further resources that can help you to implement them in your own research software projects.
 
 ---  
 
-### Demonstration projects
-- A python package  
-- A python streamlit (web) app  
-- An R package  
-- An R-shiny webapp  
 
----  
-
-### Mini articles
-
-- Defining the scope of the project through tests  
-- Demonstrating proof of correctness through tests  
-- The 3 tier user model  
-- Developing with containers  
-- Developing in reproducible environments  
-- https://coderefinery.github.io/reproducible-research/  
-
----  
-
-### In-house training  
-
-- Using vscode modules  
-
----  
-
-### Resources / References  
-
-https://betterscientificsoftware.github.io/python-for-hpc/python-for-hpc/
-https://coderefinery.org/
-https://www.universe-hpc.ac.uk/resources/training-material/#course-website
-https://github.com/UNIVERSE-HPC/course-material
-https://code.visualstudio.com/docs/python/python-tutorial
-https://learn.microsoft.com/en-us/
-https://www.software.ac.uk/guide/how-make-your-script-ready-publication
-http://www.archer.ac.uk/training/courses/
-https://learn.microsoft.com/en-us/training/paths/beginner-python/
-https://code.visualstudio.com/learn/educators/python
-
-email from streamlit:
-https://www.youtube.com/watch?v=FOULV9Xij_8
-
-Clickable scatter: https://community.plotly.com/t/is-it-possible-to-add-a-hyperlink-to-data-points-in-a-scatter-plot/28343/5
-
-https://zenodo.org/communities/hirse/records?q=&l=list&p=1&s=10&sort=newest
 
 
 

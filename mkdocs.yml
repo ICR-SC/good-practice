@@ -1,16 +1,11 @@
 site_name: Research Software Good Practice
 nav:
-  - Index: index.md
-  - About: about.md
-  - Project:
-    - 'Continuous Integration': 'good/cicd.md'
-    - 'Version control': 'good/version.md'    
-    - 'Packaging and deploying': 'good/packaging.md'
-    - 'Using AI' : good/ai.md
-  - Languages:
-    - 'Python good practices': 'good/python.md'
-  - Examples:
-    - 'Making this streamlit webapp': 'examples/streamlit1.md'    
+  - Index: index.md  
+  - Good-practice Webinar Series:
+    - 'Overview': 'good/overview.md'
+    - 'Monday': 'good/monday.md'    
+  - Vibe Coding with VSCode Webinar Series:
+    - 'Overview': 'vibe/overview.md'  
 theme:
   name: material
   logo: assets/icr_svg_logo.svg  
