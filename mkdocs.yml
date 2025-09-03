@@ -1,11 +1,12 @@
 site_name: Research Software Good Practice
 nav:
   - Index: index.md  
-  - Good-practice Webinar Series:
-    - 'Overview': 'good/overview.md'
-    - 'Monday': 'good/monday.md'    
-  - Vibe-coding Webinar Series:
-    - 'Overview': 'vibe/overview.md'  
+  - Webinar Series:
+    - Good-practice:
+      - 'Overview': 'good/overview.md'
+      - 'Monday': 'good/monday.md'    
+    - Vibe-coding:
+      - 'Overview': 'vibe/overview.md'  
 theme:
   name: material
   logo: assets/icr_svg_logo.svg  
