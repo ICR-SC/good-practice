@@ -4,7 +4,7 @@ nav:
   - Good-practice Webinar Series:
     - 'Overview': 'good/overview.md'
     - 'Monday': 'good/monday.md'    
-  - Vibe Coding with VSCode Webinar Series:
+  - Vibe-coding Webinar Series:
     - 'Overview': 'vibe/overview.md'  
 theme:
   name: material

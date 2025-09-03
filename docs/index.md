@@ -1,9 +1,9 @@
 # Research Software Good Practice
 
-Research software development differs from standard software development [in some core ways](## What are the challenges in Research Software?). These guides aims to provide a set of good practices that can be applied to research software development to ensure that the software is of high quality, maintainable, reusable and importantly - reproducible.
+Research software development differs from standard software development [in some core ways](#what-are-the-challenges-in-research-software). These guides aims to provide a set of good practices that can be applied to research software development to ensure that the software is of high quality, maintainable, reusable and importantly - reproducible.
 
-The ICR runs some courses on research software development best practices, covering training through the [carpentries organisation](), usually in-person and can be found on our training website. We also run series of webinars:
-- [Good-Pratice in Research Software](## Good Practice in Research Software - webinar series)
+The ICR runs some courses on research software development best practices, covering training through the [carpentries organisation](https://carpentries.org/), usually in-person and can be found on our training website. We also run series of webinars:
+- [Good-Pratice in Research Software](#good-practice-in-research-software-webinar-series)
 - **Vibe coding good practice in VSCode** - coming soon in Feb 2026
 
 
