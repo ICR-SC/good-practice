@@ -1,6 +1,14 @@
+Welcome to the Good Practice guide! This text will wrap around the image if your Markdown renderer supports HTML tags.
+
 # Research Software Good Practice
 
 Research software development differs from standard software development [in some core ways](#what-are-the-challenges-in-research-software). These guides aims to provide a set of good practices that can be applied to research software development to ensure that the software is of high quality, maintainable, reusable and importantly - reproducible.
+# Research Software Good Practice
+
+Research software development differs from standard software development [in some core ways](#what-are-the-challenges-in-research-software). These guides aims to provide a set of good practices that can be applied to research software development to ensure that the software is of high quality, maintainable, reusable and importantly - reproducible.
+
+<a href="https://book.the-turing-way.org/"><img src="assets/turing.png" alt="Turing Logo" align="right" width="200"/></a>
+There are many initiatives in the research software community to develop training and standards. One of these that is well established is [The Turing Way](https://book.the-turing-way.org/), a published gude to *reproducible, ethical and collaborative data science.* (The Turing Way 2025).
 
 The ICR runs some courses on research software development best practices, covering training through the [carpentries organisation](https://carpentries.org/), usually in-person and can be found on our training website. We also run series of webinars:
 - [Good-Pratice in Research Software](#good-practice-in-research-software-webinar-series)
@@ -8,6 +16,13 @@ The ICR runs some courses on research software development best practices, cover
 
 
 ## Good Practice in Research Software - webinar series
+This is a series of webinars run by the ICR Research Software Engineering team, covering good practices in research software development. The webinars are recorded and available on (link to come soon).  
+The [overview page is here](good/overview.md), and in summary it covers:  
+- Monday: Bash and VScode
+- Tuesday: Git and GitHub
+- Wednesday: Python projects
+- Thursday: R projects
+- Friday: Conda environments
 
 ## What are the challenges in Research Software?
 
@@ -42,6 +57,8 @@ This guide provides an overview of each of these practices, as well as links to 
 
 ---  
 
+## References  
+- The Turing Way Community. (2022). The Turing Way: A handbook for reproducible, ethical and collaborative research (1.0.2). Zenodo. [DOI The Turing Way Community (2025).](https://zenodo.org/records/15213042)  
 
 
 
