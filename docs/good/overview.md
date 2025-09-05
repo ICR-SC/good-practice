@@ -9,7 +9,7 @@ A practical 5-day course teaching essential coding practices for reproducible re
 
 ---
 
-## **Who Should Attend**
+## **Who might be interested?**
 
 - **PhD students and postdocs** working with data analysis
 - **Principal investigators** managing computational research projects  
@@ -24,8 +24,10 @@ A practical 5-day course teaching essential coding practices for reproducible re
 
 By the end of this course, you will be able to:
 
+- **Log in to Alma** for high-performance computing
 - **Create standardized project structures** for reproducible workflows
 - **Use version control (Git) effectively** for collaboration and change tracking
+- **GitLab and GitHub repositories** understand how to access the ICR's own instances
 - **Write ethical, testable Python code** with bias detection and robust testing
 - **Conduct analyses in R** with reproducible reporting and publication-ready visualizations
 - **Manage computational environments** using conda and Docker for long-term reproducibility

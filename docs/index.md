@@ -1,6 +1,6 @@
 # Research Software Good Practice
 
-Research software development differs from standard software development [in some core ways](#what-are-the-challenges-in-research-software). These guides aims to provide a set of good practices that can be applied to research software development to ensure that the software is of high quality, maintainable, reusable and importantly - reproducible.
+Research software development differs from standard software development [in some core ways](#what-are-the-challenges-in-research-software). These guides aim to provide a set of good practices that can be applied to research software development to ensure that the software is of high quality, maintainable, reusable and reproducible.
 
 ## Research Good-Practice Initiatives
 <a href="https://book.the-turing-way.org/"><img src="assets/turing.png" alt="Turing Logo" align="right" width="300"/></a>
