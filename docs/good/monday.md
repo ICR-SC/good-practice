@@ -20,8 +20,6 @@
 
 ---
 
-*This summary provides a quick reference to the main skills and concepts introduced in Monday's session.*
-
 # Monday Resources: Good-Practices in Research Coding
 
 ## Key References
@@ -71,14 +69,12 @@ code .
 ## Additional Reading
 
 - **Why Reproducibility Matters:**
-  https://www.nature.com/articles/d41586-019-00067-3
+  [https://www.nature.com/articles/d41586-019-00067-3](https://www.nature.com/articles/d41586-019-00067-3)
 
 - **VSCode for Research:**
-  https://www.r-bloggers.com/2021/03/vscode-for-research/
+  [https://www.r-bloggers.com/2021/03/vscode-for-research/](https://www.r-bloggers.com/2021/03/vscode-for-research/)
 
 ---
-
-*This resource list supports the Monday session and provides links for further exploration and practice.*
 
 # Monday Homework: Session Consolidation
 
