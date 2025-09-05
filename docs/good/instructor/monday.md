@@ -32,7 +32,7 @@
 
 ---
 
-## Part 1.1 (starts at 0 min, takes 5 min)
+## Part 1.1 (0 min-5 min)
 ### What is The Turing Way?
 
 **What I Say:**
@@ -40,7 +40,7 @@
 
 ---
 
-## Part 1.2 (starts at 5 min, takes 5 min)
+## Part 1.2 (5 min-5 min)
 ### Starting a Command Line
 
 **What I Say:**
@@ -55,8 +55,8 @@
 
 ---
 
-## Part 1.3 (starts at 10 min, takes 10 min)
-### Basic Local Command Line Functionality
+## Part 1.3 (10 min-10 min)
+### Basic Local Command Line
 
 **What I Say:**
 "Let's try some very basic commands. Type what I type."
@@ -82,8 +82,8 @@ ls
 
 ---
 
-## Part 1.4 (starts at 20 min, takes 10 min)
-### More Advanced Command Line Tools & Techniques
+## Part 1.4 (20 min-10 min)
+### More Advanced Command Line
 
 **What I Say:**
 "Let's try a few more useful commands. Don't worry if you haven't seen these before!"
@@ -104,8 +104,8 @@ cd ..
 
 ---
 
-## Part 1.5 (starts at 30 min, takes 5 min)
-### Logging into Alma (HPC Cluster)
+## Part 1.5 (30 min-5 min)
+### Logging into Alma
 
 **What I Say:**
 "Now let's log into our HPC cluster, Alma. This is where we run big analyses."
@@ -120,7 +120,7 @@ ssh <username>@alma.icr.ac.uk
 
 ---
 
-## Part 1.6 (starts at 35 min, takes 5 min)
+## Part 1.6 (35 min-5 min)
 ### Login Nodes vs Compute Nodes
 
 **What I Say:**
@@ -136,8 +136,8 @@ srun --pty -t 12:00:00 --cpus-per-task 1 --mem-per-cpu 4021 --partition interact
 
 ---
 
-## Part 1.7 (starts at 40 min, takes 5 min)
-### Navigating Locally, Creating a Project Folder, and Opening VSCode
+## Part 1.7 (40 min-5 min)
+### Project Folder and VSCode
 
 **What I Say:**
 "Let's go back to our own computer and make a folder for a reproducible project. We'll use VSCode to work in it."
@@ -154,7 +154,7 @@ code .
 
 ---
 
-## Part 1.8 (starts at 45 min, takes 5 min)
+## Part 1.8 (45 min-5 min)
 ### Making a Sensible Project Structure
 
 **What I Say:**
@@ -168,14 +168,15 @@ ls
 
 ---
 
-## Part 1.9 Practical Exercise (starts at 50 min, takes 15 min)
+## Part 1.9 (50 min-15 min)
+### Practical Exercise
 
-### Individual Exercise
+**Individual Exercise**
 
 **What I Say:**
 "Now it's your turn! I want you to practice what we've learned by creating a project structure for your own research."
 
-#### Exercise Instructions:
+**Exercise Instructions:**
 
 **Core Tasks:**
 1. Create a new project directory for your research area
@@ -203,7 +204,8 @@ code .
 
 ---
 
-## Part 1.10 Session Wrap-up & Homework (starts at 65 min, takes 5 min)
+## Part 1.10 (65 min-5 min)
+### Session Wrap-up & Homework
 
 **What I Say:**
 "Great job today! You've learned how to use the command line, log into Alma, and set up a basic project folder. Next time, we'll go deeper into project structure and data sensitivity."
