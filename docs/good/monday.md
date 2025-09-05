@@ -1,6 +1,7 @@
 # Monday Session Summary (For Researchers)
+[*Return to home*](overview.md)
 
-## What We Cover
+## Summary
 
 - How to open and use the command line (Windows, Mac, Linux)
 - Basic navigation and file/folder creation: `ls`, `cd`, `pwd`, `mkdir`, `touch`
@@ -10,13 +11,6 @@
 - Creating a simple project folder for your research
 - Opening and using VSCode for coding and project management
 - Setting up a basic folder structure for a research project
-
-## Key Takeaways
-
-- Command line skills help you work efficiently and reproducibly
-- Alma HPC is used for large-scale analyses; know how to log in and run jobs
-- VSCode is a powerful tool for coding, documentation, and project organization
-- A clear folder structure makes your research easier to manage and share
 
 ## Homework
 
@@ -33,29 +27,22 @@
 ## Key References
 
 - **The Turing Way Handbook (General):**
-  https://the-turing-way.netlify.app/
-  - Principles of reproducible, ethical, and collaborative research.
+  [https://the-turing-way.netlify.app/](https://the-turing-way.netlify.app/)
 
 - **The Turing Way: Reproducible Research Guide:**
-  https://book.the-turing-way.org/reproducible-research/reproducible-research
-  - Sections referenced throughout the week for best practices in reproducible research.
-
+  [https://book.the-turing-way.org/reproducible-research/reproducible-research](https://book.the-turing-way.org/reproducible-research/reproducible-research)
+  
 ## Institutional Resources
-
-- **Alma HPC Cluster (ICR):**
-  - [Alma Documentation](https://alma.icr.ac.uk/) *(internal access required)*
+  - Contact [Scientific Computing help desk](mailto:schelpdesk@icr.ac.uk) for questions
+  - [Alma Documentation](https://almacookbook.github.io/) *(internal access required)*
   - SSH access: `ssh <username>@alma.icr.ac.uk`
 
+## External Resources
 - **VSCode Documentation:**
-  https://code.visualstudio.com/docs
-  - Getting started, integrated terminal, extensions, and project setup.
-
-## Command Line Basics
-
-- **Linux Command Line Tutorial:**
-  https://ryanstutorials.net/linuxtutorial/
-  - Navigation, file/folder creation, and basic commands.
-
+  [https://code.visualstudio.com/docs](https://code.visualstudio.com/docs)  
+- **Linux Command Line Tutorial from the carpentries:**
+  [https://swcarpentry.github.io/shell-novice/aio.html](https://swcarpentry.github.io/shell-novice/aio.html)
+  
 ## Example Commands Used in Session
 
 ```bash

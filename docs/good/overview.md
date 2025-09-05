@@ -1,5 +1,5 @@
-# 5-Session Coding Good Practices Course
-## Reproducible Computational Research Skills for ICR Researchers
+# 5-Session Webinar in Coding Good Practices
+**Reproducible Computational Research Skills for ICR Researchers**
 
 ---
 
