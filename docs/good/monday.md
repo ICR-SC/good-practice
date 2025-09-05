@@ -1,5 +1,5 @@
 # Monday Session Summary (For Researchers)
-[*Return to home*](overview.md) [*Instructor script*](instructor/monday.md)
+{[*Return to home*](overview.md)} - {[*Instructor script*](instructor/monday.md)}
 
 ## Summary
 
