@@ -28,10 +28,9 @@ By the end of this course, you will be able to:
 - **Create standardized project structures** for reproducible workflows
 - **Use version control (Git) effectively** for collaboration and change tracking
 - **GitLab and GitHub repositories** understand how to access the ICR's own instances
-- **Write ethical, testable Python code** with bias detection and robust testing
-- **Conduct analyses in R** with reproducible reporting and publication-ready visualizations
+- **Python code in VSCode** with bias detection and robust testing
+- **R in RStudio** with reproducible reporting and publication-ready visualizations
 - **Manage computational environments** using conda and Docker for long-term reproducibility
-- **Integrate Python and R workflows** within collaborative research projects
 - **Apply The Turing Way principles** for transparent, collaborative, and sustainable research
 
 ---
@@ -46,8 +45,8 @@ By the end of this course, you will be able to:
 |----------|---------------------------------------|--------------------------------------------------------|-----------------------------------------------------|
 | Monday   | Command Line & VSCode Foundations     | Project organization, command line, VSCode setup        | Create standardized project structure               |
 | Tuesday  | Git & Collaboration Workflows         | Git basics, collaboration, merge conflicts, code review | Implement version control workflow                  |
-| Wednesday| Ethical Python Development            | Testing, ethics, bias detection, analysis pipeline      | Build tested, ethical Python analysis pipeline      |
-| Thursday | Statistical Rigor with R              | Statistical testing, reporting, Python-R integration    | Create R workflow with validation and reporting     |
+| Wednesday| Python Development in VSCode            | Testing, ethics, bias detection, analysis pipeline      | Build tested, ethical Python analysis pipeline      |
+| Thursday | R Development in RStudio              | Statistical testing, reporting, Python-R integration    | Create R workflow with validation and reporting     |
 | Friday   | Computational Reproducibility         | Conda/Docker environments, sharing, sustainability      | Complete integrated reproducible research pipeline  |
 
 ---
@@ -73,14 +72,8 @@ By the end of this course, you will be able to:
 
 ---
 
-## **About The Turing Way**
+## **Acknowledgements**
 
 *This training material adapts and builds upon The Turing Way's open-source content under CC-BY 4.0 license. We acknowledge the diverse global community of contributors who have developed these evidence-based practices for reproducible research.*
 
-More information: https://book.the-turing-way.org/
-
----
-
-*This intensive course provides immediately applicable skills for your current research projects while establishing professional practices that meet high standards of computational reproducibility.*
-
-*Gain immediately applicable skills for your research and establish professional practices for computational reproducibility.*
+More information: [https://book.the-turing-way.org/](https://book.the-turing-way.org/)
