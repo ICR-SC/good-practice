@@ -1,6 +1,6 @@
 # Monday Session Summary (For Researchers)
 
-## What We Covered
+## What We Cover
 
 - How to open and use the command line (Windows, Mac, Linux)
 - Basic navigation and file/folder creation: `ls`, `cd`, `pwd`, `mkdir`, `touch`
