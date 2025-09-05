@@ -7,22 +7,25 @@
 
 ## Overview
 
-This course will teach you coding best practices for reproducible research using The Turing Way framework. To participate fully, you'll need several tools installed and accounts configured. Please complete all setup steps below **before Monday's session**.
+This course will teach you coding good practices for reproducible research referencing The Turing Way framework. To participate fully, you'll need several tools installed and accounts configured. Please complete all setup steps below.
+
+For any of the elements that you do not have access to, you can go back and do the session again following the recording, or the RSE team will help you in a drop-in session in the RSE office.  
+
+The summary of the requirements is broken down for each day, with links to fuller instructions below.
 
 ---
 
-## 📋 Quick Checklist
+## Monday's Session
+- [Install VSCode]()
+- [Access a terminal]()
+- [Have an HPC Alma account]()
 
-- [ ] Install VSCode
-- [ ] Install Git
-- [ ] Install GitHub Desktop (Windows/Mac only)
-- [ ] Install Python (Anaconda/Miniconda)
-- [ ] Install R and RStudio
-- [ ] Install Conda/Miniconda
-- [ ] Set up GitLab access (SSO)
-- [ ] Set up GitHub access (institutional account)
-- [ ] Configure Git identity
-- [ ] Test all installations
+## Tuesdays's Session
+- [Install VSCode]()
+- [Install and configure Git]()
+- [Install GitHub Desktop (Windows/Mac)]()
+- [Set up GitLab access (SSO)]()
+- [Set up GitHub access (institutional account)]()
 
 ---
 

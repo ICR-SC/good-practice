@@ -1,4 +1,4 @@
-# Monday Session: Good-Practices in Research Coding (Beginner Edition)
+# Monday Live Coding Script: Good-Practices in Research Coding
 [instructor home](overview.md)
 
 ## Monday Session Timings (Instructor Guide)
