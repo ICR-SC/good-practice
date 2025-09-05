@@ -24,7 +24,7 @@ The [overview page is here](good/overview.md), and in summary it covers:
 ### Webinar Series: Vibe-Coding
 Coming soon in February 2026  
 
-## What are come challenges in Research Software?
+## Challenges in Research Software
 
 Research software development differs from standard software development in some core ways. This resource aims to help with good practices that can be applied to research software development to ensure that the software is of high quality, maintainable, reusable and reproducible.
 
