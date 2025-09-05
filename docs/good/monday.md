@@ -32,8 +32,9 @@
   
 ## Institutional Resources
   - Contact [Scientific Computing help desk](mailto:schelpdesk@icr.ac.uk) for questions
-  - [Alma Documentation](https://almacookbook.github.io/) *(internal access required)*
-  - SSH access: `ssh <username>@alma.icr.ac.uk`
+  - [Alma Documentation](https://almacookbook.github.io/)
+  - SSH access: `ssh <username>@alma.icr.ac.uk` *(internal - vpn or network)*
+  - [Alma docs on nexus](https://nexus.icr.ac.uk/strategic-initiatives/sc/hpc/Pages/New-Users-Guide.aspx)
 
 ## External Resources
 - **VSCode Documentation:**
