@@ -20,20 +20,6 @@
 
 ---
 
-*Use this guide to help pace the Monday session and ensure all key topics are covered within the allotted time.*
-
-
-data/processed/
-touch README.md .gitignore
-
-## Live Coding Script for Instructors
-
-*Duration: 60 minutes | Format: Participatory live coding*
-*Homework: Short session consolidation*
-
-# Reference
-This session is inspired by the principles of reproducible, ethical, and collaborative research as described in [The Turing Way handbook](https://the-turing-way.netlify.app/). Throughout the week, we will refer to relevant sections from [The Turing Way: Reproducible Research Guide](https://book.the-turing-way.org/reproducible-research/reproducible-research), an open, community-driven resource for making data science accessible and reproducible for everyone.
-
 ## Pre-Session Setup
 
 **[ASIDE: Have terminal and VSCode open. Share screen showing both. Have a clean desktop/folder structure visible.]**
