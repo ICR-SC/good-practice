@@ -2,8 +2,7 @@
 
 Research software development differs from standard software development [in some core ways](#what-are-the-challenges-in-research-software). These guides aims to provide a set of good practices that can be applied to research software development to ensure that the software is of high quality, maintainable, reusable and importantly - reproducible.
 
-Research software development differs from standard software development [in some core ways](#what-are-the-challenges-in-research-software). These guides aims to provide a set of good practices that can be applied to research software development to ensure that the software is of high quality, maintainable, reusable and importantly - reproducible.
-
+## Research Good-Practice Initiatives
 <a href="https://book.the-turing-way.org/"><img src="assets/turing.png" alt="Turing Logo" align="right" width="300"/></a>
 There are many initiatives in the research software community to develop training and standards. One of these that is well established is [The Turing Way](https://book.the-turing-way.org/), a published gude to *reproducible, ethical and collaborative data science.* (The Turing Way 2025).
 
@@ -11,9 +10,9 @@ The ICR runs some courses on research software development best practices, cover
 - [Good-Pratice in Research Software](#good-practice-in-research-software-webinar-series)
 - **Vibe coding good practice in VSCode** - coming soon in Feb 2026
 
-## Webinar Series
+## ICR Internal Training
 
-### Good-Practice in Research Software
+### Webinar Series: Good-Practice in Research Software
 This is a series of webinars run by the ICR Research Software Engineering team, covering good practices in research software development. The webinars are recorded and available on (link to come soon).  
 The [overview page is here](good/overview.md), and in summary it covers:  
 - Monday: Bash and VScode  
@@ -22,12 +21,12 @@ The [overview page is here](good/overview.md), and in summary it covers:
 - Thursday: R projects  
 - Friday: Conda environments  
 
-### Vibe-Coding
+### Webinar Series: Vibe-Coding
 Coming soon in February 2026  
 
-## What are the challenges in Research Software?
+## What are come challenges in Research Software?
 
-Research software development differs from standard software development in some core ways. This guide aims to provide a set of good practices that can be applied to research software development to ensure that the software is of high quality, maintainable, reusable and importantly - reproducible.
+Research software development differs from standard software development in some core ways. This resource aims to help with good practices that can be applied to research software development to ensure that the software is of high quality, maintainable, reusable and reproducible.
 
 Key differences include:
 
@@ -53,8 +52,6 @@ However, there are a number of good practices that can be applied to research so
 - Using continuous integration
 - Using a package manager
 - Using a code review process
-
-This guide provides an overview of each of these practices, as well as links to further resources that can help you to implement them in your own research software projects.
 
 ---  
 
