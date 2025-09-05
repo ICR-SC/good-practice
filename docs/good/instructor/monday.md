@@ -5,17 +5,17 @@
 
 | Section                                      | Suggested Time | Running Time |
 |----------------------------------------------|:--------------:|:------------:|
-| 1.0 Opening & Welcome                           |    5 min       |     5         |
-| 1.1 What is The Turing Way?                     |    5 min       |     10         |
-| 1.2 Starting a Command Line                     |    5 min       |     15         |
-| 1.3 Basic Local Command Line Functionality      |   10 min       |     25         |
-| 1.4 More Advanced Command Line Tools & Techniques|   10 min       |    35          |
-| 1.5 Logging into Alma (HPC Cluster)             |    5 min       |     40         |
-| 1.6 Login Nodes vs Compute Nodes                |    5 min       | 45     |
-| 1.7 Navigating Locally, Creating Project Folder, Opening VSCode | 5 min | 50 |
+| 1.0 Opening & Welcome                           |    5 min       | 5  |
+| 1.1 What is The Turing Way?                     |    5 min       | 10 |
+| 1.2 Starting a Command Line                     |    5 min       | 15 |
+| 1.3 Basic Local Command Line Functionality      |   10 min       | 25 |
+| 1.4 More Advanced Command Line Tools            |   10 min       | 35 |
+| 1.5 Logging into Alma (HPC Cluster)             |    5 min       | 40 |
+| 1.6 Login Nodes vs Compute Nodes                |    5 min       | 45 |
+| 1.7 Navigating Locally, Projects, VSCode        |    5 min       | 50 |
 | 1.8 Making a Sensible Project Structure         |    5 min       | 55 |
 | 1.9 Session Wrap-up & Homework                  |    5 min       | 60 |
-| **Total**                                   |   **60 min**   |              |
+| **Total**                                       |   **60 min**   | 60 |
 
 ---
 
@@ -195,49 +195,11 @@ ls
 
 ---
 
-## Part 1.9 (50 min-15 min)
-### Practical Exercise
-
-**Individual Exercise**
-
-**What I Say:**
-```
-"Now it's your turn! I want you to practice what we've learned by creating a project structure for your own research."
-```
-
-**Exercise Instructions:**
-
-**Core Tasks:**
-1. Create a new project directory for your research area
-2. Set up the folder structure we learned today (use the mkdir -p command)
-3. Create a basic README.md with your project description
-4. Create a .gitignore appropriate for your research
-5. Open the project in VSCode
-
-**Example command sequence:**
-```bash
-mkdir my_research_project
-cd my_research_project
-mkdir -p data/{raw,processed} src/{python,r} docs results/{figures,tables} notebooks environment
-touch README.md .gitignore
-code .
-```
-
-**Focus on:**
-- Clear project organization
-- Meaningful directory names
-- Basic documentation
-
-
-**[ASIDE: Circulate and help participants. Focus on ensuring everyone can complete the basic directory structure.]**
-
----
-
-## Part 1.10 (65 min-5 min)
+## Part 1.9 (65 min-5 min)
 ### Session Wrap-up & Homework
 
 **What I Say:**
-"Great job today! You've learned how to use the command line, log into Alma, and set up a basic project folder. Next time, we'll go deeper into project structure and data sensitivity."
+"You've learned how to use the command line, log into Alma, and set up a basic project folder. Next time, we'll go deeper into project structure and data sensitivity."
 
 #### Homework (Session Consolidation):
 - Practice opening your terminal and running the basic commands (`pwd`, `ls`, `mkdir`, `cd`)
