@@ -1,16 +1,13 @@
 # Research Software Good Practice
-
+<a href="https://book.the-turing-way.org/"><img src="assets/turing.png" alt="Turing Logo" align="right" width="300"/></a>
 Research software development differs from standard software development [in some core ways](#what-are-the-challenges-in-research-software). These guides aim to provide a set of good practices that can be applied to research software development to ensure that the software is of high quality, maintainable, reusable and reproducible.
 
 ## Research Good-Practice Initiatives
-<a href="https://book.the-turing-way.org/"><img src="assets/turing.png" alt="Turing Logo" align="right" width="300"/></a>
 There are many initiatives in the research software community to develop training and standards. One of these that is well established is [The Turing Way](https://book.the-turing-way.org/), a published gude to *reproducible, ethical and collaborative data science.* (The Turing Way 2025).
 
-The ICR runs some courses on research software development best practices, covering training through the [carpentries organisation](https://carpentries.org/), usually in-person and can be found on our training website. We also run series of webinars:
-- [Good-Pratice in Research Software](#good-practice-in-research-software-webinar-series)
-- **Vibe coding good practice in VSCode** - coming soon in Feb 2026
 
-## ICR Internal Training
+## ICR Internal Training  
+The ICR runs some courses on research software development best practices, covering training through the [carpentries organisation](https://carpentries.org/), usually in-person and can be found on the [ICR training website](https://training.icr.ac.uk/) (search *carpentry*). 
 
 ### Webinar Series: Good-Practice in Research Software
 This is a series of webinars run by the ICR Research Software Engineering team, covering good practices in research software development. The webinars are recorded and available on (link to come soon).  
@@ -40,17 +37,17 @@ Key differences include:
 
 - Research software is often developed in a collaborative environment, with multiple researchers working on the same codebase. This can lead to issues with code quality, consistency, and maintainability.
 
-- A demonstration of correctness is often required for research software for a research paper. This is an ouput of the software that differs from traditional sofwtare (where the software itself is the output).
+- A demonstration of correctness may be required for a research paper. This is an output of the software that differs from traditional software (where the software itself is the output).
 
 Given these challenges, it can be difficult to apply standard software development practices to research software.
 
 However, there are a number of good practices that can be applied to research software development to ensure that the software is of high quality, maintainable, and reusable. These practices include:
-- Using version control
 - Writing clean, readable code
-- Writing tests
+- Using version control
 - Documenting the software
+- Writing tests
 - Using continuous integration
-- Using a package manager
+- Using environments
 - Using a code review process
 
 ---  
