@@ -21,7 +21,7 @@ The summary of the requirements is broken down for each day, with links to fulle
 - [Have an HPC Alma account]()
 - [Optionally set up Alma ssh keys]()
 
-## Tuesdays's Session
+## Tuesday's Session
 - [Install VSCode]()
 - [Install and configure Git]()
 - [Install GitHub Desktop (Windows/Mac)]()
