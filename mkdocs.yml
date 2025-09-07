@@ -1,6 +1,6 @@
 site_name: Research Software Good Practice
 nav:
-  - Index: index.md  
+  - Home: index.md  
   - Webinar Series:
     - Good-practice:
       - 'Overview': 'good/overview.md'

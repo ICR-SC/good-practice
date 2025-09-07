@@ -50,8 +50,11 @@ For more on version control and reproducible research, see [The Turing Way handb
 #### What I Type (Live Coding):
 ```bash
 git --version
+git config --list
 git config --global user.name "Your Name"
 git config --global user.email "your.email@icr.ac.uk"
+git config --global init.defaultBranch main
+git config --list
 ```
 
 ---
@@ -64,14 +67,13 @@ git config --global user.email "your.email@icr.ac.uk"
 #### What I Type (Live Coding):
 ```bash
 cd biomarkers_project
+code .
 git init
 git status
-touch README.md
 git add README.md
 git commit -m "Add README for biomarkers project"
 git status
 ```
-
 ---
 
 ## Part 2.4 (starts at 18 min, takes 5 min): Using Git at ICR
@@ -81,8 +83,40 @@ git status
 **GitHub organisation:** https://github.com/enterprises/icr/organizations
 **ICR GitLab:** https://git.icr.ac.uk/
 
-"You can create a repository on either platform. For sensitive or internal work, use ICR GitLab. For public or collaborative projects, GitHub is also available."
+>You can create a repository on either platform. For sensitive or internal work, use ICR GitLab. For public or collaborative projects, GitHub is also available.
 
+
+## Setting up keys for GitLab
+> You need to set up an ssh key for GitLab. You can follow the instructions here: https://git.icr.ac.uk/help/ssh/README
+
+```bash
+ssh-keygen -t ecdsa -C ""
+```
+
+>This will create a key file ~/.ssh/id_ecdsa.pub. Copy the content of this file to gitlab (via web interface) in User/Preference/SSH Keys > Add new key
+
+` ~/.ssh/config`
+```text
+# Private GitLab instance
+Host <your_usernames>.git.icr.ac.uk
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_ecdsa
+
+```
+
+## Using the gitlab repository for your project
+
+> I am going to use GitLab for this example. I am now going to go to GitLab and create a project somewhere I think is sensible:
+https://git.icr.ac.uk/ralcraft/biomarkers_project
+> Follow the instructions when I created an empty proect
+
+```bash
+git init --initial-branch=main
+git remote add origin git@git.icr.ac.uk:ralcraft/biomarkers_project.git
+git add .
+git commit -m "Initial commit"
+git push --set-upstream origin main
+```
 ---
 
 ## Part 2.5 (starts at 23 min, takes 5 min): Using Git in IDEs
@@ -90,22 +124,24 @@ git status
 >You can use git inside VSCode or RStudio. Both have built-in tools to help you see changes, commit, and push without using the command line.
 
 **[ASIDE: Show VSCode Source Control panel.]**
+**[Show a change to the readme file being made and how it looks]**
 
 ---
 
 ## Part 2.6 (starts at 28 min, takes 5 min): Using GitHub Desktop
 
->GitHub Desktop is a simple app for managing git visually. You can use it with both GitHub and GitLab repositories.
+>GitHub Desktop is a simple app for managing git visually. You can use it with both GitHub and GitLab repositories. It also can give you a colsolidated visual overview if you use multiple different apps like jpyter, vscode and rsudio.
 
-**[ASIDE: Show GitHub Desktop or screenshots. Demonstrate opening the biomarkers project and making a commit.]**
+**[ASIDE: Show GitHub Desktop or screenshots. Demonstrate opening the biomarkers project show how it looks with the waiting commit, which we will do from VSCode.]**
 
 ---
 
 ## Part 2.7 (starts at 33 min, takes 8 min): Working with Branches
 
->Branches let you try new ideas without breaking your main code. Let's make a branch, switch to it, and merge it back.
+>Branches let you try new ideas without breaking your main code. 
+>Branches and the flow are a big topic and there are many ways to use them for different project types.  An example of 6 different methods is here: https://dev.to/juniourrau/6-types-of-git-branching-strategy-g54
+Here I will just show a simple example of making a branch, switching to it, making a change and then merging it back to main.
 
-#### What I Type (Live Coding):
 ```bash
 git branch experiment
 git checkout experiment
@@ -119,27 +155,39 @@ git merge experiment
 **[Aside Look at how this looks in the tool I have used]**
 ---
 
-## Part 2.8 (starts at 41 min, takes 10 min): Resolving a Merge Conflict
+## Part 2.8a (starts at 41 min, takes 10 min): Forgetting a commit message
+>Forgetting a commit message is something that happens to everyone. Here are some ways to fix it.
+>I create a change to the test.sh file then visually commit it without a message.
+> I type the commit at the top and simply close the file down
+
+? DO it again and this time through the command line, make another change
+
+```bash
+# Make a commit without a message
+git add .
+git commit
+```
+>Nano pops up and I do the same thing as I did, enter and close
+
+## Part 2.8b (starts at 41 min, takes 10 min): Resolving a Merge Conflict
 
 >Merge conflicts are one of the most common fears in git, but they're just git's way of asking for your help when two people change the same part of a file. Let's see how to create and fix a simple conflict.
 
 #### What I Type (Live Coding):
 ```bash
-# On main branch, edit README.md
-echo "This is the main branch version." > README.md
+# On main branch, edit README.md in vscode
 git add README.md
 git commit -m "Edit README on main branch"
 
 # Create and switch to a new branch
 git checkout -b conflict-demo
-# Edit the same line in README.md
-echo "This is the conflict-demo branch version." > README.md
+# Edit the same line in README.md in vscode
 git add README.md
 git commit -m "Edit README on conflict-demo branch"
 
-# Switch back to main and make another change
+# Switch back to main
 git checkout main
-echo "Another change on main branch." > README.md
+# edit readme  in vscode
 git add README.md
 git commit -m "Another edit on main branch"
 
@@ -182,9 +230,21 @@ git pull
 git push
 ```
 
+## Part 2.10 gitignore files
+> You may remember that when we created the csv files I observed that we should not put raw data files in git. We can do this by using a .gitignore file. This is a simple text file called .gitignore that lists patterns for files and folders that git should ignore.
+
+```text
+# Ignore all CSV files
+*.csv   
+```bash
+
+## Part 2.11 Project boards
+>ICR GitLab and GitHub both have project boards and issues to help you manage tasks and issues. You can create cards for tasks, assign them to team members, and track progress.
+**[ASIDE: Show GitHub or GitLab project board examples.]**
+
 ---
 
-## Part 2.10 (starts at 56 min, takes 4 min): Best Practices for Research Projects
+## Part 2.12 (starts at 56 min, takes 4 min): Best Practices for Research Projects
 
 >- Commit often with clear messages
 >- Don't put raw data or sensitive files in git
@@ -194,9 +254,6 @@ git push
 
 ---
 
-## Part 2.11 Project boards
->ICR GitLab and GitHub both have project boards and issues to help you manage tasks and issues. You can create cards for tasks, assign them to team members, and track progress.
-**[ASIDE: Show GitHub or GitLab project board examples.]**
 
 ## Session Wrap-up & Homework (starts at 60 min, takes 3 min)
 
