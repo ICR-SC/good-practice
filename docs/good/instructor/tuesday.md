@@ -33,25 +33,19 @@ For more on version control and reproducible research, see [The Turing Way handb
 
 **[ASIDE: Have terminal, VSCode, and browser tabs open for GitHub and ICR GitLab. Make sure yesterday's biomarkers project is available. Check that participants have Git installed.]**
 
-
-## Opening & Welcome
-
-### What I Say:
-"Good morning! Yesterday we set up our project folders and learned some command line basics. Today, we're going to learn about git, the tool that helps us keep track of changes and work together on research code. We'll use examples from our own institution, ICR."
+>"Good morning! Yesterday we set up our project folders and learned some command line basics. Today, we're going to learn about git, the tool that helps us keep track of changes and work together on research code. We'll use examples from our own institution, ICR."
 
 ---
 
 ## Part 2.1 (starts at 0 min, takes 5 min): What is Git?
 
-### What I Say:
-"Git is a tool that helps you save versions of your code and documents, so you can go back in time, undo mistakes, and work with others. It's like a super-powered undo button for your research project."
+>"Git is a tool that helps you save versions of your code and documents, so you can go back in time, undo mistakes, and work with others. It's like a super-powered undo button for your research project."
 
 ---
 
 ## Part 2.2 (starts at 5 min, takes 5 min): Setting Up Git for Your Project
 
-### What I Say:
-"Let's check if git is installed and set up your name and email."
+>"Let's check if git is installed and set up your name and email."
 
 #### What I Type (Live Coding):
 ```bash
@@ -64,8 +58,8 @@ git config --global user.email "your.email@icr.ac.uk"
 
 ## Part 2.3 (starts at 10 min, takes 8 min): Basic Git Commands
 
-### What I Say:
-"Let's turn our biomarkers project into a git repository and learn the basic commands."
+>Let's turn our biomarkers project into a git repository and learn the basic commands.  
+>I am going to do this from the VSCode command line terminal.
 
 #### What I Type (Live Coding):
 ```bash
@@ -82,8 +76,7 @@ git status
 
 ## Part 2.4 (starts at 18 min, takes 5 min): Using Git at ICR
 
-### What I Say:
-"At ICR, we use both GitHub and our internal GitLab for sharing code."
+>At ICR, we use both GitHub and our internal GitLab for sharing code.
 
 **GitHub organisation:** https://github.com/enterprises/icr/organizations
 **ICR GitLab:** https://git.icr.ac.uk/
@@ -94,17 +87,15 @@ git status
 
 ## Part 2.5 (starts at 23 min, takes 5 min): Using Git in IDEs
 
-### What I Say:
-"You can use git inside VSCode or RStudio. Both have built-in tools to help you see changes, commit, and push without using the command line."
+>You can use git inside VSCode or RStudio. Both have built-in tools to help you see changes, commit, and push without using the command line.
 
-**[ASIDE: Show VSCode Source Control panel. In RStudio, show the Git tab if available.]**
+**[ASIDE: Show VSCode Source Control panel.]**
 
 ---
 
 ## Part 2.6 (starts at 28 min, takes 5 min): Using GitHub Desktop
 
-### What I Say:
-"GitHub Desktop is a simple app for managing git visually. You can use it with both GitHub and GitLab repositories."
+>GitHub Desktop is a simple app for managing git visually. You can use it with both GitHub and GitLab repositories.
 
 **[ASIDE: Show GitHub Desktop or screenshots. Demonstrate opening the biomarkers project and making a commit.]**
 
@@ -112,8 +103,7 @@ git status
 
 ## Part 2.7 (starts at 33 min, takes 8 min): Working with Branches
 
-### What I Say:
-"Branches let you try new ideas without breaking your main code. Let's make a branch, switch to it, and merge it back."
+>Branches let you try new ideas without breaking your main code. Let's make a branch, switch to it, and merge it back.
 
 #### What I Type (Live Coding):
 ```bash
@@ -126,12 +116,12 @@ git checkout main
 git merge experiment
 ```
 
+**[Aside Look at how this looks in the tool I have used]**
 ---
 
 ## Part 2.8 (starts at 41 min, takes 10 min): Resolving a Merge Conflict
 
-### What I Say:
-"Merge conflicts are one of the most common fears in git, but they're just git's way of asking for your help when two people change the same part of a file. Let's see how to create and fix a simple conflict."
+>Merge conflicts are one of the most common fears in git, but they're just git's way of asking for your help when two people change the same part of a file. Let's see how to create and fix a simple conflict.
 
 #### What I Type (Live Coding):
 ```bash
@@ -158,35 +148,29 @@ git merge conflict-demo
 # Git will report a conflict in README.md
 ```
 
-#### What I Say:
-"Git will stop and show a conflict in README.md. Open the file and you'll see both versions marked like this:
-
+>Git will stop and show a conflict in README.md. Open the file and you'll see both versions marked like this
 ```text
 <<<<<<< HEAD
 Another change on main branch.
 =======
 This is the conflict-demo branch version.
->>>>>>> conflict-demo
+>>>>>> conflict-demo
 ```
+>Edit the file to keep what you want (or combine both), then save it."
 
-Edit the file to keep what you want (or combine both), then save it."
-
-#### What I Type (Live Coding):
 ```bash
 # After editing README.md to resolve the conflict:
 git add README.md
 git commit -m "Resolve merge conflict in README.md"
 ```
 
-### What I Say:
-"That's it! Merge conflicts are normal and just mean git needs your help. Take your time, read the markers, and choose what you want to keep."
+>That's it! Merge conflicts are normal and just mean git needs your help. Take your time, read the markers, and choose what you want to keep.
 
 ---
 
 ## Part 2.9 (starts at 51 min, takes 5 min): Collaborating with Others
 
-### What I Say:
-"To work with others, you can clone a repository, pull changes, and push your own updates."
+>To work with others, you can clone a repository, pull changes, and push your own updates.
 
 #### What I Type (Live Coding):
 ```bash
@@ -202,14 +186,17 @@ git push
 
 ## Part 2.10 (starts at 56 min, takes 4 min): Best Practices for Research Projects
 
-### What I Say:
-- Commit often with clear messages
-- Don't put raw data or sensitive files in git
-- Use branches for new ideas
-- Always pull before you push
-- Use .gitignore to keep your repository clean
+>- Commit often with clear messages
+>- Don't put raw data or sensitive files in git
+>- Use branches for new ideas, there are many ways to use brances for different projject types
+>- Always pull before you push
+>- Use .gitignore to keep your repository clean
 
 ---
+
+## Part 2.11 Project boards
+>ICR GitLab and GitHub both have project boards and issues to help you manage tasks and issues. You can create cards for tasks, assign them to team members, and track progress.
+**[ASIDE: Show GitHub or GitLab project board examples.]**
 
 ## Session Wrap-up & Homework (starts at 60 min, takes 3 min)
 
