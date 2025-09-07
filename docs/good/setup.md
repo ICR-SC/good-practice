@@ -2,6 +2,7 @@
 ## Prerequisites and Setup Guide
 
 *Complete these setup steps before the first session to ensure a smooth learning experience*
+*If you have any problems, please contact the RSE team for help!*
 
 ---
 

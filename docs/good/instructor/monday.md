@@ -14,8 +14,10 @@
 | 1.6 Login Nodes vs Compute Nodes                |    5 min       | 45 |
 | 1.7 Navigating Locally, Projects, VSCode        |    5 min       | 50 |
 | 1.8 Making a Sensible Project Structure         |    5 min       | 55 |
-| 1.9 Session Wrap-up & Homework                  |    5 min       | 60 |
-| **Total**                                       |   **60 min**   | 60 |
+| 1.9 Adding a file to the Project Structure      |     min        | 60 |
+| 1.10 Writing some bash code                     |     min        | 65 |
+| 1.11 Session Wrap-up & Homework                 |    5 min       | 70 |
+| **Total**                                       |   **70 min**   | 70 |
 
 ---
 
