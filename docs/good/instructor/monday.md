@@ -5,19 +5,20 @@
 
 | Section                                      | Suggested Time | Running Time |
 |----------------------------------------------|:--------------:|:------------:|
-| 1.0 Opening & Welcome                           |    5 min       | 5  |
-| 1.1 What is The Turing Way?                     |    5 min       | 10 |
-| 1.2 Starting a Command Line                     |    5 min       | 15 |
-| 1.3 Basic Local Command Line Functionality      |   10 min       | 25 |
-| 1.4 More Advanced Command Line Tools            |   10 min       | 35 |
-| 1.5 Logging into Alma (HPC Cluster)             |    5 min       | 40 |
-| 1.6 Login Nodes vs Compute Nodes                |    5 min       | 45 |
-| 1.7 Navigating Locally, Projects, VSCode        |    5 min       | 50 |
-| 1.8 Making a Sensible Project Structure         |    5 min       | 55 |
-| 1.9 Adding a file to the Project Structure      |     min        | 60 |
-| 1.10 Writing some bash code                     |     min        | 65 |
-| 1.11 Session Wrap-up & Homework                 |    5 min       | 70 |
-| **Total**                                       |   **70 min**   | 70 |
+| 1.0 Opening & Welcome                           |    5 min       | 0  |
+| 1.1 What is The Turing Way?                     |    5 min       | 5 |
+| 1.2 Starting a Command Line                     |    5 min       | 10 |
+| 1.3 Basic Local Command Line Functionality      |    5 min       | 15 |
+| 1.4 More Advanced Command Line Tools            |    5 min       | 20 |
+| 1.5 Logging into Alma (HPC Cluster)             |    5 min       | 25 |
+| 1.6 Login Nodes vs Compute Nodes                |    5 min       | 30 |
+| 1.7 Navigating Locally, Projects, VSCode        |    5 min       | 35 |
+| 1.8 Making a Sensible Project Structure         |    5 min       | 40 |
+| 1.9 Adding a file to the Project Structure      |    5 min       | 45 |
+| 1.10 Writing some bash code                     |    5 min       | 50 |
+| 1.11 Using ssh-remote code                      |    5 min       | 55 |
+| 1.12 Session Wrap-up & Homework                 |    5 min       | 60 |
+| **Total**                                       |   **60 min**   | 60 |
 
 ---
 
@@ -145,6 +146,7 @@ ssh <username>@alma.icr.ac.uk
 
 ```bash
 srun --pty -t 12:00:00 --cpus-per-task 1 --mem-per-cpu 4021 --partition interactive bash
+squeue -u $USER
 ```
 
 >Now you're on a compute node and can run your analysis.
@@ -157,6 +159,8 @@ srun --pty -t 12:00:00 --cpus-per-task 1 --mem-per-cpu 4021 --partition interact
 >Let's go back to our own computer and make a folder for a reproducible project. We'll use VSCode to work in it.
 
 ```bash
+cd ..
+rm -rf test_folder
 mkdir biomarkers_project
 cd biomarkers_project
 code .
@@ -243,8 +247,19 @@ chmod +x process_data.sh
 >You should see a message for each file. If you want, you can uncomment the `cp` line in the script to actually copy the files to `data/processed`.
 
 
-
 ## Part 1.11 (65 min-5 min)
+> Finally we will look at using VScode with Alma using remote-ssh on VSCode.  This is not something that everyone will do so you may just be interested to watch and see that it is possible.
+> To do this you will need to have followed the set up for remote-ssh in the pre-requisites.  You will also need to have your ssh keys set up on Alma.  If you have not done this please let us know and we can help you with it.
+
+Show the link: https://almacookbook.github.io/ides/remote/
+
+**[ASIDE: Demonstrate remote-ssh connection to Alma in VSCode. Show how to open a terminal and navigate the file system on Alma.]**
+
+**[ASIDE: Also, as an alternative show using the terminal in git and also using scratch for git pull]**
+
+
+
+## Part 1.12 (65 min-5 min)
 ### Session Wrap-up & Homework
 
 >You've learned how to use the command line, log into Alma, and set up a basic project folder. Next time, we'll go deeper into project structure and data sensitivity.

@@ -21,6 +21,7 @@ The summary of the requirements is broken down for each day, with links to fulle
 - [Access a terminal]()
 - [Have an HPC Alma account]()
 - [Optionally set up Alma ssh keys]()
+- [Optionally setup remote-ssh for VSCode](https://almacookbook.github.io/ides/remote/)
 
 ## Tuesday's Session
 - [Install VSCode]()
