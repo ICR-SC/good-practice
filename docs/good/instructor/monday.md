@@ -24,13 +24,13 @@
 ## Pre-Session Setup
 
 **[ASIDE: Have open and visible:
-1) Prerequ: https://icr-sc.github.io/good-practice/good/setup/
-2) Summary: https://icr-sc.github.io/good-practice/good/overview/
-3) Monday: https://icr-sc.github.io/good-practice/good/monday/
-4) Turing Way: https://book.the-turing-way.org/
-5) Have terminal
-6) VSCode open
-Have a clean desktop/folder structure visible.]**
+1) Prerequusites: https://icr-sc.github.io/good-practice/good/setup/  
+2) Summary: https://icr-sc.github.io/good-practice/good/overview/  
+3) Monday: https://icr-sc.github.io/good-practice/good/monday/  
+4) Turing Way: https://book.the-turing-way.org/  
+5) Have terminal  
+6) VSCode open  
+Have a clean desktop/folder structure visible.]**  
 
 
 ## Part 1.0 Opening & Welcome
