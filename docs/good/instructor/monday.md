@@ -21,15 +21,20 @@
 
 ## Pre-Session Setup
 
-**[ASIDE: Have terminal and VSCode open. Share screen showing both. Have a clean desktop/folder structure visible.]**
+**[ASIDE: Have open and visible:
+1) the pages with setup instructions and look
+2) Have terminal
+3) VSCode open
+4) Turing Way
+Have a clean desktop/folder structure visible.]**
 
 
 ## Part 1.0 Opening & Welcome
 
 **What I Say:**
->Good morning everyone! Welcome to our first session in the 'good-practices in research coding' series. Today we're going to get started with the command line and VSCode. >This session is designed for beginners, but even if you have experience, you'll get a refresher and see how things work at our institution.
+>Good morning everyone! Welcome to our first session in the 'good-practices in research coding' series. Today we're going to get started with the command line and VSCode. This session is designed for beginners, but even if you have experience, you'll get a refresher and see how things work at our institution.
 
->These sessions are designed as follow-along sessions, but realistically you may not be following along now as they are designed also for your lunch break. The sessions >are recorded, so you can watch back and follow along when it is most convenient for you.  If you are following along live, type any questions in the chat and one of the >RFSE team memebrs will do their best to help you as it goes.  We are happy to help you with any of these sessions afterwards, just get in touch or come along to one of >our drop in sessions on Monday or Tuesday lunch times.
+>These sessions are designed as follow-along sessions, but realistically you may not be following along now as they are designed also for your lunch break. The sessions >are recorded, so you can watch back and follow along when it is most convenient for you.  If you are following along live, type any questions in the chat and one of the RSE team members will do their best to help you as it goes.  We are happy to help you with any of these sessions afterwards, just get in touch or come along to one of >our drop in sessions on Monday or Tuesday lunch times.
 
 ---
 
