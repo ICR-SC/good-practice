@@ -9,8 +9,8 @@ nav:
       - 'Tuesday': 'good/tuesday.md'    
     - Vibe-coding:
       - 'Overview': 'vibe/overview.md'  
-    - (Admin-Instructors):
-      - 'Good-practice': 'good/instructor/overview.md'  
+  - Admin(Instructors):
+    - 'Good-practice': 'good/instructor/overview.md'  
       
 theme:
   name: material
