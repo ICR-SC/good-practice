@@ -19,6 +19,7 @@ The summary of the requirements is broken down for each day, with links to fulle
 - [Install VSCode]()
 - [Access a terminal]()
 - [Have an HPC Alma account]()
+- [Optionally set up Alma ssh keys]()
 
 ## Tuesdays's Session
 - [Install VSCode]()

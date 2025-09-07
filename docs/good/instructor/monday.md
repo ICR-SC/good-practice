@@ -22,26 +22,25 @@
 ## Pre-Session Setup
 
 **[ASIDE: Have open and visible:
-1) the pages with setup instructions and look
-2) Have terminal
-3) VSCode open
-4) Turing Way
+1) Prerequ: https://icr-sc.github.io/good-practice/good/setup/
+2) Summary: https://icr-sc.github.io/good-practice/good/overview/
+3) Monday: https://icr-sc.github.io/good-practice/good/monday/
+4) Turing Way: https://book.the-turing-way.org/
+5) Have terminal
+6) VSCode open
 Have a clean desktop/folder structure visible.]**
 
 
 ## Part 1.0 Opening & Welcome
 
-**What I Say:**
 >Good morning everyone! Welcome to our first session in the 'good-practices in research coding' series. Today we're going to get started with the command line and VSCode. This session is designed for beginners, but even if you have experience, you'll get a refresher and see how things work at our institution.
 
->These sessions are designed as follow-along sessions, but realistically you may not be following along now as they are designed also for your lunch break. The sessions >are recorded, so you can watch back and follow along when it is most convenient for you.  If you are following along live, type any questions in the chat and one of the RSE team members will do their best to help you as it goes.  We are happy to help you with any of these sessions afterwards, just get in touch or come along to one of >our drop in sessions on Monday or Tuesday lunch times.
+>These sessions are designed as follow-along sessions, a form of participatory live coding. Realistically you may not be following along now as they are designed also for your lunch break. The sessions >are recorded, so you can watch back and follow along when it is most convenient for you.  If you are following along live, type any questions in the chat and one of the RSE team members will do their best to help you as it goes.  We are happy to help you with any of these sessions afterwards, just get in touch or come along to one of >our drop in sessions on Monday or Tuesday lunch times.
 
 ---
 
 ## Part 1.1 (0 min-5 min)
 ### What is The Turing Way?
-
-**What I Say:**
 
 >The Turing Way is an open-source guide to reproducible, ethical, and collaborative research. It helps us make our work understandable and reusable by others. We will >refer to these principles as we go through our sessions this week."
 
@@ -50,8 +49,6 @@ Have a clean desktop/folder structure visible.]**
 
 ## Part 1.2 (5 min-5 min)
 ### Starting a Command Line
-
-**What I Say:**
 
 >Let's open a command line. I'll be using Windows, with a mix of WSL2 and Powershell. If you're on Mac or Linux, you can use the built-in Terminal."
 
@@ -67,10 +64,8 @@ Have a clean desktop/folder structure visible.]**
 ## Part 1.3 (10 min-10 min)
 ### Basic Local Command Line
 
-**What I Say:**
 >Let's try some very basic commands. Type what I type."
 
-**What I Type (Live Coding):**
 ```bash
 # Where am I?
 pwd
@@ -86,7 +81,18 @@ touch example.txt
 ls
 ```
 
-**What I Say:**
+### Editing a File with nano
+>If you want to quickly edit a file from the command line, you can use the `nano` editor. For example, after creating a file with `touch example.txt`, type:
+>
+```bash
+nano example.txt
+```
+>This opens the file in a simple editor. Type your text, then press `Ctrl+O` to save and `Ctrl+X` to exit.
+>You can then type:
+```bash
+cat example.txt
+```
+>to see the contents of your file printed in the terminal.
 >These commands help you navigate and create files and folders. If you get lost, use `pwd` to see where you are.
 
 ---
@@ -94,10 +100,8 @@ ls
 ## Part 1.4 (20 min-10 min)
 ### More Advanced Command Line
 
-**What I Say:**
 >Let's try a few more useful commands. Don't worry if you haven't seen these before!
 
-**What I Type (Live Coding):**
 ```bash
 # See hidden files
 ls -la
@@ -116,50 +120,42 @@ cd ..
 ## Part 1.5 (30 min-5 min)
 ### Logging into Alma
 
-**What I Say:**
 >Now let's log into our HPC cluster, Alma. This is where we run big analyses.
 
 
-**What I Type (Live Coding):**
 ```bash
 ssh <username>@alma.icr.ac.uk
 ```
 
-**What I Say:**
 >You'll need your username and password. If you have trouble, let us know.
+>I have an ssh key set up in windows but not WSL2, you cans ee that in windows I can log straight in but in Ubuntu I need a password.
 
 ---
 
 ## Part 1.6 (35 min-5 min)
 ### Login Nodes vs Compute Nodes
 
-**What I Say:**
 >On Alma, there are login nodes (for connecting and setting up) and compute nodes (for running jobs). To access a compute node for interactive work, use this command:
 
-**What I Type (Live Coding):**
 ```bash
 srun --pty -t 12:00:00 --cpus-per-task 1 --mem-per-cpu 4021 --partition interactive bash
 ```
 
-**What I Say:**
 >Now you're on a compute node and can run your analysis.
-
+>I am going to type exit to return to the login node and exit again to return to my local computer.
 ---
 
 ## Part 1.7 (40 min-5 min)
 ### Project Folder and VSCode
 
-**What I Say:**
 >Let's go back to our own computer and make a folder for a reproducible project. We'll use VSCode to work in it.
 
-**What I Type (Live Coding):**
 ```bash
 mkdir biomarkers_project
 cd biomarkers_project
 code .
 ```
 
-**What I Say:**
 >VSCode will open in your project folder. You can use the built-in terminal to run the same commands we've just learned.
 
 ---
@@ -167,21 +163,84 @@ code .
 ## Part 1.8 (45 min-5 min)
 ### Making a Sensible Project Structure
 
-**What I Say:**
 >Let's quickly make a sensible folder structure for a biomarkers project. We'll talk more about project structure and data sensitivity next time.
 
-**What I Type (Live Coding):**
 ```bash
 mkdir -p data/{raw,processed} src docs results notebooks environment
 ls
 ```
+## Part 1.9 (50 min-5 min)
+### Adding a file
+
+>Let's add a README file to our project to describe it.
+
+```bash
+touch README.md
+ls
+```
+Now you can see that I don't need to use nano to edit this file as I can use VSCode to do that.
 
 ---
 
-## Part 1.9 (65 min-5 min)
+
+## Part 1.10 (55 min-5 min)
+### Writing some bash code
+>Let’s create some very simple data files in our `data/raw` directory, and then write a bash script to “process” them into `data/processed`.
+>I could crate the visually but it is easier to do it from the command line so I will do that.
+
+```bash
+# Make sure you are in your project folder
+cd biomarkers_project
+
+# Create the raw and processed directories if they don't exist
+mkdir -p data/raw data/processed
+
+# Create a simple data file in data/raw
+echo -e "id,value\n1,10\n2,20" > data/raw/data1.csv
+```
+>This is a bash command that creates a new CSV file called data1.csv in the data/raw directory. It >writes two rows of data (with a header row) into the file. The -e flag allows interpretation >of the \n as newlines. We can see the file in VSCode.:
+
+>If I arrow up I get the last command and I can edit it to quickly create 3 more files
+```bash
+echo -e "id,value\n3,30\n4,40" > data/raw/data2.csv
+echo -e "id,value\n5,50\n6,60" > data/raw/data3.csv
+echo -e "id,value\n7,70\n8,80" > data/raw/data4.csv
+```
+
+>Now let’s write a very simple bash script that “processes” these files. For now, it will just print a message for each file (you could also copy them if you want):
+
+```bash
+# Create a script called process_data.sh
+touch src/process_data.sh
+```
+
+>Paste the following into the script:
+
+```bash
+#!/bin/bash
+for file in data/raw/*.csv; do
+	echo "Processing $file"	
+    # Uncomment the next line to actually copy the files
+    # cp "$file" data/processed/	
+done
+```
+
+>The first line is called a "shebang" (or hashbang) line. It should be the very first line in a script file. It tells the operating system to use the Bash shell to interpret and run the script that follows. This ensures that when you execute the script (e.g., with ./process_data.sh), it will be run using Bash, regardless of your default shell.
+
+>Make the script executable and run it:
+
+```bash
+chmod +x process_data.sh
+./process_data.sh
+```
+
+>You should see a message for each file. If you want, you can uncomment the `cp` line in the script to actually copy the files to `data/processed`.
+
+
+
+## Part 1.11 (65 min-5 min)
 ### Session Wrap-up & Homework
 
-**What I Say:**
 >You've learned how to use the command line, log into Alma, and set up a basic project folder. Next time, we'll go deeper into project structure and data sensitivity.
 
 #### Homework (Session Consolidation):
