@@ -37,6 +37,8 @@ Have a clean desktop/folder structure visible.]**
 
 >Good morning everyone! Welcome to our first session in the 'good-practices in research coding' series. Today we're going to get started with the command line and VSCode. This session is designed for beginners, but even if you have experience, you'll get a refresher and see how things work at our institution.
 
+>Introduce yourself and the RSE team members present.
+
 >These sessions are designed as follow-along sessions, a form of participatory live coding. Realistically you may not be following along now as they are designed also for your lunch break. The sessions >are recorded, so you can watch back and follow along when it is most convenient for you.  If you are following along live, type any questions in the chat and one of the RSE team members will do their best to help you as it goes.  We are happy to help you with any of these sessions afterwards, just get in touch or come along to one of >our drop in sessions on Monday or Tuesday lunch times.
 
 ---
