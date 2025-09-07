@@ -17,36 +17,36 @@ The summary of the requirements is broken down for each day, with links to fulle
 ---
 
 ## Monday's Session
-- [**Install VSCode**]()
-- [**Access a terminal**]()
-- [**Have an HPC Alma account**]()
-- [**Optionally set up Alma ssh keys**]()
-- [**Optionally setup remote-ssh for VSCode**](https://code.visualstudio.com/docs/remote/ssh) [AlmaCookBook link](https://almacookbook.github.io/ides/remote/)
+- [**Install VSCode**](#install-vscode)
+- [**Access a terminal**](#access-a-terminal)
+- [**Have an HPC Alma account**](#have-an-hpc-alma-account)
+- [**Optionally set up Alma ssh keys**](#set-up-alma-ssh-keys)
+- [**Optionally setup remote-ssh for VSCode**](#setup-remote-ssh-for-vscode)
 
 
 ## Tuesday's Session
-- [Install VSCode]()
-- [**Install and configure Git**]()
-- [**Install GitHub Desktop (Windows/Mac)**]()
-- [**Set up GitLab access (SSO)**]()
-- [**Set up GitHub access (institutional account)**]()
+- [Install VSCode](#install-vscode)
+- [**Install and configure Git**](#install-and-configure-git)
+- [**Install GitHub Desktop (Windows/Mac)**](#install-github-desktop)
+- [**Set up (internal) GitLab access**](#set-up-gitlab-access)
+- [**Set up GitHub access (institutional account)**](#set-up-github-access)
 
 ## Wednesday's Session
-- [Install VSCode]()
-- [Install and configure Git]()
-- [Set up GitLab access (SSO)]()
-- [**JupyterLab notebooks from Anaconda**]()
+- [Install VSCode](#install-vscode)
+- [Install and configure Git](#install-and-configure-git)
+- [Set up GitLab access (SSO)](#set-up-gitlab-access)
+- [**JupyterLab notebooks from Anaconda**](#jupyterlab-notebooks)
 
 ## Thursday's Session
-- [Install VSCode]()
-- [Install and configure Git]()()
-- [Set up GitLab access (SSO)]()()
-- [**R and RStudio**]()
+- [Install VSCode](#install-vscode)
+- [Install and configure Git](#install-and-configure-git)
+- [Set up GitLab access (SSO)](#set-up-gitlab-access)
+- [**R and RStudio**](#r-and-rstudio)
 
 ## Friday's Session
-- [Install VSCode]()
-- [**Install Conda (Anaconda)**]()
-- [**Optionally Install Docker**]()
+- [Install VSCode](#install-vscode)
+- [**Install Conda (Anaconda)**](#install-conda-anaconda)
+- [**Install Docker**](#install-docker)
 
 ---
 
@@ -56,17 +56,17 @@ For all software installations at the ICR it is recommended to check with servic
 ### Install VSCode
 ### Access a terminal
 ### Have an HPC Alma account
-### Optionally set up Alma ssh keys
-### Optionally setup remote-ssh for VSCode
+### Set up Alma ssh keys
+### Setup remote-ssh for VSCode
 (https://code.visualstudio.com/docs/remote/ssh) [AlmaCookBook link](https://almacookbook.github.io/ides/remote/)
 
 ### Install and configure Git
-### Install GitHub Desktop (Windows/Mac)
-### Set up GitLab access (SSO)
-### Set up GitHub access (institutional account)
-### JupyterLab notebooks from Anaconda
+### Install GitHub Desktop
+### Set up GitLab access
+### Set up GitHub access
+### JupyterLab notebooks
 ### R and RStudio
 ### Install Conda (Anaconda)
-### Optionally Install Docker
+### Install Docker
 
 
