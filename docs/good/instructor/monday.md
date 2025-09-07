@@ -87,15 +87,17 @@ ls
 
 ### Editing a File with nano
 >If you want to quickly edit a file from the command line, you can use the `nano` editor. For example, after creating a file with `touch example.txt`, type:
->
+
 ```bash
 nano example.txt
 ```
 >This opens the file in a simple editor. Type your text, then press `Ctrl+O` to save and `Ctrl+X` to exit.
 >You can then type:
+
 ```bash
 cat example.txt
 ```
+
 >to see the contents of your file printed in the terminal.
 >These commands help you navigate and create files and folders. If you get lost, use `pwd` to see where you are.
 
