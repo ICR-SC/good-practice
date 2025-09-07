@@ -1,6 +1,6 @@
 # Tuesday Session Summary (For Researchers)
 
-## What We Covered
+## Summaty
 
 - Introduction to version control and why it matters for research
 - Setting up Git and configuring your identity
@@ -12,24 +12,9 @@
 - Integrating Git with VSCode and GitHub Desktop
 - Best practices for team coding and project management
 
-## Key Takeaways
 
-- Version control helps you track changes, collaborate, and ensure reproducibility
-- Branching and merging are essential for team workflows
-- Remote repositories (GitHub, GitLab) enable sharing and backup
-- Resolving merge conflicts is a normal part of collaboration
-- VSCode and GitHub Desktop make Git easier to use for beginners
-
-## Homework
-
-- Practice basic Git commands on your project
-- Try creating and merging branches
-- Set up a remote repository and push your changes
-- Review the version control section in The Turing Way handbook
 
 ---
-
-*This summary provides a quick reference to the main skills and concepts introduced in Tuesday's session.*
 
 # Tuesday Resources: Version Control and Collaboration in Research Coding
 
@@ -69,74 +54,82 @@
 
 ## Example Commands Used in Session
 
+### Setting Up Git for Your Project
 ```bash
-# Configure git
+git --version
+git config --list
 git config --global user.name "Your Name"
-git config --global user.email "your.email@domain.com"
-
-# Initialize repository
-git init
-
-# Add and commit files
-git add README.md
-git commit -m "Initial commit"
-
-# Create and switch branches
-git branch feature-branch
-git checkout feature-branch
-
-# Merge branches
-git checkout main
-git merge feature-branch
-
-# Clone repository
-git clone <repo_url>
-
-# Push to remote
-git remote add origin <repo_url>
-git push -u origin main
+git config --global user.email "your.email@icr.ac.uk"
+git config --global init.defaultBranch main
+git config --list
 ```
 
-## Merge Conflict Demo
+### Basic Git Commands
+```bash
+cd biomarkers_project
+code .
+git init
+git status
+git add README.md
+git commit -m "Add README for biomarkers project"
+git status
+```
 
-- **Resolving Merge Conflicts:**
-  https://book.the-turing-way.org/reproducible-research/vcs/vcs-conflicts.html
-  - Step-by-step guide to understanding and resolving merge conflicts in Git.
+### Using Git at ICR
+- [**GitHub organisation:**]) https://github.com/enterprises/icr/organizations)  
+- [**ICR GitLab:** ](https://git.icr.ac.uk/)  
 
-## Additional Reading
+### Setting up keys for GitLab
+```bash
+ssh-keygen -t ecdsa -C ""
+```
+` ~/.ssh/config`
+```text
+# Private GitLab instance
+Host <your_usernames>.git.icr.ac.uk
+  PreferredAuthentications publickey
+  IdentityFile ~/.ssh/id_ecdsa
+```
 
-- **Why Version Control Matters:**
-  https://www.nature.com/articles/d41586-019-02035-0
+### Using the gitlab repository for your project
+```bash
+git init --initial-branch=main
+git remote add origin git@git.icr.ac.uk:ralcraft/biomarkers_project.git
+git add .
+git commit -m "Initial commit"
+git push --set-upstream origin main
+```
 
-- **Collaborative Coding Best Practices:**
-  https://www.turing.ac.uk/research/research-projects/best-practices-collaborative-coding
+### Working with Branches
+```bash
+git branch experiment
+git checkout experiment
+echo "# Testing a new analysis" > test.txt
+git add test.txt
+git commit -m "Add test analysis file"
+git checkout main
+git merge experiment
+```
 
----
+### Collaborating with Others
+```bash
+# Clone a repository (example)
+git clone https://git.icr.ac.uk/yourusername/biomarkers_project.git
+# Pull latest changes
+git pull
+# Push your changes
+git push
+```
+---  
 
-*This resource list supports the Tuesday session and provides links for further exploration and practice.*
+## Homework
 
-# Tuesday Homework: Version Control Practice
+- Practice basic Git commands on your project
+- Try creating and merging branches
+- Set up a remote repository and push your changes
+- Review the version control section in The Turing Way handbook
 
-## Practice Tasks
-
-- Practice basic Git commands in your project:
-  - `git init` (initialize repository)
-  - `git add <file>` (stage changes)
-  - `git commit -m "message"` (save changes)
-  - `git status` (check repository status)
-  - `git log` (view commit history)
-
-- Create and switch branches:
-  - `git branch experiment`
-  - `git checkout experiment`
-  - Make a change, commit it, and merge back to main
-
-- Try resolving a merge conflict (optional):
-  - Follow the steps from today's merge conflict demo
-
-- Set up a remote repository (GitHub or ICR GitLab):
-  - `git remote add origin <repo_url>`
-  - `git push -u origin main`
+---  
 
 ## Reflection
 

@@ -41,13 +41,13 @@ By the end of this course, you will be able to:
 **Format:** 1 hour live session per day, Monday–Friday + homework exercises  
 **Style:** Interactive, hands-on learning with practical application to your research
 
-| Day      | Topic                                 | Live Session Highlights                                 | Homework Focus                                      |
-|----------|---------------------------------------|--------------------------------------------------------|-----------------------------------------------------|
-| [Monday](monday.md)   | Command Line & VSCode Foundations     | Project organization, command line, VSCode setup        | Create standardized project structure               |
-| [Tuesday](tuesday.md)  | Git & Collaboration Workflows         | Git basics, collaboration, merge conflicts, code review | Implement version control workflow                  |
-| [Wednesday](wednesday.md)| Python Development in VSCode            | Testing, ethics, bias detection, analysis pipeline      | Build tested, ethical Python analysis pipeline      |
-| [Thursday](thursday.md) | R Development in RStudio              | Statistical testing, reporting, Python-R integration    | Create R workflow with validation and reporting     |
-| [Friday](friday.md)   | Computational Reproducibility         | Conda/Docker environments, sharing, sustainability      | Complete integrated reproducible research pipeline  |
+| Day                       | Topic                             | Live Session Highlights                             |
+|---------------------------|-----------------------------------|-----------------------------------------------------|
+| [Monday](monday.md)       | Command Line & VSCode Foundations | Project organization, command line, VSCode setup    |
+| [Tuesday](tuesday.md)     | Git & Collaboration Workflows     | Git basics, collaboration, merge conflicts          |
+| [Wednesday](wednesday.md) | Python Development in VSCode      | Testing, analysis pipeline                          |
+| [Thursday](thursday.md)   | R Development in RStudio          | Testing, analysis pipeline                          |
+| [Friday](friday.md)       | Computational Reproducibility     | Conda/Docker environments, sharing, sustainability  |
 
 ---
 
@@ -55,7 +55,7 @@ By the end of this course, you will be able to:
 
 - Laptop with administrator privileges for software installation
 - ICR network access for GitLab and HPC integration
-- Pre-course setup instructions will be provided
+- Pre-course setup instructions 
 
 **All necessary software is free and open-source.**
 

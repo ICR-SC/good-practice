@@ -44,28 +44,92 @@
   
 ## Example Commands Used in Session
 
+### Basic Local Command Line
 ```bash
-# Open terminal and navigate
-ls
-cd <folder>
+# Where am I?
 pwd
-
-# Create folders and files
-mkdir test_folder
-cd test_folder
-touch example.txt
+# List files and folders
 ls
+# Make a new folder for practice
+mkdir test_folder
+# Go into it
+cd test_folder
+# Make a file
+touch example.txt
+# See the file
+ls
+```
 
-# Advanced folder creation
+### Editing a File with nano
+```bash
+nano example.txt
+```
+>This opens the file in a simple editor. Type your text, then press `Ctrl+O` to save and `Ctrl+X` to exit.
+
+```bash
+cat example.txt
+```
+
+### More Advanced Command Line
+
+```bash
+# See hidden files
+ls -la
+# Make several folders at once
 mkdir -p data/{raw,processed}
-
-# Remove file and move up
+# See your folder structure
+ls
+# Remove a file
 rm example.txt
+# Go up a folder
 cd ..
+```
 
-# Open VSCode in project folder
+### Logging into Alma
+```bash
+ssh <username>@alma.icr.ac.uk
+```
+
+### Login Nodes vs Compute Nodes
+```bash
+srun --pty -t 12:00:00 --cpus-per-task 1 --mem-per-cpu 4021 --partition interactive bash
+squeue -u $USER
+```
+
+### Project Folder and VSCode
+```bash
+cd ..
+rm -rf test_folder
+mkdir biomarkers_project
+cd biomarkers_project
 code .
 ```
+
+### Making a Sensible Project Structure
+```bash
+mkdir -p data/{raw,processed} src docs results notebooks environment
+```
+
+### Adding a file
+Let's create a file amd ,ale it executable
+```bash
+touch process_data.sh
+```
+Make the script executable and run it:
+```bash
+chmod +x process_data.sh
+./process_data.sh
+```
+
+
+
+
+
+
+
+
+
+
 
 ## Additional Reading
 
@@ -97,6 +161,8 @@ code .
   - `mkdir -p data/{raw,processed} src docs results notebooks environment`
   - `touch README.md .gitignore`
   - `code .` (open in VSCode)
+
+---  
 
 ## Reflection
 
