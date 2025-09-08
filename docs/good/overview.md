@@ -28,8 +28,8 @@ By the end of this course, you will be able to:
 - **Create standardized project structures** for reproducible workflows
 - **Use version control (Git) effectively** for collaboration and change tracking
 - **GitLab and GitHub repositories** understand how to access the ICR's own instances
-- **Python code in VSCode** with bias detection and robust testing
-- **R in RStudio** with reproducible reporting and publication-ready visualizations
+- **Python code in VSCode** a simple workflow with testing
+- **R in RStudio** a simple workflow with testing
 - **Manage computational environments** using conda and Docker for long-term reproducibility
 - **Apply The Turing Way principles** for transparent, collaborative, and sustainable research
 
@@ -41,13 +41,13 @@ By the end of this course, you will be able to:
 **Format:** 1 hour live session per day, Monday–Friday + homework exercises  
 **Style:** Interactive, hands-on learning with practical application to your research
 
-| Day                       | Topic                                     | Live Session Highlights                             |
-|---------------------------|-------------------------------------------|-----------------------------------------------------|
-| [Monday](monday.md)       | Command Line & VSCode Foundations         | Project organization, command line, VSCode setup    |
-| [Tuesday](tuesday.md)     | Git & Collaboration Workflows             | Git basics, collaboration, merge conflicts          |
-| [Wednesday](wednesday.md) | Python Development in VSCode and JupyerLab| Testing, analysis pipeline                          |
-| [Thursday](thursday.md)   | R Development in RStudio and VSCode       | Testing, analysis pipeline                          |
-| [Friday](friday.md)       | Computational Reproducibility             | Conda/Docker environments, sharing, sustainability  |
+| Day                       | Topic                                     | Live Session Highlights                           |
+|---------------------------|-------------------------------------------|---------------------------------------------------|
+| [Monday](monday.md)       | Command Line & VSCode Foundations         | Project organization, command line, VSCode setup  |
+| [Tuesday](tuesday.md)     | Git & Collaboration Workflows             | Git basics, collaboration, merge conflicts        |
+| [Wednesday](wednesday.md) | Python Development in VSCode              | Testing, analysis pipeline                        |
+| [Thursday](thursday.md)   | R Development in RStudio and VSCode       | Testing, analysis pipeline                        |
+| [Friday](friday.md)       | Computational Reproducibility             | Conda/Docker environments, sharing, sustainability|
 
 ---
 

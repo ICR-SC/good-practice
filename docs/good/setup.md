@@ -35,12 +35,11 @@ The summary of the requirements is broken down for each day, with links to fulle
 - [Install VSCode](#install-vscode)
 - [Install and configure Git](#install-and-configure-git)
 - [Set up GitLab access (SSO)](#set-up-gitlab-access)
-- [**JupyterLab notebooks from Anaconda**](#jupyterlab-notebooks)
 
 ## Thursday's Session
 - [Install VSCode](#install-vscode)
 - [Install and configure Git](#install-and-configure-git)
-- [Set up GitLab access (SSO)](#set-up-gitlab-access)
+- [Set up GitLab access](#set-up-gitlab-access)
 - [**R and RStudio**](#r-and-rstudio)
 
 ## Friday's Session
@@ -61,12 +60,21 @@ For all software installations at the ICR it is recommended to check with servic
 (https://code.visualstudio.com/docs/remote/ssh) [AlmaCookBook link](https://almacookbook.github.io/ides/remote/)
 
 ### Install and configure Git
+
 ### Install GitHub Desktop
+
 ### Set up GitLab access
+
 ### Set up GitHub access
+
 ### JupyterLab notebooks
+
 ### R and RStudio
+For WSL2: `sudo snap install rstudio --classic`
+
 ### Install Conda (Anaconda)
+
 ### Install Docker
+
 
 

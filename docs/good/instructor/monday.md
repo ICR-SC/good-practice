@@ -176,7 +176,7 @@ code .
 >Let's quickly make a sensible folder structure for a biomarkers project. We'll talk more about project structure and data sensitivity next time.
 
 ```bash
-mkdir -p data/{raw,processed} src docs results notebooks environment
+mkdir -p data/{raw,processed} src docs results tests environment
 ls
 ```
 ## Part 1.9 (50 min-5 min)

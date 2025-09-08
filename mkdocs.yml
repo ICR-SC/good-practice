@@ -4,9 +4,11 @@ nav:
   - Webinar Series:
     - Good-practice:
       - 'Overview': 'good/overview.md'
-      - 'Prerequisites': 'good/setup.md'
+      - 'Setup': 'good/setup.md'
       - 'Monday': 'good/monday.md'    
       - 'Tuesday': 'good/tuesday.md'    
+      - 'Wednesday': 'good/wednesday.md'    
+      - 'Thursday': 'good/thursday.md'    
     - Vibe-coding:
       - 'Overview': 'vibe/overview.md'  
   - Admin:
