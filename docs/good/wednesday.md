@@ -5,7 +5,7 @@ Learn how to set up a reproducible research project in Python, manage your code 
 
 ---
 
-### What We Covered
+### What We Cover
 
 - **Project Setup & Data Privacy:**  
   - Reviewed a sensible folder structure for research projects.
