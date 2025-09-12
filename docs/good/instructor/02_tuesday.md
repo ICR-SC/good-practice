@@ -3,21 +3,13 @@
 
 ## Monday Session Timings (Instructor Guide)
 
-| Section                                      | Suggested Time | Running Total |
-|----------------------------------------------|:--------------:|:-------------:|
-| Opening & Welcome                           |    5 min       |      5 min    |
-| Reference to The Turing Way (Version Control)|    2 min       |      7 min    |
-| Pre-Session Setup                           |    3 min       |     10 min    |
-| Introduction to Version Control Concepts     |    5 min       |     15 min    |
-| Setting Up Git & Configuring Identity        |    5 min       |     20 min    |
-| Initializing a Repository & Tracking Changes |    8 min       |     28 min    |
-| Basic Git Commands (add, commit, status, log)|    7 min       |     35 min    |
-| Branching & Collaboration                   |    8 min       |     43 min    |
-| Merge Demo & Resolving Conflicts            |   10 min       |     53 min    |
-| Using GitHub, GitLab, VSCode, GitHub Desktop|    5 min       |     58 min    |
-| Best Practices & Team Coding                |    4 min       |     62 min    |
-| Session Wrap-up & Homework                  |    3 min       |     65 min    |
-| **Total**                                   |   **65 min**   |     65 min    |
+| Part | Section(s) Covered                                                                 | Suggested Time | Running Time |
+|------|------------------------------------------------------------------------------------|:--------------:|:------------:|
+| 1    | Opening, Welcome & Introduction to Version Control                                 |    10 min      |     10       |
+| 2    | Setting Up Git & Basic Commands (config, init, add, commit, status, log)           |    15 min      |     25       |
+| 3    | Remote Repositories & Collaboration (GitHub, GitLab, SSH keys, pushing, pulling)   |    15 min      |     40       |
+| 4    | Branching, Merging & Conflict Resolution                                           |    15 min      |     55       |
+| 5    | Best Practices, Project Boards, Wrap-up & Homework                                 |    10 min      |     65       |
 
 ---
 
@@ -117,6 +109,8 @@ git add .
 git commit -m "Initial commit"
 git push --set-upstream origin main
 ```
+
+> I could have done this a different way but first creating the project in gitlab and cloning it, which is the way I would usually work. One of the reasons for this is that when I create a project through the GitLab or GitHub web interface it will create some of the skepeketin that I want such as a readme and .gitiognore file. Another important file I want is the LICENSE.md file. This is a text file that describes the license under which I am sharing my code. There are many different licenses, and you can find out more about them here: https://choosealicense.com/. I am going to go to main page in GitLab and create a LICNSE,.md file, this will autoamtically give me the license picker.I will choose the MIT license as it is simple and permissive. A license is necessary if you want to share your code with others.
 ---
 
 ## Part 2.5 (starts at 23 min, takes 5 min): Using Git in IDEs

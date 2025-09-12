@@ -58,7 +58,7 @@ Learn how to set up a reproducible research project in Python, manage your code 
 
 ---
 
-## Session Cheat Sheet: Wednesday (Python for Reproducible Research)
+## Session Cheat Sheet: Wednesday
 
 ### Bash/Terminal Commands
 

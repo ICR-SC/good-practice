@@ -16,6 +16,7 @@ Understand the basics of version control with Git, set up repositories, collabor
 - Using GitHub and ICR GitLab for remote collaboration
 - Integrating Git with VSCode and GitHub Desktop
 - Best practices for team coding and project management
+- Choosing a license in GitLab and GitHub
 
 ---
 
@@ -93,6 +94,11 @@ git add test.txt
 git commit -m "Add test analysis file"
 git checkout main
 git merge experiment
+# To merge in changes from main
+git pull origin main
+git merge origin/main
+# Resolve conflicts if needed
+git push
 ```
 
 ### Collaborating with Others
