@@ -58,7 +58,7 @@ Learn how to set up a reproducible research project in R, manage your code and d
 
 ---
 
-## Session Cheat Sheet: Thursday (R for Reproducible Research)
+## Session Cheat Sheet: Thursday
 
 ### Bash/Terminal and RStudio Commands
 

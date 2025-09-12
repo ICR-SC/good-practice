@@ -117,6 +117,8 @@ git add .
 git commit -m "Initial commit"
 git push --set-upstream origin main
 ```
+
+> I could have done this a different way but first creating the project in gitlab and cloning it, which is the way I would usually work. One of the reasons for this is that when I create a project through the GitLab or GitHub web interface it will create some of the skepeketin that I want such as a readme and .gitiognore file. Another important file I want is the LICENSE.md file. This is a text file that describes the license under which I am sharing my code. There are many different licenses, and you can find out more about them here: https://choosealicense.com/. I am going to go to main page in GitLab and create a LICNSE,.md file, this will autoamtically give me the license picker.I will choose the MIT license as it is simple and permissive. A license is necessary if you want to share your code with others.
 ---
 
 ## Part 2.5 (starts at 23 min, takes 5 min): Using Git in IDEs
