@@ -3,21 +3,13 @@
 
 ## Monday Session Timings (Instructor Guide)
 
-| Section                                      | Suggested Time | Running Total |
-|----------------------------------------------|:--------------:|:-------------:|
-| Opening & Welcome                           |    5 min       |      5 min    |
-| Reference to The Turing Way (Version Control)|    2 min       |      7 min    |
-| Pre-Session Setup                           |    3 min       |     10 min    |
-| Introduction to Version Control Concepts     |    5 min       |     15 min    |
-| Setting Up Git & Configuring Identity        |    5 min       |     20 min    |
-| Initializing a Repository & Tracking Changes |    8 min       |     28 min    |
-| Basic Git Commands (add, commit, status, log)|    7 min       |     35 min    |
-| Branching & Collaboration                   |    8 min       |     43 min    |
-| Merge Demo & Resolving Conflicts            |   10 min       |     53 min    |
-| Using GitHub, GitLab, VSCode, GitHub Desktop|    5 min       |     58 min    |
-| Best Practices & Team Coding                |    4 min       |     62 min    |
-| Session Wrap-up & Homework                  |    3 min       |     65 min    |
-| **Total**                                   |   **65 min**   |     65 min    |
+| Part | Section(s) Covered                                                                 | Suggested Time | Running Time |
+|------|------------------------------------------------------------------------------------|:--------------:|:------------:|
+| 1    | Opening, Welcome & Introduction to Version Control                                 |    10 min      |     10       |
+| 2    | Setting Up Git & Basic Commands (config, init, add, commit, status, log)           |    15 min      |     25       |
+| 3    | Remote Repositories & Collaboration (GitHub, GitLab, SSH keys, pushing, pulling)   |    15 min      |     40       |
+| 4    | Branching, Merging & Conflict Resolution                                           |    15 min      |     55       |
+| 5    | Best Practices, Project Boards, Wrap-up & Homework                                 |    10 min      |     65       |
 
 ---
 
