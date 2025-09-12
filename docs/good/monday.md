@@ -1,22 +1,120 @@
-# Monday Session Summary (For Researchers)
+# Monday Overview: Good-Practices in Research Coding
 
-## What We Covered
+**Goal:**  
+Learn how to use the command line, log into the Alma HPC cluster, and set up a sensible, reproducible project folder for your research.
+
+---
+
+## What We Cover
 
 - How to open and use the command line (Windows, Mac, Linux)
 - Basic navigation and file/folder creation: `ls`, `cd`, `pwd`, `mkdir`, `touch`
+- Editing files with `nano` and viewing them with `cat`
 - Logging into the Alma HPC cluster using SSH
 - Understanding login nodes vs compute nodes on Alma
 - Running interactive jobs with `srun`
-- Creating a simple project folder for your research
+- Creating a simple, organized project folder for your research
 - Opening and using VSCode for coding and project management
-- Setting up a basic folder structure for a research project
+
+---
 
 ## Key Takeaways
 
-- Command line skills help you work efficiently and reproducibly
-- Alma HPC is used for large-scale analyses; know how to log in and run jobs
-- VSCode is a powerful tool for coding, documentation, and project organization
-- A clear folder structure makes your research easier to manage and share
+- The command line is a powerful tool for navigating, creating, and managing files and folders.
+- Use [`.gitignore`](.gitignore ) to keep sensitive or unnecessary files out of version control.
+- Organize your project folders for clarity and reproducibility.
+- Use VSCode’s built-in terminal and editor to streamline your workflow.
+- Practice makes perfect—try these commands on your own!
+
+---
+
+## Session Cheat Sheet: Monday
+
+### Basic Command Line
+
+```bash
+# Where am I?
+pwd
+
+# List files and folders
+ls
+
+# Make a new folder for practice
+mkdir test_folder
+
+# Go into it
+cd test_folder
+
+# Make a file
+touch example.txt
+
+# See the file
+ls
+```
+
+### Editing and Viewing Files
+
+```bash
+nano example.txt
+# (Type your text, then Ctrl+O to save, Ctrl+X to exit)
+
+cat example.txt
+```
+
+### More Advanced Command Line
+
+```bash
+# See hidden files
+ls -la
+
+# Make several folders at once
+mkdir -p data/{raw,processed}
+
+# Remove a file
+rm example.txt
+
+# Go up a folder
+cd ..
+```
+
+### Logging into Alma
+
+```bash
+ssh <username>@alma.icr.ac.uk
+```
+
+### Compute Nodes
+
+```bash
+srun --pty -t 12:00:00 --cpus-per-task 1 --mem-per-cpu 4021 --partition interactive bash
+squeue -u $USER
+```
+
+### Project Folder and VSCode
+
+```bash
+cd ..
+rm -rf test_folder
+mkdir biomarkers_project
+cd biomarkers_project
+code .
+```
+
+### Making a Sensible Project Structure
+
+```bash
+mkdir -p data/{raw,processed} src docs results notebooks environment
+```
+
+### Adding and Running a Script
+
+```bash
+touch process_data.sh
+chmod +x process_data.sh
+./process_data.sh
+```
+
+---
 
 ## Homework
 
@@ -26,100 +124,8 @@
 
 ---
 
-*This summary provides a quick reference to the main skills and concepts introduced in Monday's session.*
-
-# Monday Resources: Good-Practices in Research Coding
-
-## Key References
-
-- **The Turing Way Handbook (General):**
-  https://the-turing-way.netlify.app/
-  - Principles of reproducible, ethical, and collaborative research.
-
-- **The Turing Way: Reproducible Research Guide:**
-  https://book.the-turing-way.org/reproducible-research/reproducible-research
-  - Sections referenced throughout the week for best practices in reproducible research.
-
-## Institutional Resources
-
-- **Alma HPC Cluster (ICR):**
-  - [Alma Documentation](https://alma.icr.ac.uk/) *(internal access required)*
-  - SSH access: `ssh <username>@alma.icr.ac.uk`
-
-- **VSCode Documentation:**
-  https://code.visualstudio.com/docs
-  - Getting started, integrated terminal, extensions, and project setup.
-
-## Command Line Basics
-
-- **Linux Command Line Tutorial:**
-  https://ryanstutorials.net/linuxtutorial/
-  - Navigation, file/folder creation, and basic commands.
-
-## Example Commands Used in Session
-
-```bash
-# Open terminal and navigate
-ls
-cd <folder>
-pwd
-
-# Create folders and files
-mkdir test_folder
-cd test_folder
-touch example.txt
-ls
-
-# Advanced folder creation
-mkdir -p data/{raw,processed}
-
-# Remove file and move up
-rm example.txt
-cd ..
-
-# Open VSCode in project folder
-code .
-```
-
-## Additional Reading
-
-- **Why Reproducibility Matters:**
-  https://www.nature.com/articles/d41586-019-00067-3
-
-- **VSCode for Research:**
-  https://www.r-bloggers.com/2021/03/vscode-for-research/
-
----
-
-*This resource list supports the Monday session and provides links for further exploration and practice.*
-
-# Monday Homework: Session Consolidation
-
-## Practice Tasks
-
-- Open your terminal and run the basic commands:
-  - `pwd` (print working directory)
-  - `ls` (list files and folders)
-  - `mkdir` (make new folder)
-  - `cd` (change directory)
-  - `touch` (create a new file)
-
-- Try logging into Alma (if you have access):
-  - `ssh <username>@alma.icr.ac.uk`
-
-- Create a simple project folder for your research:
-  - `mkdir my_research_project`
-  - `cd my_research_project`
-  - `mkdir -p data/{raw,processed} src docs results notebooks environment`
-  - `touch README.md .gitignore`
-  - `code .` (open in VSCode)
-
 ## Reflection
 
 - What did you find easy or challenging about using the command line?
 - Were you able to log into Alma? If not, what issues did you encounter?
 - How does organizing your project folder help your research?
-
----
-
-*Complete these tasks before the next session to consolidate your skills and prepare for working with version control.*
