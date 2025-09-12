@@ -28,6 +28,10 @@ Learn how to use the command line, log into the Alma HPC cluster, and set up a s
 
 ---
 
+## Video of session
+
+<iframe width="560" height="315" src="https://vimeo.com/1118101761/8e4f975eed" frameborder="0" allowfullscreen></iframe>
+
 ## Session Cheat Sheet: Monday
 
 ### Basic Command Line
