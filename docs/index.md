@@ -1,29 +1,6 @@
 # Research Software Good Practice
-<a href="https://book.the-turing-way.org/"><img src="assets/turing.png" alt="Turing Logo" align="right" width="300"/></a>
-Research software development differs from standard software development [in some core ways](#what-are-the-challenges-in-research-software). These guides aim to provide a set of good practices that can be applied to research software development to ensure that the software is of high quality, maintainable, reusable and reproducible.
 
-## Research Good-Practice Initiatives
-There are many initiatives in the research software community to develop training and standards. One of these that is well established is [The Turing Way](https://book.the-turing-way.org/), a published gude to *reproducible, ethical and collaborative data science.* (The Turing Way 2025).
-
-
-## ICR Internal Training  
-The ICR runs some courses on research software development best practices, covering training through the [carpentries organisation](https://carpentries.org/), usually in-person and can be found on the [ICR training website](https://training.icr.ac.uk/) (search *carpentry*). 
-
-### Webinar Series: Good-Practice in Research Software
-This is a series of webinars run by the ICR Research Software Engineering team, covering good practices in research software development. The webinars are recorded and available on (link to come soon).  
-The [overview page is here](good/overview.md), and in summary it covers:  
-- Monday: Bash and VScode  
-- Tuesday: Git and GitHub  
-- Wednesday: Python projects  
-- Thursday: R projects  
-- Friday: Conda environments  
-
-### Webinar Series: Vibe-Coding
-Coming soon in February 2026  
-
-## Challenges in Research Software
-
-Research software development differs from standard software development in some core ways. This resource aims to help with good practices that can be applied to research software development to ensure that the software is of high quality, maintainable, reusable and reproducible.
+Research software development differs from standard software development in some core ways. This guide aims to provide a set of good practices that can be applied to research software development to ensure that the software is of high quality, maintainable, reusable and importantly - reproducible.
 
 Key differences include:
 
@@ -37,26 +14,22 @@ Key differences include:
 
 - Research software is often developed in a collaborative environment, with multiple researchers working on the same codebase. This can lead to issues with code quality, consistency, and maintainability.
 
-- A demonstration of correctness may be required for a research paper. This is an output of the software that differs from traditional software (where the software itself is the output).
+- A demonstration of correctness is often required for research software for a research paper. This is an ouput of the software that differs from traditional sofwtare (where the software itself is the output).
 
 Given these challenges, it can be difficult to apply standard software development practices to research software.
 
 However, there are a number of good practices that can be applied to research software development to ensure that the software is of high quality, maintainable, and reusable. These practices include:
-- Writing clean, readable code
 - Using version control
-- Documenting the software
+- Writing clean, readable code
 - Writing tests
+- Documenting the software
 - Using continuous integration
-- Using environments
+- Using a package manager
 - Using a code review process
+
+This guide provides an overview of each of these practices, as well as links to further resources that can help you to implement them in your own research software projects.
 
 ---  
 
-## References  
-- The Turing Way Community. (2022). The Turing Way: A handbook for reproducible, ethical and collaborative research (1.0.2). Zenodo. [DOI The Turing Way Community (2025).](https://zenodo.org/records/15213042)  
-
-
-
-
-
+As a self-referential example, this guide is written in markdown and rendered using mkdocs. The build process is autoamtically kicked off with github actions when a change is pulled into the main branch.  The source code for this guide is available on GitHub at [ICR-RSE-Group/good-practice](https://github.com/ICR-RSE-Group/good-practice)
 
