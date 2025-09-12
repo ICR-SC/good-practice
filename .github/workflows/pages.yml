@@ -3,7 +3,6 @@ on:
   push:
     branches:
       - main
-      - fix-issue-01
 permissions:
   contents: write
 jobs:
