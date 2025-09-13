@@ -6,6 +6,16 @@
 *Duration: 60 minutes | Format: Participatory live coding*
 *Homework: Build a simple, reproducible analysis pipeline in Python*
 
+## Session Overview & Timing Guide
+
+| Section                                      | Time (min) | Start Time | Description                                                      |
+|-----------------------------------------------|------------|------------|------------------------------------------------------------------|
+| 1. Project Setup & Data Privacy               | 10         | 0          | Folder structure, .gitignore, and data privacy basics            |
+| 2. Git & Virtual Environment Setup            | 10         | 10         | Git tracking in VSCode, creating and using a Python venv         |
+| 3. Writing Reproducible Python Code (Pipeline)| 20         | 20         | Downloading data, writing/structuring analysis code, pipeline    |
+| 4. Basic Testing                             | 10         | 40         | Writing and running simple tests with pytest                     |
+| 5. Ethics, Documentation & Homework           | 10         | 50         | Code documentation, ethical coding, session wrap-up, homework    |
+
 ---
 
 # Reference
