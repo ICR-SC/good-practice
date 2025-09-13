@@ -32,9 +32,9 @@ Understand the basics of version control with Git, set up repositories, collabor
 
 ## Videos of session
 
-Link to video [Good Practice-Session 02 Part 01](https://youtu.be/aLvv7utZYbA)  
-Link to video [Good Practice-Session 02 Part 02](https://youtu.be/J2FkQRxtatY)  
-Link to video [Good Practice-Session 02 Part 03](https://youtu.be/uPKRqBp-Av8)  
+Link to video [Good Practice-Session 02 Part 01](https://youtu.be/aLvv7utZYbA)- 8.45  
+Link to video [Good Practice-Session 02 Part 02](https://youtu.be/J2FkQRxtatY)- 27.20  
+Link to video [Good Practice-Session 02 Part 03](https://youtu.be/uPKRqBp-Av8)- 24.30  
 
 ---  
 

@@ -52,9 +52,9 @@ Learn how to set up a reproducible research project in Python, manage your code 
 
 ## Videos of session
 
-Link to video [Good Practice-Session 03 Part 01](https://youtu.be/pgwfC7wSRls)  
-Link to video [Good Practice-Session 03 Part 02](https://youtu.be/R7VAxLVDsv0)  
-Link to video [Good Practice-Session 03 Part 03](https://youtu.be/-PgKyz9yLwY)  
+Link to video [Good Practice-Session 03 Part 01](https://youtu.be/pgwfC7wSRls)- 21.19  
+Link to video [Good Practice-Session 03 Part 02](https://youtu.be/R7VAxLVDsv0)- 15.06  
+Link to video [Good Practice-Session 03 Part 03](https://youtu.be/-PgKyz9yLwY)- 19.43  
 
 ---
 
