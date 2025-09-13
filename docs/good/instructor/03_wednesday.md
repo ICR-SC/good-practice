@@ -1,5 +1,3 @@
-
-
 # Wednesday Session: Python for Reproducible Research (Beginner Edition)
 ## Live Coding Script for Instructors
 
