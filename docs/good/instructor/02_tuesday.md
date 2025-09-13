@@ -13,23 +13,24 @@
 
 ---
 
-## 
-
-*Duration: 60 minutes | Format: Participatory live coding*
-*Homework: Short session consolidation*
-
-# Reference
-For more on version control and reproducible research, see [The Turing Way handbook: Version Control](https://book.the-turing-way.org/reproducible-research/vcs). This resource explains why version control is essential for collaborative, transparent, and reproducible research.
-
 ## Pre-Session Setup
 
 **[ASIDE: Have terminal, VSCode, and browser tabs open for GitHub and ICR GitLab. Make sure yesterday's biomarkers project is available. Check that participants have Git installed.]**
 
->"Good morning! Yesterday we set up our project folders and learned some command line basics. Today, we're going to learn about git, the tool that helps us keep track of changes and work together on research code. We'll use examples from our own institution, ICR."
+1) Prerequsites: [https://icr-sc.github.io/good-practice/good/setup/](https://icr-sc.github.io/good-practice/good/setup/)
+2) Summary: [https://icr-sc.github.io/good-practice/good/overview/](https://icr-sc.github.io/good-practice/good/overview/)
+3) Tuesday: [https://icr-sc.github.io/good-practice/good/tuesday/](https://icr-sc.github.io/good-practice/good/tuesday/)
+4) Turing Way: [https://book.the-turing-way.org/](https://book.the-turing-way.org/)
+5) Have terminal  
+6) VSCode open  
+Have a clean desktop/folder structure visible.]**  
 
 ---
 
 ## Part 1: Opening, Welcome and Introduction to Version Control
+
+>"Good morning! Yesterday we set up our project folders and learned some command line basics. Today, we're going to learn about git, the tool that helps us keep track of changes and work together on research code. We'll use examples from our own institution, ICR."
+
 
 >"Git is a tool that helps you save versions of your code and documents, so you can go back in time, undo mistakes, and work with others. It's like a super-powered undo button for your research project."
 
