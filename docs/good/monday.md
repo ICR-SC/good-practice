@@ -30,9 +30,10 @@ Learn how to use the command line, log into the Alma HPC cluster, and set up a s
 
 ## Videos of session
 
-Link to video [Good Practice-Session 01 Part 01](https://youtu.be/UetHMph6iQo)- 19.19  
-Link to video [Good Practice-Session 01 Part 02](https://youtu.be/ckdpX6D-fdk)- 20.58  
-Link to video [Good Practice-Session 01 Part 03](https://youtu.be/eZOjNbW5KYQ)- 28.04  
+- [Section 1/3](https://youtu.be/LJjvqBXqidI) 18.07  
+- [Section 2/3](https://youtu.be/hNwI-jPoU3A) 19.02  
+- [Section 3/3](https://youtu.be/lj9t9o2jRxw) 24.12  
+
 
 ## Session Cheat Sheet: Monday
 

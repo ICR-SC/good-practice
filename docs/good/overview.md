@@ -51,6 +51,27 @@ By the end of this course, you will be able to:
 
 ---
 
+## Video Playlists
+
+### Monday
+- [Section 1/3](https://youtu.be/LJjvqBXqidI) 18.07  
+- [Section 2/3](https://youtu.be/hNwI-jPoU3A) 19.02  
+- [Section 3/3](https://youtu.be/lj9t9o2jRxw) 24.12  
+
+### Tuesday
+- [Section 1/3](https://youtu.be/aLvv7utZYbA) 8.45  
+- [Section 2/3](https://youtu.be/J2FkQRxtatY) 27.20  
+- [Section 3/3](https://youtu.be/uPKRqBp-Av8) 24.30  
+
+### Wednesday
+- [Section 1/3](https://youtu.be/pgwfC7wSRls) 21.19  
+- [Section 2/3](https://youtu.be/R7VAxLVDsv0) 15.06  
+- [Section 3/3](https://youtu.be/-PgKyz9yLwY) 19.43  
+
+### Thursday
+
+### Friday
+
 ## **Technical Requirements**
 
 - Laptop with administrator privileges for software installation
