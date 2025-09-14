@@ -80,9 +80,7 @@ Use the built-in Terminal application.
 ---  
 
 ### Have an HPC Alma account
-#### Windows
-
-#### Mac
+[Alma Pages on Nexus](https://nexus.icr.ac.uk/strategic-initiatives/sc/hpc/Pages/Getting-Started.aspx) have information on getting started with Alma, or contact [schelpdesk.icr.ac.uk](mailto:schelpdesk.icr.ac.uk).
 
 ---  
 
