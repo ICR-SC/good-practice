@@ -56,7 +56,11 @@ For all software installations at the ICR it is recommended to check with servic
 ### Install VSCode
 #### Windows
 For Windows The application can be installed from Company Portal.  
-<img src="imgs/vscode-image.png" alt="VSCode" width="400"/>
+<img src="good/imgs/vscode-image.png" alt="VSCode" width="400"/>
+
+<img src="../imgs/vscode-image.png" alt="VSCode" width="400"/>
+
+<img src="/good/imgs/vscode-image.png" alt="VSCode" width="400"/>
 
 #### Mac
 For Mac the application can be downloaded and installed from here [code.visualstudio.com/Download](https://code.visualstudio.com/Download).  
