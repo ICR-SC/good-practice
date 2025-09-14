@@ -56,11 +56,7 @@ For all software installations at the ICR it is recommended to check with servic
 ### Install VSCode
 #### Windows
 For Windows The application can be installed from Company Portal.  
-<img src="good/imgs/vscode-image.png" alt="VSCode" width="400"/>
-
 <img src="../imgs/vscode-image.png" alt="VSCode" width="400"/>
-
-<img src="/good/imgs/vscode-image.png" alt="VSCode" width="400"/>
 
 #### Mac
 For Mac the application can be downloaded and installed from here [code.visualstudio.com/Download](https://code.visualstudio.com/Download).  
@@ -69,10 +65,10 @@ Choose the User Installer for your system (Apple Silicon or Intel).
 ### Access a terminal
 #### Windows
 Use PowerShell or Command Prompt. But install WSL2 (Windows Subsystem for Linux) for a better experience. This can be installed from Windows Store:  
-<img src="imgs/wsl2-image.png" alt="WSL2" width="400"/>  
+<img src="../imgs/wsl2-image.png" alt="WSL2" width="400"/>  
 
 Alternatively you can use GitBash for a linux-like terminal experience. This is also available on company portal.  
-<img src="imgs/git-image.png" alt="GitHub Desktop" width="400"/>
+<img src="../imgs/git-image.png" alt="GitHub Desktop" width="400"/>
 
 #### Mac
 Use the built-in Terminal application.
@@ -97,7 +93,7 @@ Use the built-in Terminal application.
 ### Install and configure Git
 #### Windows
 Install Git from the Company Portal:  
-<img src="good/imgs/git-image.png" alt="Git-Install" width="400"/>
+<img src="../imgs/git-image.png" alt="Git-Install" width="400"/>
 
 #### Mac
 Use HomeBrew, the mac store, or download from [git-scm.com](https://git-scm.com/download/mac).
@@ -105,7 +101,7 @@ Use HomeBrew, the mac store, or download from [git-scm.com](https://git-scm.com/
 ### Install GitHub Desktop
 #### Windows
 For Windows The application can be installed from Company Portal.  
-<img src="imgs/github-desktop-image.png" alt="GitHub Desktop" width="400"/>
+<img src="../imgs/github-desktop-image.png" alt="GitHub Desktop" width="400"/>
 
 #### Mac
 For Mac the application can be downloaded and installed from here [desktop.github.com](https://desktop.github.com/).
@@ -119,14 +115,14 @@ Send an email to [schelpdesk.icr.ac.uk](mailto:schelpdesk.icr.ac.uk) to request 
 ### Install Python
 #### Windows
 For Windows The application can be installed from Company Portal.  
-<img src="imgs/code-image.png" alt="VSCode" width="400"/>
+<img src="../imgs/code-image.png" alt="VSCode" width="400"/>
 
 #### Mac
 Python should be pre-installed. You can check by running `python3 --version` in the terminal. If not, install it from [python.org](https://www.python.org/downloads/macos/).
 
 ### R and RStudio
 #### Windows
-<img src="imgs/code-image.png" alt="Code" width="400"/>
+<img src="../imgs/code-image.png" alt="Code" width="400"/>
 
 #### For WSL2
 To use RStudio from WSL2 as if native install it in linux. This command worked for me:  
@@ -137,7 +133,7 @@ Install R from [CRAN](https://cran.r-project.org/bin/macosx/) and RStudio from [
 
 ### Install Conda (Anaconda)
 Install Anaconda from the Company Portal:  
-<img src="imgs/anaconda-image.png" alt="Anaconda" width="400"/>
+<img src="../imgs/anaconda-image.png" alt="Anaconda" width="400"/>
 
 #### Mac
 Install Anaconda from [anaconda.com](https://www.anaconda.com/products/distribution#download-section):
@@ -145,7 +141,7 @@ Install Anaconda from [anaconda.com](https://www.anaconda.com/products/distribut
 ### Install Docker
 #### Windows
 For Windows The application can be installed from Company Portal.  
-<img src="imgs/docker-image.png" alt="Docker" width="400"/>
+<img src="../imgs/docker-image.png" alt="Docker" width="400"/>
 
 #### Mac
 For Mac the application can be downloaded and installed from here [docker.com](https://www.docker.com/products/docker-desktop/).
