@@ -93,7 +93,7 @@ Use the built-in Terminal application.
 ### Install and configure Git
 #### Windows
 Install Git from the Company Portal:  
-<img src="assets/git-image.png" alt="Git" width="400"/>
+<img src="assets/git-image.png" alt="Git-Install" width="400"/>
 
 #### Mac
 Use HomeBrew, the mac store, or download from [git-scm.com](https://git-scm.com/download/mac).
