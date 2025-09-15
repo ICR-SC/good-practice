@@ -166,4 +166,11 @@ For Windows The application can be installed from Company Portal.
 #### Mac
 For Mac the application can be downloaded and installed from here [docker.com](https://www.docker.com/products/docker-desktop/).
 
+### See Hidden Files
+#### Windows
+For Windows The application can be installed from Company Portal.  
+<img src="../imgs/hidden-image.png" alt="HiddenFiles" width="400"/>
+
+#### Mac
+Inside Finder on Mac, you can show hidden files with "Cmd + Shift + ."
 
