@@ -178,4 +178,10 @@ test_that("pipeline smoke test", {
 echo -e "# Analysis Scripts\nThis folder contains R scripts for data analysis. Each script is documented and tested." > src/R/README.md
 cat src/R/README.md
 ```
+---  
 
+## References
+- Cerami et al. The cBio Cancer Genomics Portal: An Open Platform for Exploring Multidimensional Cancer Genomics Data. Cancer Discovery. May 2012; 401. [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/22588877)
+- Gao et al. Integrative analysis of complex cancer genomics and clinical profiles using the cBioPortal. Sci. Signal. 6, pl1 (2013). [PubMed](https://www.ncbi.nlm.nih.gov/pubmed/23550210)
+- de Bruijn et al. Analysis and Visualization of Longitudinal Genomic and Clinical Data from the AACR Project GENIE Biopharma Collaborative in cBioPortal. Cancer Res (2023). [PubMed](https://pubmed.ncbi.nlm.nih.gov/37668528/)
+- DataSet: https://www.cbioportal.org/study/plots?id=aml_tcga_gdc
