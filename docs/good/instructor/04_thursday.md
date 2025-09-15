@@ -71,6 +71,7 @@ git status
 >A reproducible environment keeps your project dependencies organized. Let's use `renv` to manage packages.
 
 ```r
+# Using the r console in RStudio
 install.packages("renv")
 renv::init()
 install.packages(c("tidyverse", "testthat"))
@@ -91,7 +92,9 @@ renv::snapshot()
 
 ## Part 3.4 (starts at 20 min, takes 15 min): Writing Simple, Reproducible R Code
 > Let's download a public dataset so that we have something a little meaningful to work with. We can use bash to do this and download from cBioPortal here: https://www.cbioportal.org/datasets. We will use this set: Acute Myeloid Leukemia (TARGET GDC, 2025) which is 66MB.
+
 ```bash
+# Using bash
 mkdir -p data/raw
 wget -O data/raw/aml_tcga_gdc.tar.gz https://cbioportal-datahub.s3.amazonaws.com/aml_tcga_gdc.tar.gz
 tar -xzvf data/raw/aml_tcga_gdc.tar.gz -C data/raw

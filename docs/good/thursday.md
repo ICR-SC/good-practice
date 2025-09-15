@@ -82,7 +82,7 @@ git status
 ### R Environment Setup
 
 ```r
-# Install and initialize renv for reproducible environments
+# Using the R console in RStudio
 install.packages("renv")
 renv::init()
 install.packages(c("tidyverse", "testthat"))
@@ -90,12 +90,11 @@ renv::snapshot()
 ```
 
 ### Data Download and Extraction
-
-```r
-# Download and extract a dataset from cBioPortal
-if (!dir.exists("data/raw")) dir.create("data/raw", recursive = TRUE)
-download.file("https://cbioportal-datahub.s3.amazonaws.com/aml_tcga_gdc.tar.gz", destfile = "data/raw/aml_tcga_gdc.tar.gz")
-untar("data/raw/aml_tcga_gdc.tar.gz", exdir = "data/raw")
+```bash
+# Using the bash terminal in R Studio or your system terminal
+mkdir -p data/raw
+wget -O data/raw/aml_tcga_gdc.tar.gz https://cbioportal-datahub.s3.amazonaws.com/aml_tcga_gdc.tar.gz
+tar -xzvf data/raw/aml_tcga_gdc.tar.gz -C data/raw
 ```
 
 ---
@@ -174,6 +173,7 @@ test_that("pipeline smoke test", {
 
 #### Add a README to your analysis folder
 
+`bash`
 ```bash
 echo -e "# Analysis Scripts\nThis folder contains R scripts for data analysis. Each script is documented and tested." > src/R/README.md
 cat src/R/README.md
