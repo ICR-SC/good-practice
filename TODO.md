@@ -14,5 +14,5 @@
 [x] - Make the final overview consistent with everything I have
 [x] - Test them all again
 [x] - Record each session using whereby popups and streamlit screen cast.
-[ ] - Add references to cbioportal and the used dataset, demo how the link is found
+[x] - Add references to cbioportal and the used dataset, demo how the link is found
 [x] - Make sure license is both in code and in demo

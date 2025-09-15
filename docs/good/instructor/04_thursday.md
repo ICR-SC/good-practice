@@ -35,9 +35,11 @@ cat .gitignore
 >We use a `.gitignore` file to protect sensitive data and keep our code clean. Let's add some common R exclusions.
 
 ```bash
-echo ".Rhistory\n.RData\n.Rproj.user/\nrenv/" >> .gitignore
+echo -e ".Rhistory\n.RData\n.Rproj.user/\nrenv/" >> .gitignore
 cat .gitignore
 ```
+
+>The difference between `>` and `>>` is that `>` overwrites the file, while `>>` appends to it. Always use `>>` when adding to `.gitignore`. Or you could ammend in the editor of VSCode too.
 
 >We also want to make sure we have the folders for R.
 
@@ -47,6 +49,9 @@ ls
 ```
 
 ---
+
+>Open rstudio (use the command line) and then create a new project in the current directory. Now we can see the files we have created. If you have not already initiaised git from the git session do `git init`
+
 
 ## Part 3.2 (starts at 10 min, takes 5 min): Setting Up Git in RStudio
 
