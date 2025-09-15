@@ -116,10 +116,12 @@ For Mac the application can be downloaded and installed from here [desktop.githu
 ---  
 
 ### Set up GitLab access
-We will walk through this in the *git* session: [docs.gitlab.com/user/ssh](https://docs.gitlab.com/user/ssh/)
+Internal GitLab is here: [git.icr.ac.uk/](https://git.icr.ac.uk/) - sign on using LDAP and your ICR shortname and password.  
+We will walk through this ssh key setup in the *git* session: [docs.gitlab.com/user/ssh](https://docs.gitlab.com/user/ssh/)  
 
 ### Set up GitHub access
 Send an email to [schelpdesk.icr.ac.uk](mailto:schelpdesk.icr.ac.uk) to request an institutional GitHub account.  You will receieve an invite to your icr email address.  
+The ICR main GitHub page is: [github.com/instituteofcancerresearch](https://github.com/instituteofcancerresearch) - you can also have lab pages set up, contact us to ask for help.  
 
 ---  
 
