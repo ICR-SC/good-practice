@@ -48,6 +48,12 @@ Learn how to set up a reproducible research project in R, manage your code and d
 - Test your code to catch errors early and ensure reproducibility.
 - Document your scripts and results for yourself and others.
 
+
+### Videos of session
+
+- [Section 1/3](https://youtu.be/-PgKyz9yLwY?feature=shared) 15.55  
+- [Section 2/3](https://youtu.be/jlOzBGM64RU?feature=shared) 17.21  
+- [Section 3/3](https://youtu.be/ayg84ireSFs?feature=shared) 17.15 
 ---
 
 **Homework:**  

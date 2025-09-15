@@ -163,6 +163,7 @@ sudo apt-get install libssl-dev
 sudo apt-get install libfontconfig1-dev
 sudo apt-get install libharfbuzz-dev libfribidi-dev
 sudo apt-get install -y libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev libwebp-dev
+sudo apt-get install pkg-config
 
 # Either
 wget https://download1.rstudio.org/electron/jammy/amd64/rstudio-2025.09.0-387-amd64.deb
