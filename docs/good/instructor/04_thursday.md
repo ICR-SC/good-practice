@@ -79,19 +79,24 @@ renv::snapshot()
 
 >Remember to add `renv/` to your `.gitignore` so it doesn't get tracked by git.
 
+>renv::snapshot() saves the current state of your R project's package environment. It records all the packages (and their versions) you have installed into a file called renv.lock. This makes your project reproducible: anyone else (or you in the future) can use renv::restore() to recreate the exact same package environment from that lock file.
+
+>When you open your project you see something like:
+```r
+- Project '~/good-practice/biomarkers_project' loaded. [renv 1.1.5]
+[Workspace loaded from ~/good-practice/biomarkers_project/.RData]
+```
+
 ---
 
 ## Part 3.4 (starts at 20 min, takes 15 min): Writing Simple, Reproducible R Code
-
-> Let's download a public dataset so that we have something meaningful to work with. We can use bash to do this and download from cBioPortal here: https://www.cbioportal.org/datasets. We will use this set: Acute Myeloid Leukemia (TARGET GDC, 2025).
-
+> Let's download a public dataset so that we have something a little meaningful to work with. We can use bash to do this and download from cBioPortal here: https://www.cbioportal.org/datasets. We will use this set: Acute Myeloid Leukemia (TARGET GDC, 2025) which is 66MB.
 ```bash
 mkdir -p data/raw
-download.file("https://cbioportal-datahub.s3.amazonaws.com/aml_tcga_gdc.tar.gz", destfile = "data/raw/aml_tcga_gdc.tar.gz")
-untar("data/raw/aml_tcga_gdc.tar.gz", exdir = "data/raw")
+wget -O data/raw/aml_tcga_gdc.tar.gz https://cbioportal-datahub.s3.amazonaws.com/aml_tcga_gdc.tar.gz
+tar -xzvf data/raw/aml_tcga_gdc.tar.gz -C data/raw
 ```
-
->This has extracted a fair amount of data. We won't use all of it but we can use some for our examples, let's use the file: `data/raw/aml_tcga_gdc/data_mutations.txt`.
+>This has extracted a fair amount of data. We won't use all of it but we can use some for our examples, let's use the file: `data/raw/aml_tcga_gdc/data_mutatations.txt`. You can see now how important it was that we added all the files in raw to our .gitognore as I don't need to worry that I might accidentally commit them all to the GitLab cloud.
 
 >Let's write a simple function to load data. Clear function names and documentation help others understand your code. Create `src/R/analysis.R`:
 

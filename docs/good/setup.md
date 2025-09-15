@@ -142,7 +142,34 @@ Python should be pre-installed. You can check by running `python3 --version` in 
 
 #### For WSL2
 To use RStudio from WSL2 as if native install it in linux. This command worked for me:  
-`sudo snap install rstudio --classic`
+Depending on the linux variaiton:
+```bash
+# you may need to install some libraries
+sudo apt-get update
+sudo apt-get install r-base
+sudo apt-get install gdebi-core
+sudo apt-get install libglib2.0-0
+sudo apt-get install libnspr4
+sudo apt-get install libnss3
+sudo apt-get install libatk1.0-0
+sudo apt-get install libatk-bridge2.0-0
+sudo apt-get install libcups2
+sudo apt-get install libcairo2
+sudo apt-get install libgtk-3-0
+sudo apt-get install libgbm1
+sudo apt-get install libasound2
+sudo apt-get install libcurl4-openssl-dev
+sudo apt-get install libssl-dev
+sudo apt-get install libfontconfig1-dev
+sudo apt-get install libharfbuzz-dev libfribidi-dev
+sudo apt-get install -y libfreetype6-dev libpng-dev libtiff5-dev libjpeg-dev libwebp-dev
+
+# Either
+wget https://download1.rstudio.org/electron/jammy/amd64/rstudio-2025.09.0-387-amd64.deb
+sudo gdebi rstudio-2025.09.0-387-amd64.deb
+# or
+sudo snap install rstudio --classic
+```
 
 #### Mac
 Install R from [CRAN](https://cran.r-project.org/bin/macosx/) and RStudio from [RStudio](https://www.rstudio.com/products/rstudio/download/#download).
