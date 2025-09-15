@@ -9,6 +9,7 @@ nav:
       - 'Tuesday': 'good/tuesday.md'    
       - 'Wednesday': 'good/wednesday.md'    
       - 'Thursday': 'good/thursday.md'    
+      - 'Friday': 'good/friday.md'    
     - Vibe-coding:
       - 'Overview': 'vibe/overview.md'  
   - Admin:
