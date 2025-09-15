@@ -155,7 +155,7 @@ analyze_data <- function(df) {
 
 ```r
 library(testthat)
-source("src/R/analysis.R")
+source("../../src/R/analysis.R")
 
 test_that("pipeline smoke test", {
   df <- data.frame(

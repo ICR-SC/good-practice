@@ -103,6 +103,10 @@ tar -xzvf data/raw/aml_tcga_gdc.tar.gz -C data/raw
 
 >Let's write a simple function to load data. Clear function names and documentation help others understand your code. Create `src/R/analysis.R`:
 
+
+**MOVE TO VIDEO 2**
+
+
 ```r
 #!/usr/bin/env Rscript
 
@@ -149,6 +153,10 @@ analyze_data <- function(df) {
 # ggsave("results/top10_mutated_genes.png", plot = p, width = 8, height = 5)
 ```
 
+**MOVE to VIDEO 3**
+
+>If we uncomment out the Exaple usage section it will run through a test
+
 ---
 
 ## Part 3.5 (starts at 35 min, takes 10 min): Basic Testing
@@ -158,7 +166,7 @@ analyze_data <- function(df) {
 Create `tests/R/test_analysis.R`:
 ```r
 library(testthat)
-source("src/R/analysis.R")
+source("../../src/R/analysis.R")
 
 test_that("pipeline smoke test", {
   df <- data.frame(
@@ -175,6 +183,7 @@ test_that("pipeline smoke test", {
 >Let's run our test.
 
 ```r
+# In the R console
 testthat::test_file("tests/R/test_analysis.R")
 ```
 
