@@ -54,6 +54,7 @@ Rscript src/R/analysis.R
 >**Tip:** You can export your environment for sharing:
 ```bash
 conda env export > environment.yml
+conda env export --no-build > environment-no.yml
 ```
 
 ---

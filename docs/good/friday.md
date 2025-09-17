@@ -72,7 +72,7 @@ conda activate good-r
 conda env export > environment.yml
 
 # Export platform indeppendedn
-conda env export --no-builds > environment.yml
+conda env export --no-build > environment.yml
 
 # Run scripts
 python src/python/analysis.py
