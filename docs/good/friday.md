@@ -55,6 +55,8 @@ By the end of this session, you'll be able to:
 
 ### Cheat Sheet
 
+Link to repo: [github.com/ICR-SC/gp-01-biomarkers](https://github.com/ICR-SC/gp-01-biomarkers)  
+
 **Conda Commands Used:**
 ```bash
 # Create Python environment
