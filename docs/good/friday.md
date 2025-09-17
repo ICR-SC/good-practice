@@ -80,9 +80,9 @@ Rscript src/R/analysis.R
 **Docker Commands Used:**
 ```bash
 # Build Docker images
-docker build -f Dockerfile.python -t good-python .
-docker build -f Dockerfile.r -t good-r .
-docker build -f Dockerfile.conda -t good-conda .
+docker build -f docker/Dockerfile.python -t good-python .
+docker build -f docker/Dockerfile.r -t good-r .
+docker build -f docker/Dockerfile.conda -t good-conda .
 
 # Run Docker containers
 docker run --rm -v $(pwd)/data:/app/data -v $(pwd)/results:/app/results good-python

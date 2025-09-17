@@ -212,3 +212,43 @@ For Windows The application can be installed from Company Portal.
 #### Mac
 Inside Finder on Mac, you can show hidden files with "Cmd + Shift + ."
 
+### Install Singularity
+// ...existing code...
+
+### Install Singularity
+
+#### Windows
+Singularity/Apptainer is not natively supported on Windows.
+advanced users only).
+
+#### Mac
+```bash
+# Install Homebrew if not already installed
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+# Install Apptainer (successor to Singularity)
+brew install apptainer
+```
+
+#### Linux (WSL2/Ubuntu/Debian)
+```bash
+# Install dependencies
+sudo apt update
+sudo apt install curl gnupg
+# Add repository and install
+curl -fsSL https://download.opensuse.org/repositories/home:/apptainer/Debian_12/Release.key | sudo gpg --dearmor -o /usr/share/keyrings/apptainer-archive-keyring.gpg
+echo "deb [signed-by=/usr/share/keyrings/apptainer-archive-keyring.gpg] https://download.opensuse.org/repositories/home:/apptainer/Debian_12/ /" | sudo tee /etc/apt/sources.list.d/apptainer.list
+sudo apt update
+sudo apt install apptainer
+```
+
+**Verify Installation:**
+```bash
+# Check version
+singularity --version
+# Test with hello world
+singularity pull docker://hello-world
+singularity run hello-world_latest.sif
+```
+**Note:** Apptainer is the actively maintained successor to Singularity and is recommended for new installations.
+
+

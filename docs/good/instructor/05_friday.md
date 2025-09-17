@@ -62,7 +62,7 @@ conda env export > environment.yml
 
 >Docker lets you create a container with everything your code needs. Let’s write a simple Dockerfile for both Python and R.
 
-### Python Dockerfile (`Dockerfile.python`)
+### Python Dockerfile (`docker/Dockerfile.python`)
 
 ```dockerfile
 # filepath: Dockerfile.python
@@ -78,7 +78,7 @@ RUN pip install pandas matplotlib
 CMD ["python", "analysis.py"]
 ```
 
-### R Dockerfile (`Dockerfile.r`)
+### R Dockerfile (`docker/Dockerfile.r`)
 
 ```dockerfile
 # filepath: Dockerfile.r
@@ -104,7 +104,7 @@ CMD ["Rscript", "analysis.R"]
 
 ```bash
 # Build the Python Docker image
-docker build -f Dockerfile.python -t good-python .
+docker build -f docker/Dockerfile.python -t good-python .
 
 # Run the Python container
 docker run --rm -v $(pwd)/data:/app/data -v $(pwd)/results:/app/results good-python
@@ -114,7 +114,7 @@ docker run --rm -v $(pwd)/data:/app/data -v $(pwd)/results:/app/results good-pyt
 
 ```bash
 # Build the R Docker image
-docker build -f Dockerfile.r -t good-r .
+docker build -f docker/Dockerfile.r -t good-r .
 
 # Run the R container
 docker run --rm -v $(pwd)/data:/app/data -v $(pwd)/results:/app/results good-r
@@ -125,7 +125,7 @@ docker run --rm -v $(pwd)/data:/app/data -v $(pwd)/results:/app/results good-r
 ---
 
 
-### Conda Dockerfile (`Dockerfile.conda`)
+### Conda Dockerfile (`docker/Dockerfile.conda`)
 ```dockerfile
 # filepath: Dockerfile.conda
 FROM continuumio/miniconda3:latest
@@ -153,7 +153,7 @@ CMD ["python", "analysis.py"]
 
 ```bash
 # Build the Conda Docker image
-docker build -f Dockerfile.conda -t good-conda .
+docker build -f docker/Dockerfile.conda -t good-conda .
 # Run the python script
 docker run --rm -v $(pwd)/data:/app/data -v $(pwd)/results:/app/results good-conda python analysis.py
 # Run the R script
@@ -173,30 +173,3 @@ docker run --rm -v $(pwd)/data:/app/data -v $(pwd)/results:/app/results good-con
     - Try building and running your own Docker container for a different script or project.
     - Share your `environment.yml` or `Dockerfile` with a collaborator and see if they can reproduce your results.
 
----
-
-## Session Cheat Sheet: Friday
-
-### Conda
-
-```bash
-conda create -n good-python python=3.11 pandas matplotlib pytest -y
-conda activate good-python
-conda create -n good-r r-base=4.3 r-tidyverse r-ggplot2 r-testthat -y
-conda activate good-r
-conda env export > environment.yml
-```
-
-### Docker
-
-```bash
-docker build -f Dockerfile.python -t good-python .
-docker run --rm -v $(pwd)/data:/app/data -v $(pwd)/results:/app/results good-python
-
-docker build -f Dockerfile.r -t good-r .
-docker run --rm -v $(pwd)/data:/app/data -v $(pwd)/results:/app/results good-r
-```
-
----
-
-**See you next time!**
