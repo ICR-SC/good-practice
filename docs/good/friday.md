@@ -127,3 +127,20 @@ SHELL ["conda", "run", "-n", "good-env", "/bin/bash", "-c"]
 ENTRYPOINT ["conda", "run", "-n", "good-env"]
 CMD ["python", "analysis.py"]
 ```
+
+**Singularity Commands used**
+```bash
+# Build Docker image
+docker build -f Dockerfile.conda -t good-conda .
+singularity build good-conda.sif docker-daemon://good-conda:latest
+#or 
+docker save good-conda:latest -o good-conda.tar
+singularity build good-conda.sif docker-archive://good-conda.tar
+
+# (Copy files and data to alma, eg /data/scratch/etc...)
+## Run the Python script
+singularity exec --bind data:/app/data,results:/app/results good-conda.sif bash -c "source /opt/conda/etc/profile.d/conda.sh && conda run -n good-env python /app/analysis.py"
+
+## Run the R script
+singularity exec --bind data:/app/data,results:/app/results good-conda.sif bash -c "source /opt/conda/etc/profile.d/conda.sh && conda run -n good-env Rscript /app/analysis.R"
+```

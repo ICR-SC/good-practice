@@ -277,21 +277,20 @@ sbatch run_container.slurm
 ```bash
 # Build Docker image
 docker build -f Dockerfile.conda -t good-conda .
-
-# Convert Docker image to Singularity SIF
 singularity build good-conda.sif docker-daemon://good-conda:latest
+#or 
+docker save good-conda:latest -o good-conda.tar
+singularity build good-conda.sif docker-archive://good-conda.tar
 
-# Transfer SIF to HPC
-scp good-conda.sif <username>@alma.icr.ac.uk:/data/your_folder/
+# Use files to transfer to scratch and copy data
+## Run the Python script
+singularity exec --bind data:/app/data,results:/app/results good-conda.sif bash -c "source /opt/conda/etc/profile.d/conda.sh && conda run -n good-env python /app/analysis.py"
 
-# On Alma: Run Python
-singularity exec --bind /data/your_folder/data:/app/data,/data/your_folder/results:/app/results good-conda.sif python analysis.py
+## Run the R script
+singularity exec --bind data:/app/data,results:/app/results good-conda.sif bash -c "source /opt/conda/etc/profile.d/conda.sh && conda run -n good-env Rscript /app/analysis.R"
 
-# On Alma: Run R
-singularity exec --bind /data/your_folder/data:/app/data,/data/your_folder/results:/app/results good-conda.sif Rscript analysis.R
 
-# Submit as a batch job
-sbatch run_container.slurm
+
 ```
 
 ---
