@@ -101,11 +101,10 @@ docker run --rm -v $(pwd)/data:/app/data -v $(pwd)/results:/app/results good-con
 **Dockerfile Examples Created:**
 ```dockerfile
 # Python Dockerfile
-FROM python:3.11-slim
+FROM python:3.13-slim
 WORKDIR /app
+RUN pip install pandas matplotlib pytest
 COPY src/python/analysis.py ./analysis.py
-COPY data/raw ./data/raw
-RUN pip install pandas matplotlib
 CMD ["python", "analysis.py"]
 
 # R Dockerfile  

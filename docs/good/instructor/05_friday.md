@@ -74,7 +74,6 @@ FROM python:3.13-slim
 WORKDIR /app
 RUN pip install pandas matplotlib pytest
 COPY src/python/analysis.py ./analysis.py
-COPY data/raw/aml_tcga_gdc ./data/raw/aml_tcga_gdc
 CMD ["python", "analysis.py"]
 ```
 
