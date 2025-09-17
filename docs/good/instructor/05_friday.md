@@ -65,23 +65,23 @@ conda env export > environment.yml
 ### Python Dockerfile (`docker/Dockerfile.python`)
 
 ```dockerfile
-# filepath: Dockerfile.python
-FROM python:3.11-slim
-
+# ---------- Python dockerfile --------------------------------
+# BUILD IT:     docker build -f docker/Dockerfile.python -t good-python .
+# CHECK IT:     docker run -it good-python /bin/bash
+# RUN IT:       docker run -v ./data:/app/data -v ./results:/app/results good-python
+# -------------------------------------------------------------
+FROM python:3.13-slim
 WORKDIR /app
-
+RUN pip install pandas matplotlib pytest
 COPY src/python/analysis.py ./analysis.py
-COPY data/raw ./data/raw
-
-RUN pip install pandas matplotlib
-
+COPY data/raw/aml_tcga_gdc ./data/raw/aml_tcga_gdc
 CMD ["python", "analysis.py"]
 ```
 
-### R Dockerfile (`docker/Dockerfile.r`)
+### R Dockerfile (`docker/Dockerfile.rscript`)
 
 ```dockerfile
-# filepath: Dockerfile.r
+# filepath: Dockerfile.rscript
 FROM rocker/r-base:4.3.1
 
 WORKDIR /app
