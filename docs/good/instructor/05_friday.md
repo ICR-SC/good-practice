@@ -105,7 +105,8 @@ CMD ["Rscript", "analysis.R"]
 ```bash
 # Build the Python Docker image
 docker build -f docker/Dockerfile.python -t good-python .
-
+# Look inside the docker image and navigate with bash
+docker run -it good-python /bin/bash
 # Run the Python container
 docker run --rm -v $(pwd)/data:/app/data -v $(pwd)/results:/app/results good-python
 ```
@@ -154,14 +155,13 @@ CMD ["python", "analysis.py"]
 ```bash
 # Build the Conda Docker image
 docker build -f docker/Dockerfile.conda -t good-conda .
+# Look inside the docker image and navigate with bash
+docker run -it good-python /bin/bash
 # Run the python script
 docker run --rm -v $(pwd)/data:/app/data -v $(pwd)/results:/app/results good-conda python analysis.py
 # Run the R script
 docker run --rm -v $(pwd)/data:/app/data -v $(pwd)/results:/app/results good-conda Rscript analysis.R
-
-
-
-
+```
 ## Part 5: Wrap-up, Best Practices & Homework
 
 - **Best Practices:**

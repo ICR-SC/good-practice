@@ -86,6 +86,11 @@ docker build -f docker/Dockerfile.python -t good-python .
 docker build -f docker/Dockerfile.r -t good-r .
 docker build -f docker/Dockerfile.conda -t good-conda .
 
+# Look inside the docker image and navigate with bash
+```bash
+docker run -it good-python /bin/bash
+```
+
 # Run Docker containers
 docker run --rm -v $(pwd)/data:/app/data -v $(pwd)/results:/app/results good-python
 docker run --rm -v $(pwd)/data:/app/data -v $(pwd)/results:/app/results good-r
