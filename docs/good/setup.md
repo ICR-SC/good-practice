@@ -178,11 +178,21 @@ Install R from [CRAN](https://cran.r-project.org/bin/macosx/) and RStudio from [
 ---  
 
 ### Install Conda (Anaconda)
+#### Windows
 Install Anaconda from the Company Portal:  
 <img src="../imgs/anaconda-image.png" alt="Anaconda" width="400"/>
 
+#### WSL2
+```bash
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+chmod +x Miniconda3-latest-Linux-x86_64.sh
+./Miniconda3-latest-Linux-x86_64.sh
+```
+
 #### Mac
 Install Anaconda from [anaconda.com](https://www.anaconda.com/products/distribution#download-section):
+
+
 
 ---  
 

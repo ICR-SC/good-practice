@@ -58,7 +58,7 @@ By the end of this session, you'll be able to:
 **Conda Commands Used:**
 ```bash
 # Create Python environment
-conda create -n good-python python=3.11 pandas matplotlib pytest -y
+conda create -n good-python python=3.13 pandas matplotlib pytest -y
 conda activate good-python
 conda list
 
@@ -68,6 +68,9 @@ conda activate good-r
 
 # Export environment
 conda env export > environment.yml
+
+# Export platform indeppendedn
+conda env export --no-builds > environment.yml
 
 # Run scripts
 python src/python/analysis.py
