@@ -2,14 +2,13 @@
 *Duration: 60 minutes | Format: Interactive demonstration and hands-on practice*
 
 ## Summary
-Friday's session focuses on containerization and advanced environment management for reproducible research. You'll learn to use Docker for creating portable, reproducible environments and explore conda for Python package management. We'll demonstrate how containers solve the "it works on my machine" problem and provide a foundation for scalable, reproducible research workflows.
+Friday's session focuses on containerization and advanced environment management for reproducible research. You'll learn to use Docker for creating portable, reproducible environments and explore conda for package management. We'll demonstrate a foundation for scalable, reproducible research workflows.
 
 ---
 
 ## What We Cover
 
 ### Docker Fundamentals
-- Understanding containers vs virtual machines
 - Installing and configuring Docker
 - Basic Docker commands and workflow
 - Creating simple Dockerfiles for research projects
@@ -23,8 +22,7 @@ Friday's session focuses on containerization and advanced environment management
 ### Practical Applications
 - Containerizing a simple analysis pipeline
 - Sharing reproducible environments with colleagues
-- Best practices for container security and efficiency
-- Integration with version control systems
+- Converting docker to singularity for HPC
 
 ---
 
@@ -40,24 +38,15 @@ By the end of this session, you'll be able to:
 
 ---
 
-## Homework & Resources
-
-### Practice Exercise (~30 minutes)
-- Create a simple Dockerfile for one of your analysis scripts from earlier sessions
-- Set up a conda environment with specific package versions for a research project
-- Practice sharing an environment file with a colleague or on GitLab
-
 ### Additional Resources
 - [Docker for Data Science Tutorial](https://docker-curriculum.com/)
 - [Conda User Guide](https://docs.conda.io/projects/conda/en/latest/user-guide/)
 - [The Turing Way: Reproducible Environments](https://book.the-turing-way.org/reproducible-research/renv.html)
 - [Docker Best Practices for Research](https://docs.docker.com/develop/dev-best-practices/)
+- Link to repo: [github.com/ICR-SC/gp-01-biomarkers](https://github.com/ICR-SC/gp-01-biomarkers)  
 
 ### Cheat Sheet
-
-Link to repo: [github.com/ICR-SC/gp-01-biomarkers](https://github.com/ICR-SC/gp-01-biomarkers)  
-
-**Conda Commands Used:**
+#### **Conda Commands Used:**
 ```bash
 # Create Python environment
 conda create -n good-python python=3.13 pandas matplotlib pytest -y
@@ -79,18 +68,14 @@ python src/python/analysis.py
 Rscript src/R/analysis.R
 ```
 
-**Docker Commands Used:**
+#### **Docker Commands Used:**
 ```bash
 # Build Docker images
 docker build -f docker/Dockerfile.python -t good-python .
 docker build -f docker/Dockerfile.r -t good-r .
 docker build -f docker/Dockerfile.conda -t good-conda .
-
 # Look inside the docker image and navigate with bash
-```bash
 docker run -it good-python /bin/bash
-```
-
 # Run Docker containers
 docker run --rm -v $(pwd)/data:/app/data -v $(pwd)/results:/app/results good-python
 docker run --rm -v $(pwd)/data:/app/data -v $(pwd)/results:/app/results good-r
@@ -98,7 +83,7 @@ docker run --rm -v $(pwd)/data:/app/data -v $(pwd)/results:/app/results good-con
 docker run --rm -v $(pwd)/data:/app/data -v $(pwd)/results:/app/results good-conda Rscript analysis.R
 ```
 
-**Dockerfile Examples Created:**
+#### **Dockerfile Examples Created:**
 ```dockerfile
 # Python Dockerfile
 FROM python:3.13-slim
@@ -128,7 +113,7 @@ ENTRYPOINT ["conda", "run", "-n", "good-env"]
 CMD ["python", "analysis.py"]
 ```
 
-**Singularity Commands used**
+#### **Singularity Commands used**
 ```bash
 # Build Docker image
 docker build -f Dockerfile.conda -t good-conda .
