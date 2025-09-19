@@ -69,11 +69,14 @@ By the end of this course, you will be able to:
 - [Section 3/3](https://youtu.be/-PgKyz9yLwY) 19.43  
 
 ### Thursday
-- [Section 1/3](https://youtu.be/-PgKyz9yLwY?feature=shared) 15.55  
-- [Section 2/3](https://youtu.be/jlOzBGM64RU?feature=shared) 17.21  
-- [Section 3/3](https://youtu.be/ayg84ireSFs?feature=shared) 17.15 
+- [Section 1/3](https://youtu.be/-PgKyz9yLwY?feature=shared) 15.55   
+- [Section 2/3](https://youtu.be/jlOzBGM64RU?feature=shared) 17.21   
+- [Section 3/3](https://youtu.be/ayg84ireSFs?feature=shared) 17.15  
 
 ### Friday
+- [Section 1/3](https://youtu.be/0j-DxEs7H_Y?feature=shared) 19.01    
+- [Section 2/3](https://youtu.be/ejnRAjXGFBs?feature=shared) 19.19  
+- [Section 3/3](https://youtu.be/dy-y3kmb7sc?feature=shared) 13.08  
 
 ## **Technical Requirements**
 

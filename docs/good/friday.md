@@ -38,6 +38,14 @@ By the end of this session, you'll be able to:
 
 ---
 
+### Videos of session
+
+- [Section 1/3](https://youtu.be/0j-DxEs7H_Y?feature=shared) 19.01  
+- [Section 2/3](https://youtu.be/ejnRAjXGFBs?feature=shared) 19.19  
+- [Section 3/3](https://youtu.be/dy-y3kmb7sc?feature=shared) 13.08  
+
+---  
+
 ### Additional Resources
 - [Docker for Data Science Tutorial](https://docker-curriculum.com/)
 - [Conda User Guide](https://docs.conda.io/projects/conda/en/latest/user-guide/)
