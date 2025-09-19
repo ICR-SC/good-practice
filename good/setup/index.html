@@ -1,0 +1,1969 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../overview/">
+      
+      
+        <link rel="next" href="../monday/">
+      
+      
+      <link rel="icon" href="../../assets/icr_svg_logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Setup - Research Software Good Practice</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#5-session-coding-good-practices-course" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Research Software Good Practice" class="md-header__button md-logo" aria-label="Research Software Good Practice" data-md-component="logo">
+      
+  <img src="../../assets/icr_svg_logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Research Software Good Practice
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Setup
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Research Software Good Practice" class="md-nav__button md-logo" aria-label="Research Software Good Practice" data-md-component="logo">
+      
+  <img src="../../assets/icr_svg_logo.svg" alt="logo">
+
+    </a>
+    Research Software Good Practice
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Webinar Series
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Webinar Series
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Good-practice
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Good-practice
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Setup
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites-and-setup-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites and Setup Guide
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mondays-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monday's Session
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tuesdays-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tuesday's Session
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wednesdays-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wednesday's Session
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thursdays-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thursday's Session
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fridays-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      Friday's Session
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Software Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-vscode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install VSCode
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install VSCode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mac
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-a-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access a terminal
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Access a terminal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mac
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#have-an-hpc-alma-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Have an HPC Alma account
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-up-alma-ssh-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set up Alma ssh keys
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-remote-ssh-for-vscode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup remote-ssh for VSCode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-and-configure-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install and configure Git
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install and configure Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mac
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-github-desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install GitHub Desktop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install GitHub Desktop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mac
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-up-gitlab-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set up GitLab access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-up-github-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set up GitHub access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Python
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mac
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r-and-rstudio" class="md-nav__link">
+    <span class="md-ellipsis">
+      R and RStudio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="R and RStudio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-wsl2" class="md-nav__link">
+    <span class="md-ellipsis">
+      For WSL2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mac
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-conda-anaconda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Conda (Anaconda)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Conda (Anaconda)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wsl2" class="md-nav__link">
+    <span class="md-ellipsis">
+      WSL2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mac
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Docker
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mac
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#see-hidden-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      See Hidden Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="See Hidden Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mac
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-singularity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Singularity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-singularity_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Singularity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Singularity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mac
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux-wsl2ubuntudebian" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux (WSL2/Ubuntu/Debian)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monday/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Monday
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tuesday/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tuesday
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wednesday/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wednesday
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../thursday/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Thursday
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../friday/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Friday
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Vibe-coding
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Vibe-coding
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vibe/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Admin
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Admin
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Instructors
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Instructors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instructor/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Good-practice
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites-and-setup-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prerequisites and Setup Guide
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mondays-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monday's Session
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tuesdays-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tuesday's Session
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#wednesdays-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      Wednesday's Session
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#thursdays-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      Thursday's Session
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fridays-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      Friday's Session
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#software-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Software Installation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Software Installation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#install-vscode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install VSCode
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install VSCode">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mac
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#access-a-terminal" class="md-nav__link">
+    <span class="md-ellipsis">
+      Access a terminal
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Access a terminal">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mac
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#have-an-hpc-alma-account" class="md-nav__link">
+    <span class="md-ellipsis">
+      Have an HPC Alma account
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-up-alma-ssh-keys" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set up Alma ssh keys
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#setup-remote-ssh-for-vscode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup remote-ssh for VSCode
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-and-configure-git" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install and configure Git
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install and configure Git">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mac
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-github-desktop" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install GitHub Desktop
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install GitHub Desktop">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mac
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-up-gitlab-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set up GitLab access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#set-up-github-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      Set up GitHub access
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-python" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Python
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Python">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mac
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r-and-rstudio" class="md-nav__link">
+    <span class="md-ellipsis">
+      R and RStudio
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="R and RStudio">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#for-wsl2" class="md-nav__link">
+    <span class="md-ellipsis">
+      For WSL2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac_5" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mac
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-conda-anaconda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Conda (Anaconda)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Conda (Anaconda)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#wsl2" class="md-nav__link">
+    <span class="md-ellipsis">
+      WSL2
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac_6" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mac
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-docker" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Docker
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Docker">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac_7" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mac
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#see-hidden-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      See Hidden Files
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="See Hidden Files">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac_8" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mac
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-singularity" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Singularity
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#install-singularity_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      Install Singularity
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Install Singularity">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#windows_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Windows
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mac_9" class="md-nav__link">
+    <span class="md-ellipsis">
+      Mac
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linux-wsl2ubuntudebian" class="md-nav__link">
+    <span class="md-ellipsis">
+      Linux (WSL2/Ubuntu/Debian)
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="5-session-coding-good-practices-course">5-Session Coding Good Practices Course</h1>
+<h2 id="prerequisites-and-setup-guide">Prerequisites and Setup Guide</h2>
+<p><em>Complete these setup steps before the first session to ensure a smooth learning experience.</em><br />
+<em>If you have any problems, please contact the RSE team for help!</em></p>
+<hr />
+<h2 id="overview">Overview</h2>
+<p>This course will teach you coding good practices for reproducible research referencing The Turing Way framework. To participate fully, you'll need several tools installed and accounts configured. Please complete all setup steps below.</p>
+<p>For any of the elements that you do not have access to, you can go back and do the session again following the recording, or the RSE team will help you in a drop-in session in the RSE office.  </p>
+<p>The summary of the requirements is broken down for each day, with links to fuller instructions below.</p>
+<hr />
+<h2 id="mondays-session">Monday's Session</h2>
+<ul>
+<li><a href="#install-vscode"><strong>Install VSCode</strong></a></li>
+<li><a href="#access-a-terminal"><strong>Access a terminal</strong></a></li>
+<li><a href="#have-an-hpc-alma-account"><strong>Have an HPC Alma account</strong></a></li>
+<li><a href="#set-up-alma-ssh-keys"><strong>Optionally set up Alma ssh keys</strong></a></li>
+<li><a href="#setup-remote-ssh-for-vscode"><strong>Optionally setup remote-ssh for VSCode</strong></a></li>
+</ul>
+<h2 id="tuesdays-session">Tuesday's Session</h2>
+<ul>
+<li><a href="#install-vscode">Install VSCode</a></li>
+<li><a href="#install-and-configure-git"><strong>Install and configure Git</strong></a></li>
+<li><a href="#install-github-desktop"><strong>Install GitHub Desktop (Windows/Mac)</strong></a></li>
+<li><a href="#set-up-gitlab-access"><strong>Set up (internal) GitLab access</strong></a></li>
+<li><a href="#set-up-github-access"><strong>Set up GitHub access (institutional account)</strong></a></li>
+</ul>
+<h2 id="wednesdays-session">Wednesday's Session</h2>
+<ul>
+<li><a href="#install-vscode">Install VSCode</a></li>
+<li><a href="#install-python">Install Python</a></li>
+<li><a href="#install-and-configure-git">Install and configure Git</a></li>
+<li><a href="#set-up-gitlab-access">Set up GitLab access (SSO)</a></li>
+</ul>
+<h2 id="thursdays-session">Thursday's Session</h2>
+<ul>
+<li><a href="#install-vscode">Install VSCode</a></li>
+<li><a href="#install-and-configure-git">Install and configure Git</a></li>
+<li><a href="#set-up-gitlab-access">Set up GitLab access</a></li>
+<li><a href="#r-and-rstudio"><strong>R and RStudio</strong></a></li>
+</ul>
+<h2 id="fridays-session">Friday's Session</h2>
+<ul>
+<li><a href="#install-vscode">Install VSCode</a></li>
+<li><a href="#install-conda-anaconda"><strong>Install Conda (Anaconda)</strong></a></li>
+<li><a href="#install-docker"><strong>Install Docker</strong></a></li>
+</ul>
+<hr />
+<h2 id="software-installation">Software Installation</h2>
+<p>For all software installations at the ICR it is recommended to check with servicedesk@icr.ac.uk. There has beeen a process of centralising installations for Windows 11 machines, and the installations ought to be available through Company POrtal. Always check this first as when installed here you do not need admin rights. Otherwise you will probably need assistance for any installs. Mac users will need admin rights for most installs but it is changing rapidly so please check. In general the links are given to open source software installs but first check Company Portal and ask servicedesk@icr.ac.uk</p>
+<hr />
+<h3 id="install-vscode">Install VSCode</h3>
+<h4 id="windows">Windows</h4>
+<p>For Windows The application can be installed from Company Portal.<br />
+<img src="../imgs/vscode-image.png" alt="VSCode" width="400"/></p>
+<h4 id="mac">Mac</h4>
+<p>For Mac the application can be downloaded and installed from here <a href="https://code.visualstudio.com/Download">code.visualstudio.com/Download</a>.<br />
+Choose the User Installer for your system (Apple Silicon or Intel).</p>
+<hr />
+<h3 id="access-a-terminal">Access a terminal</h3>
+<h4 id="windows_1">Windows</h4>
+<p>Use PowerShell or Command Prompt. But install WSL2 (Windows Subsystem for Linux) for a better experience. This can be installed from Windows Store:<br />
+<img src="../imgs/wsl2-image.png" alt="WSL2" width="400"/>  </p>
+<p>Alternatively you can use GitBash for a linux-like terminal experience. This is also available on company portal.<br />
+<img src="../imgs/git-image.png" alt="GitHub Desktop" width="400"/></p>
+<h4 id="mac_1">Mac</h4>
+<p>Use the built-in Terminal application.</p>
+<hr />
+<h3 id="have-an-hpc-alma-account">Have an HPC Alma account</h3>
+<p><a href="https://nexus.icr.ac.uk/strategic-initiatives/sc/hpc/Pages/Getting-Started.aspx">Alma Pages on Nexus</a> have information on getting started with Alma, or contact <a href="mailto:schelpdesk.icr.ac.uk">schelpdesk.icr.ac.uk</a>.</p>
+<hr />
+<h3 id="set-up-alma-ssh-keys">Set up Alma ssh keys</h3>
+<p><a href="https://almacookbook.github.io/first_steps/#1-setting-up-ssh-key-for-alma-credits-to-vscode-and-blissweb-on-stackoverflow">ALmaCookBook instructions</a></p>
+<hr />
+<h3 id="setup-remote-ssh-for-vscode">Setup remote-ssh for VSCode</h3>
+<p><a href="https://code.visualstudio.com/docs/remote/ssh">code.visualstudio.com/docs/remote/ssh</a><br />
+<a href="https://almacookbook.github.io/ides/remote/">AlmaCookBook link</a>  </p>
+<hr />
+<h3 id="install-and-configure-git">Install and configure Git</h3>
+<h4 id="windows_2">Windows</h4>
+<p>Install Git from the Company Portal:<br />
+<img src="../imgs/git-image.png" alt="Git-Install" width="400"/></p>
+<h4 id="mac_2">Mac</h4>
+<p>Use HomeBrew, the mac store, or download from <a href="https://git-scm.com/download/mac">git-scm.com</a>.</p>
+<hr />
+<h3 id="install-github-desktop">Install GitHub Desktop</h3>
+<h4 id="windows_3">Windows</h4>
+<p>For Windows The application can be installed from Company Portal.<br />
+<img src="../imgs/github-desktop-image.png" alt="GitHub Desktop" width="400"/></p>
+<h4 id="mac_3">Mac</h4>
+<p>For Mac the application can be downloaded and installed from here <a href="https://desktop.github.com/">desktop.github.com</a>.</p>
+<hr />
+<h3 id="set-up-gitlab-access">Set up GitLab access</h3>
+<p>Internal GitLab is here: <a href="https://git.icr.ac.uk/">git.icr.ac.uk/</a> - sign on using LDAP and your ICR shortname and password.<br />
+We will walk through this ssh key setup in the <em>git</em> session: <a href="https://docs.gitlab.com/user/ssh/">docs.gitlab.com/user/ssh</a>  </p>
+<h3 id="set-up-github-access">Set up GitHub access</h3>
+<p>Send an email to <a href="mailto:schelpdesk.icr.ac.uk">schelpdesk.icr.ac.uk</a> to request an institutional GitHub account.  You will receieve an invite to your icr email address.<br />
+The ICR main GitHub page is: <a href="https://github.com/instituteofcancerresearch">github.com/instituteofcancerresearch</a> - you can also have lab pages set up, contact us to ask for help.  </p>
+<hr />
+<h3 id="install-python">Install Python</h3>
+<h4 id="windows_4">Windows</h4>
+<p>For Windows The application can be installed from Company Portal.<br />
+<img src="../imgs/code-image.png" alt="VSCode" width="400"/></p>
+<h4 id="mac_4">Mac</h4>
+<p>Python should be pre-installed. You can check by running <code>python3 --version</code> in the terminal. If not, install it from <a href="https://www.python.org/downloads/macos/">python.org</a>.</p>
+<hr />
+<h3 id="r-and-rstudio">R and RStudio</h3>
+<h4 id="windows_5">Windows</h4>
+<p><img src="../imgs/code-image.png" alt="Code" width="400"/></p>
+<h4 id="for-wsl2">For WSL2</h4>
+<p>To use RStudio from WSL2 as if native install it in linux. This command worked for me:<br />
+Depending on the linux variaiton:
+<div class="highlight"><pre><span></span><code><span class="c1"># you may need to install some libraries</span>
+sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>r-base
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>gdebi-core
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libglib2.0-0
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libnspr4
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libnss3
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libatk1.0-0
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libatk-bridge2.0-0
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libcups2
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libcairo2
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libgtk-3-0
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libgbm1
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libasound2
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libcurl4-openssl-dev
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libssl-dev
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libfontconfig1-dev
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>libharfbuzz-dev<span class="w"> </span>libfribidi-dev
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>libfreetype6-dev<span class="w"> </span>libpng-dev<span class="w"> </span>libtiff5-dev<span class="w"> </span>libjpeg-dev<span class="w"> </span>libwebp-dev
+sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>pkg-config
+
+<span class="c1"># Either</span>
+wget<span class="w"> </span>https://download1.rstudio.org/electron/jammy/amd64/rstudio-2025.09.0-387-amd64.deb
+sudo<span class="w"> </span>gdebi<span class="w"> </span>rstudio-2025.09.0-387-amd64.deb
+<span class="c1"># or</span>
+sudo<span class="w"> </span>snap<span class="w"> </span>install<span class="w"> </span>rstudio<span class="w"> </span>--classic
+</code></pre></div></p>
+<h4 id="mac_5">Mac</h4>
+<p>Install R from <a href="https://cran.r-project.org/bin/macosx/">CRAN</a> and RStudio from <a href="https://www.rstudio.com/products/rstudio/download/#download">RStudio</a>.</p>
+<hr />
+<h3 id="install-conda-anaconda">Install Conda (Anaconda)</h3>
+<h4 id="windows_6">Windows</h4>
+<p>Install Anaconda from the Company Portal:<br />
+<img src="../imgs/anaconda-image.png" alt="Anaconda" width="400"/></p>
+<h4 id="wsl2">WSL2</h4>
+<div class="highlight"><pre><span></span><code>wget<span class="w"> </span>https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+chmod<span class="w"> </span>+x<span class="w"> </span>Miniconda3-latest-Linux-x86_64.sh
+./Miniconda3-latest-Linux-x86_64.sh
+</code></pre></div>
+<h4 id="mac_6">Mac</h4>
+<p>Install Anaconda from <a href="https://www.anaconda.com/products/distribution#download-section">anaconda.com</a>:</p>
+<hr />
+<h3 id="install-docker">Install Docker</h3>
+<h4 id="windows_7">Windows</h4>
+<p>For Windows The application can be installed from Company Portal.<br />
+<img src="../imgs/docker-image.png" alt="Docker" width="400"/></p>
+<h4 id="mac_7">Mac</h4>
+<p>For Mac the application can be downloaded and installed from here <a href="https://www.docker.com/products/docker-desktop/">docker.com</a>.</p>
+<h3 id="see-hidden-files">See Hidden Files</h3>
+<h4 id="windows_8">Windows</h4>
+<p>For Windows The application can be installed from Company Portal.<br />
+<img src="../imgs/hidden-image.png" alt="HiddenFiles" width="400"/></p>
+<h4 id="mac_8">Mac</h4>
+<p>Inside Finder on Mac, you can show hidden files with "Cmd + Shift + ."</p>
+<h3 id="install-singularity">Install Singularity</h3>
+<p>// ...existing code...</p>
+<h3 id="install-singularity_1">Install Singularity</h3>
+<h4 id="windows_9">Windows</h4>
+<p>Singularity/Apptainer is not natively supported on Windows.
+advanced users only).</p>
+<h4 id="mac_9">Mac</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install Homebrew if not already installed</span>
+/bin/bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh<span class="k">)</span><span class="s2">&quot;</span>
+<span class="c1"># Install Apptainer (successor to Singularity)</span>
+brew<span class="w"> </span>install<span class="w"> </span>apptainer
+</code></pre></div>
+<h4 id="linux-wsl2ubuntudebian">Linux (WSL2/Ubuntu/Debian)</h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Install dependencies</span>
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>curl<span class="w"> </span>gnupg
+<span class="c1"># Add repository and install</span>
+curl<span class="w"> </span>-fsSL<span class="w"> </span>https://download.opensuse.org/repositories/home:/apptainer/Debian_12/Release.key<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>-o<span class="w"> </span>/usr/share/keyrings/apptainer-archive-keyring.gpg
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [signed-by=/usr/share/keyrings/apptainer-archive-keyring.gpg] https://download.opensuse.org/repositories/home:/apptainer/Debian_12/ /&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/apptainer.list
+sudo<span class="w"> </span>apt<span class="w"> </span>update
+sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>apptainer
+</code></pre></div>
+<p><strong>Verify Installation:</strong>
+<div class="highlight"><pre><span></span><code><span class="c1"># Check version</span>
+singularity<span class="w"> </span>--version
+<span class="c1"># Test with hello world</span>
+singularity<span class="w"> </span>pull<span class="w"> </span>docker://hello-world
+singularity<span class="w"> </span>run<span class="w"> </span>hello-world_latest.sif
+</code></pre></div>
+<strong>Note:</strong> Apptainer is the actively maintained successor to Singularity and is recommended for new installations.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

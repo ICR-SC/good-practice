@@ -1,0 +1,1194 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../thursday/">
+      
+      
+        <link rel="next" href="../../vibe/overview/">
+      
+      
+      <link rel="icon" href="../../assets/icr_svg_logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Friday - Research Software Good Practice</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#friday-session-containerization-environment-management" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Research Software Good Practice" class="md-header__button md-logo" aria-label="Research Software Good Practice" data-md-component="logo">
+      
+  <img src="../../assets/icr_svg_logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Research Software Good Practice
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Friday
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Research Software Good Practice" class="md-nav__button md-logo" aria-label="Research Software Good Practice" data-md-component="logo">
+      
+  <img src="../../assets/icr_svg_logo.svg" alt="logo">
+
+    </a>
+    Research Software Good Practice
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Webinar Series
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Webinar Series
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Good-practice
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Good-practice
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monday/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Monday
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tuesday/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tuesday
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wednesday/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wednesday
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../thursday/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Thursday
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Friday
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Friday
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-we-cover" class="md-nav__link">
+    <span class="md-ellipsis">
+      What We Cover
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What We Cover">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker Fundamentals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conda-environment-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conda Environment Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practical-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Applications
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Takeaways">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#videos-of-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      Videos of session
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cheat Sheet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cheat Sheet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conda-commands-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conda Commands Used:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-commands-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker Commands Used:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dockerfile-examples-created" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dockerfile Examples Created:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#singularity-commands-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      Singularity Commands used
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Vibe-coding
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Vibe-coding
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vibe/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Admin
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Admin
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Instructors
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Instructors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instructor/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Good-practice
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#summary" class="md-nav__link">
+    <span class="md-ellipsis">
+      Summary
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#what-we-cover" class="md-nav__link">
+    <span class="md-ellipsis">
+      What We Cover
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="What We Cover">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#docker-fundamentals" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker Fundamentals
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conda-environment-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conda Environment Management
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#practical-applications" class="md-nav__link">
+    <span class="md-ellipsis">
+      Practical Applications
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Takeaways">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#videos-of-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      Videos of session
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#additional-resources" class="md-nav__link">
+    <span class="md-ellipsis">
+      Additional Resources
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#cheat-sheet" class="md-nav__link">
+    <span class="md-ellipsis">
+      Cheat Sheet
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Cheat Sheet">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#conda-commands-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conda Commands Used:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#docker-commands-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      Docker Commands Used:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dockerfile-examples-created" class="md-nav__link">
+    <span class="md-ellipsis">
+      Dockerfile Examples Created:
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#singularity-commands-used" class="md-nav__link">
+    <span class="md-ellipsis">
+      Singularity Commands used
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="friday-session-containerization-environment-management">Friday Session: Containerization &amp; Environment Management</h1>
+<p><em>Duration: 60 minutes | Format: Interactive demonstration and hands-on practice</em></p>
+<h2 id="summary">Summary</h2>
+<p>Friday's session focuses on containerization and advanced environment management for reproducible research. You'll learn to use Docker for creating portable, reproducible environments and explore conda for package management. We'll demonstrate a foundation for scalable, reproducible research workflows.</p>
+<hr />
+<h2 id="what-we-cover">What We Cover</h2>
+<h3 id="docker-fundamentals">Docker Fundamentals</h3>
+<ul>
+<li>Installing and configuring Docker</li>
+<li>Basic Docker commands and workflow</li>
+<li>Creating simple Dockerfiles for research projects</li>
+</ul>
+<h3 id="conda-environment-management">Conda Environment Management</h3>
+<ul>
+<li>Installing Anaconda/Miniconda</li>
+<li>Creating and managing conda environments</li>
+<li>Using environment.yml files for reproducibility</li>
+<li>Comparing conda vs pip for package management</li>
+</ul>
+<h3 id="practical-applications">Practical Applications</h3>
+<ul>
+<li>Containerizing a simple analysis pipeline</li>
+<li>Sharing reproducible environments with colleagues</li>
+<li>Converting docker to singularity for HPC</li>
+</ul>
+<hr />
+<h2 id="key-takeaways">Key Takeaways</h2>
+<p>By the end of this session, you'll be able to:</p>
+<ul>
+<li><strong>Create Docker containers</strong> for your research projects to ensure reproducibility across different systems</li>
+<li><strong>Manage Python environments</strong> using conda to avoid dependency conflicts</li>
+<li><strong>Share reproducible environments</strong> with collaborators using container images and environment files</li>
+<li><strong>Understand when to use</strong> containers vs virtual environments for different research scenarios</li>
+<li><strong>Apply containerization</strong> to make your research more portable and reproducible</li>
+</ul>
+<hr />
+<h3 id="videos-of-session">Videos of session</h3>
+<ul>
+<li><a href="https://youtu.be/0j-DxEs7H_Y?feature=shared">Section 1/3</a> 19.01  </li>
+<li><a href="https://youtu.be/ejnRAjXGFBs?feature=shared">Section 2/3</a> 19.19  </li>
+<li><a href="https://youtu.be/dy-y3kmb7sc?feature=shared">Section 3/3</a> 13.08  </li>
+</ul>
+<hr />
+<h3 id="additional-resources">Additional Resources</h3>
+<ul>
+<li><a href="https://docker-curriculum.com/">Docker for Data Science Tutorial</a></li>
+<li><a href="https://docs.conda.io/projects/conda/en/latest/user-guide/">Conda User Guide</a></li>
+<li><a href="https://book.the-turing-way.org/reproducible-research/renv.html">The Turing Way: Reproducible Environments</a></li>
+<li><a href="https://docs.docker.com/develop/dev-best-practices/">Docker Best Practices for Research</a></li>
+<li>Link to repo: <a href="https://github.com/ICR-SC/gp-01-biomarkers">github.com/ICR-SC/gp-01-biomarkers</a>  </li>
+</ul>
+<h3 id="cheat-sheet">Cheat Sheet</h3>
+<h4 id="conda-commands-used"><strong>Conda Commands Used:</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create Python environment</span>
+conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>good-python<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.13<span class="w"> </span>pandas<span class="w"> </span>matplotlib<span class="w"> </span>pytest<span class="w"> </span>-y
+conda<span class="w"> </span>activate<span class="w"> </span>good-python
+conda<span class="w"> </span>list
+
+<span class="c1"># Create R environment  </span>
+conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>good-r<span class="w"> </span>r-base<span class="o">=</span><span class="m">4</span>.3<span class="w"> </span>r-tidyverse<span class="w"> </span>r-ggplot2<span class="w"> </span>r-testthat<span class="w"> </span>-y
+conda<span class="w"> </span>activate<span class="w"> </span>good-r
+
+<span class="c1"># Export environment</span>
+conda<span class="w"> </span>env<span class="w"> </span><span class="nb">export</span><span class="w"> </span>&gt;<span class="w"> </span>environment.yml
+
+<span class="c1"># Export platform indeppendedn</span>
+conda<span class="w"> </span>env<span class="w"> </span><span class="nb">export</span><span class="w"> </span>--no-build<span class="w"> </span>&gt;<span class="w"> </span>environment.yml
+
+<span class="c1"># Run scripts</span>
+python<span class="w"> </span>src/python/analysis.py
+Rscript<span class="w"> </span>src/R/analysis.R
+</code></pre></div>
+<h4 id="docker-commands-used"><strong>Docker Commands Used:</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Build Docker images</span>
+docker<span class="w"> </span>build<span class="w"> </span>-f<span class="w"> </span>docker/Dockerfile.python<span class="w"> </span>-t<span class="w"> </span>good-python<span class="w"> </span>.
+docker<span class="w"> </span>build<span class="w"> </span>-f<span class="w"> </span>docker/Dockerfile.r<span class="w"> </span>-t<span class="w"> </span>good-r<span class="w"> </span>.
+docker<span class="w"> </span>build<span class="w"> </span>-f<span class="w"> </span>docker/Dockerfile.conda<span class="w"> </span>-t<span class="w"> </span>good-conda<span class="w"> </span>.
+<span class="c1"># Look inside the docker image and navigate with bash</span>
+docker<span class="w"> </span>run<span class="w"> </span>-it<span class="w"> </span>good-python<span class="w"> </span>/bin/bash
+<span class="c1"># Run Docker containers</span>
+docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/data:/app/data<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/results:/app/results<span class="w"> </span>good-python
+docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/data:/app/data<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/results:/app/results<span class="w"> </span>good-r
+docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/data:/app/data<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/results:/app/results<span class="w"> </span>good-conda<span class="w"> </span>python<span class="w"> </span>analysis.py
+docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/data:/app/data<span class="w"> </span>-v<span class="w"> </span><span class="k">$(</span><span class="nb">pwd</span><span class="k">)</span>/results:/app/results<span class="w"> </span>good-conda<span class="w"> </span>Rscript<span class="w"> </span>analysis.R
+</code></pre></div>
+<h4 id="dockerfile-examples-created"><strong>Dockerfile Examples Created:</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="c"># Python Dockerfile</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">python:3.13-slim</span>
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+<span class="k">RUN</span><span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>pandas<span class="w"> </span>matplotlib<span class="w"> </span>pytest
+<span class="k">COPY</span><span class="w"> </span>src/python/analysis.py<span class="w"> </span>./analysis.py
+<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;python&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;analysis.py&quot;</span><span class="p">]</span>
+
+<span class="c"># R Dockerfile  </span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">rocker/r-base:4.3.1</span>
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+<span class="k">COPY</span><span class="w"> </span>src/R/analysis.R<span class="w"> </span>./analysis.R
+<span class="k">COPY</span><span class="w"> </span>data/raw<span class="w"> </span>./data/raw
+<span class="k">RUN</span><span class="w"> </span>R<span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;install.packages(c(&#39;tidyverse&#39;, &#39;ggplot2&#39;, &#39;testthat&#39;), repos=&#39;https://cloud.r-project.org&#39;)&quot;</span>
+<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Rscript&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;analysis.R&quot;</span><span class="p">]</span>
+
+<span class="c"># Conda Dockerfile</span>
+<span class="k">FROM</span><span class="w"> </span><span class="s">continuumio/miniconda3:latest</span>
+<span class="k">WORKDIR</span><span class="w"> </span><span class="s">/app</span>
+<span class="k">COPY</span><span class="w"> </span>environment.yml<span class="w"> </span>.
+<span class="k">COPY</span><span class="w"> </span>src/python/analysis.py<span class="w"> </span>./analysis.py
+<span class="k">COPY</span><span class="w"> </span>src/R/analysis.R<span class="w"> </span>./analysis.R
+<span class="k">COPY</span><span class="w"> </span>data/raw<span class="w"> </span>./data/raw
+<span class="k">RUN</span><span class="w"> </span>conda<span class="w"> </span>env<span class="w"> </span>create<span class="w"> </span>-f<span class="w"> </span>environment.yml
+<span class="k">SHELL</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;conda&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;run&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-n&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;good-env&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;/bin/bash&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-c&quot;</span><span class="p">]</span>
+<span class="k">ENTRYPOINT</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;conda&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;run&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;-n&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;good-env&quot;</span><span class="p">]</span>
+<span class="k">CMD</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;python&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;analysis.py&quot;</span><span class="p">]</span>
+</code></pre></div>
+<h4 id="singularity-commands-used"><strong>Singularity Commands used</strong></h4>
+<div class="highlight"><pre><span></span><code><span class="c1"># Build Docker image</span>
+docker<span class="w"> </span>build<span class="w"> </span>-f<span class="w"> </span>Dockerfile.conda<span class="w"> </span>-t<span class="w"> </span>good-conda<span class="w"> </span>.
+singularity<span class="w"> </span>build<span class="w"> </span>good-conda.sif<span class="w"> </span>docker-daemon://good-conda:latest
+<span class="c1">#or </span>
+docker<span class="w"> </span>save<span class="w"> </span>good-conda:latest<span class="w"> </span>-o<span class="w"> </span>good-conda.tar
+singularity<span class="w"> </span>build<span class="w"> </span>good-conda.sif<span class="w"> </span>docker-archive://good-conda.tar
+
+<span class="c1"># (Copy files and data to alma, eg /data/scratch/etc...)</span>
+<span class="c1">## Run the Python script</span>
+singularity<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>--bind<span class="w"> </span>data:/app/data,results:/app/results<span class="w"> </span>good-conda.sif<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;source /opt/conda/etc/profile.d/conda.sh &amp;&amp; conda run -n good-env python /app/analysis.py&quot;</span>
+
+<span class="c1">## Run the R script</span>
+singularity<span class="w"> </span><span class="nb">exec</span><span class="w"> </span>--bind<span class="w"> </span>data:/app/data,results:/app/results<span class="w"> </span>good-conda.sif<span class="w"> </span>bash<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;source /opt/conda/etc/profile.d/conda.sh &amp;&amp; conda run -n good-env Rscript /app/analysis.R&quot;</span>
+</code></pre></div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

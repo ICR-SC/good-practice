@@ -1,0 +1,1132 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="../../../assets/icr_svg_logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Monday Live Coding Script: Good-Practices in Research Coding - Research Software Good Practice</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#monday-live-coding-script-good-practices-in-research-coding" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../../.." title="Research Software Good Practice" class="md-header__button md-logo" aria-label="Research Software Good Practice" data-md-component="logo">
+      
+  <img src="../../../assets/icr_svg_logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Research Software Good Practice
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Monday Live Coding Script: Good-Practices in Research Coding
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../../.." title="Research Software Good Practice" class="md-nav__button md-logo" aria-label="Research Software Good Practice" data-md-component="logo">
+      
+  <img src="../../../assets/icr_svg_logo.svg" alt="logo">
+
+    </a>
+    Research Software Good Practice
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Webinar Series
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Webinar Series
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Good-practice
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Good-practice
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../monday/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Monday
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../tuesday/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tuesday
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../wednesday/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wednesday
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../thursday/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Thursday
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../friday/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Friday
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Vibe-coding
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Vibe-coding
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../../vibe/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Admin
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Admin
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Instructors
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Instructors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Good-practice
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#monday-session-timings-instructor-guide" class="md-nav__link">
+    <span class="md-ellipsis">
+      Monday Session Timings (Instructor Guide)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pre-session-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pre-Session Setup
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-1-opening-welcome-and-the-turing-way" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 1 Opening, Welcome and the Turing Way
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-2-command-line-basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 2: Command line basics
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 2: Command line basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#editing-a-file-with-nano" class="md-nav__link">
+    <span class="md-ellipsis">
+      Editing a File with nano
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-3-advanced-command-line-hpc" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 3: Advanced Command Line &amp; HPC
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-4-project-structure-vscode" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 4: Project Structure &amp; VSCode
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-18-45-min-5-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 1.8 (45 min-5 min)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1.8 (45 min-5 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#making-a-sensible-project-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      Making a Sensible Project Structure
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-19-50-min-5-min" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 1.9 (50 min-5 min)
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Part 1.9 (50 min-5 min)">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#adding-a-file" class="md-nav__link">
+    <span class="md-ellipsis">
+      Adding a file
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#part-5-bash-scripting-remote-access-wrap-up-homework" class="md-nav__link">
+    <span class="md-ellipsis">
+      Part 5: Bash Scripting, Remote Access, Wrap-up &amp; Homework
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#session-wrap-up-homework" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session Wrap-up &amp; Homework
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Session Wrap-up &amp; Homework">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#homework-session-consolidation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Homework (Session Consolidation):
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="monday-live-coding-script-good-practices-in-research-coding">Monday Live Coding Script: Good-Practices in Research Coding</h1>
+<p><a href="../overview/">instructor home</a></p>
+<h2 id="monday-session-timings-instructor-guide">Monday Session Timings (Instructor Guide)</h2>
+<table>
+<thead>
+<tr>
+<th>Part</th>
+<th>Section(s) Covered</th>
+<th style="text-align: center;">Suggested Time</th>
+<th style="text-align: center;">Running Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>1</td>
+<td>Opening, Welcome &amp; The Turing Way</td>
+<td style="text-align: center;">10 min</td>
+<td style="text-align: center;">10</td>
+</tr>
+<tr>
+<td>2</td>
+<td>Command Line Basics (starting terminal, navigation, file/folder management, nano)</td>
+<td style="text-align: center;">15 min</td>
+<td style="text-align: center;">25</td>
+</tr>
+<tr>
+<td>3</td>
+<td>Advanced Command Line &amp; HPC (advanced commands, logging into Alma, compute nodes)</td>
+<td style="text-align: center;">15 min</td>
+<td style="text-align: center;">40</td>
+</tr>
+<tr>
+<td>4</td>
+<td>Project Structure &amp; VSCode (making folders, using VSCode, adding files/scripts)</td>
+<td style="text-align: center;">15 min</td>
+<td style="text-align: center;">55</td>
+</tr>
+<tr>
+<td>5</td>
+<td>Bash Scripting, Remote Access, Wrap-up &amp; Homework</td>
+<td style="text-align: center;">5 min</td>
+<td style="text-align: center;">60</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="pre-session-setup">Pre-Session Setup</h2>
+<p><strong>[ASIDE: Have open and visible:
+1) Prerequsites: <a href="https://icr-sc.github.io/good-practice/good/setup/">https://icr-sc.github.io/good-practice/good/setup/</a>
+2) Summary: <a href="https://icr-sc.github.io/good-practice/good/overview/">https://icr-sc.github.io/good-practice/good/overview/</a>
+3) Monday: <a href="https://icr-sc.github.io/good-practice/good/monday/">https://icr-sc.github.io/good-practice/good/monday/</a>
+4) Turing Way: <a href="https://book.the-turing-way.org/">https://book.the-turing-way.org/</a>
+5) Have terminal<br />
+6) VSCode open<br />
+Have a clean desktop/folder structure visible.]</strong>  </p>
+<h2 id="part-1-opening-welcome-and-the-turing-way">Part 1 Opening, Welcome and the Turing Way</h2>
+<blockquote>
+<p>Good morning everyone! Welcome to our first session in the 'good-practices in research coding' series. Today we're going to get started with the command line and VSCode. This session is designed for beginners, but even if you have experience, you'll get a refresher and see how things work at our institution.</p>
+<p>Introduce yourself and the RSE team members present.</p>
+<p>These sessions are designed as follow-along sessions, a form of participatory live coding. Realistically you may not be following along now as they are designed also for your lunch break. The sessions &gt;are recorded, so you can watch back and follow along when it is most convenient for you.  If you are following along live, type any questions in the chat and one of the RSE team members will do their best to help you as it goes.  We are happy to help you with any of these sessions afterwards, just get in touch or come along to one of &gt;our drop in sessions on Monday or Tuesday lunch times.</p>
+<p>The Turing Way is an open-source guide to reproducible, ethical, and collaborative research. It helps us make our work understandable and reusable by others. We will &gt;refer to these principles as we go through our sessions this week."</p>
+</blockquote>
+<hr />
+<h2 id="part-2-command-line-basics">Part 2: Command line basics</h2>
+<blockquote>
+<p>Let's open a command line. I'll be using Windows, with a mix of WSL2 and Powershell. If you're on Mac or Linux, you can use the built-in Terminal."</p>
+<p><strong>How to open a terminal:</strong>
+- <strong>Windows:</strong> Search for 'WSL' or 'Powershell' in the Start menu
+- <strong>Mac:</strong> Use Spotlight (Cmd+Space), type 'Terminal'
+- <strong>Linux:</strong> Ctrl+Alt+T or search for 'Terminal'</p>
+</blockquote>
+<p><strong>[ASIDE: Show your terminal. Wait for participants to open theirs. Troubleshoot any issues quickly.]</strong></p>
+<blockquote>
+<p>Let's try some very basic commands. Type what I type."</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># Where am I?</span>
+<span class="nb">pwd</span>
+<span class="c1"># List files and folders</span>
+ls
+<span class="c1"># Make a new folder for practice</span>
+mkdir<span class="w"> </span>test_folder
+<span class="c1"># Go into it</span>
+<span class="nb">cd</span><span class="w"> </span>test_folder
+<span class="c1"># Make a file</span>
+touch<span class="w"> </span>example.txt
+<span class="c1"># See the file</span>
+ls
+</code></pre></div>
+<h3 id="editing-a-file-with-nano">Editing a File with nano</h3>
+<blockquote>
+<p>If you want to quickly edit a file from the command line, you can use the <code>nano</code> editor. For example, after creating a file with <code>touch example.txt</code>, type:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>nano<span class="w"> </span>example.txt
+</code></pre></div>
+<blockquote>
+<p>This opens the file in a simple editor. Type your text, then press <code>Ctrl+O</code> to save and <code>Ctrl+X</code> to exit.
+You can then type:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>cat<span class="w"> </span>example.txt
+</code></pre></div>
+<blockquote>
+<p>to see the contents of your file printed in the terminal.
+These commands help you navigate and create files and folders. If you get lost, use <code>pwd</code> to see where you are.</p>
+</blockquote>
+<hr />
+<h2 id="part-3-advanced-command-line-hpc">Part 3: Advanced Command Line &amp; HPC</h2>
+<blockquote>
+<p>Let's try a few more useful commands. Don't worry if you haven't seen these before!</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># See hidden files</span>
+ls<span class="w"> </span>-la
+<span class="c1"># Make several folders at once</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>data/<span class="o">{</span>raw,processed<span class="o">}</span>
+<span class="c1"># See your folder structure</span>
+ls
+<span class="c1"># Remove a file</span>
+rm<span class="w"> </span>example.txt
+<span class="c1"># Go up a folder</span>
+<span class="nb">cd</span><span class="w"> </span>..
+</code></pre></div>
+<hr />
+<blockquote>
+<p>Now let's log into our HPC cluster, Alma. This is where we run big analyses.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>ssh<span class="w"> </span>&lt;username&gt;@alma.icr.ac.uk
+</code></pre></div>
+<blockquote>
+<p>You'll need your username and password. If you have trouble, let us know.
+I have an ssh key set up in windows but not WSL2, you cans ee that in windows I can log straight in but in Ubuntu I need a password.</p>
+</blockquote>
+<hr />
+<blockquote>
+<p>On Alma, there are login nodes (for connecting and setting up) and compute nodes (for running jobs). To access a compute node for interactive work, use this command:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>srun<span class="w"> </span>--pty<span class="w"> </span>-t<span class="w"> </span><span class="m">12</span>:00:00<span class="w"> </span>--cpus-per-task<span class="w"> </span><span class="m">1</span><span class="w"> </span>--mem-per-cpu<span class="w"> </span><span class="m">4021</span><span class="w"> </span>--partition<span class="w"> </span>interactive<span class="w"> </span>bash
+squeue<span class="w"> </span>-u<span class="w"> </span><span class="nv">$USER</span>
+</code></pre></div>
+<blockquote>
+<p>Now you're on a compute node and can run your analysis.
+I am going to type exit to return to the login node and exit again to return to my local computer.</p>
+</blockquote>
+<hr />
+<h2 id="part-4-project-structure-vscode">Part 4: Project Structure &amp; VSCode</h2>
+<blockquote>
+<p>Let's go back to our own computer and make a folder for a reproducible project. We'll use VSCode to work in it.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="nb">cd</span><span class="w"> </span>..
+rm<span class="w"> </span>-rf<span class="w"> </span>test_folder
+mkdir<span class="w"> </span>biomarkers_project
+<span class="nb">cd</span><span class="w"> </span>biomarkers_project
+code<span class="w"> </span>.
+</code></pre></div>
+<blockquote>
+<p>VSCode will open in your project folder. You can use the built-in terminal to run the same commands we've just learned.</p>
+</blockquote>
+<hr />
+<h2 id="part-18-45-min-5-min">Part 1.8 (45 min-5 min)</h2>
+<h3 id="making-a-sensible-project-structure">Making a Sensible Project Structure</h3>
+<blockquote>
+<p>Let's quickly make a sensible folder structure for a biomarkers project. We'll talk more about project structure and data sensitivity next time.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>mkdir<span class="w"> </span>-p<span class="w"> </span>data/<span class="o">{</span>raw,processed<span class="o">}</span><span class="w"> </span>src<span class="w"> </span>docs<span class="w"> </span>results<span class="w"> </span>tests<span class="w"> </span>environment
+ls
+</code></pre></div>
+<h2 id="part-19-50-min-5-min">Part 1.9 (50 min-5 min)</h2>
+<h3 id="adding-a-file">Adding a file</h3>
+<blockquote>
+<p>Let's add a README file to our project to describe it.</p>
+</blockquote>
+<p><div class="highlight"><pre><span></span><code>touch<span class="w"> </span>README.md
+ls
+</code></pre></div>
+Now you can see that I don't need to use nano to edit this file as I can use VSCode to do that.</p>
+<hr />
+<h2 id="part-5-bash-scripting-remote-access-wrap-up-homework">Part 5: Bash Scripting, Remote Access, Wrap-up &amp; Homework</h2>
+<blockquote>
+<p>Let’s create some very simple data files in our <code>data/raw</code> directory, and then write a bash script to “process” them into <code>data/processed</code>.
+I could crate the visually but it is easier to do it from the command line so I will do that.</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># Make sure you are in your project folder</span>
+<span class="nb">cd</span><span class="w"> </span>biomarkers_project
+
+<span class="c1"># Create the raw and processed directories if they don&#39;t exist</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>data/raw<span class="w"> </span>data/processed
+
+<span class="c1"># Create a simple data file in data/raw</span>
+<span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;id,value\n1,10\n2,20&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>data/raw/data1.csv
+</code></pre></div>
+<blockquote>
+<p>This is a bash command that creates a new CSV file called data1.csv in the data/raw directory. It &gt;writes two rows of data (with a header row) into the file. The -e flag allows interpretation &gt;of the \n as newlines. We can see the file in VSCode.:</p>
+<p>If I arrow up I get the last command and I can edit it to quickly create 3 more files
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;id,value\n3,30\n4,40&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>data/raw/data2.csv
+<span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;id,value\n5,50\n6,60&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>data/raw/data3.csv
+<span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;id,value\n7,70\n8,80&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>data/raw/data4.csv
+</code></pre></div></p>
+<p>Now let’s write a very simple bash script that “processes” these files. For now, it will just print a message for each file (you could also copy them if you want):</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="c1"># Create a script called process_data.sh</span>
+touch<span class="w"> </span>src/process_data.sh
+</code></pre></div>
+<blockquote>
+<p>Paste the following into the script:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code><span class="ch">#!/bin/bash</span>
+<span class="k">for</span><span class="w"> </span>file<span class="w"> </span><span class="k">in</span><span class="w"> </span>data/raw/*.csv<span class="p">;</span><span class="w"> </span><span class="k">do</span>
+<span class="w">    </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;Processing </span><span class="nv">$file</span><span class="s2">&quot;</span><span class="w"> </span>
+<span class="w">    </span><span class="c1"># Uncomment the next line to actually copy the files</span>
+<span class="w">    </span><span class="c1"># cp &quot;$file&quot; data/processed/    </span>
+<span class="k">done</span>
+</code></pre></div>
+<blockquote>
+<p>The first line is called a "shebang" (or hashbang) line. It should be the very first line in a script file. It tells the operating system to use the Bash shell to interpret and run the script that follows. This ensures that when you execute the script (e.g., with ./process_data.sh), it will be run using Bash, regardless of your default shell.</p>
+<p>Make the script executable and run it:</p>
+</blockquote>
+<div class="highlight"><pre><span></span><code>chmod<span class="w"> </span>+x<span class="w"> </span>process_data.sh
+./process_data.sh
+</code></pre></div>
+<blockquote>
+<p>You should see a message for each file. If you want, you can uncomment the <code>cp</code> line in the script to actually copy the files to <code>data/processed</code>.</p>
+<p>Finally we will look at using VScode with Alma using remote-ssh on VSCode.  This is not something that everyone will do so you may just be interested to watch and see that it is possible.
+To do this you will need to have followed the set up for remote-ssh in the pre-requisites.  You will also need to have your ssh keys set up on Alma.  If you have not done this please let us know and we can help you with it.</p>
+</blockquote>
+<p>Show the link: https://almacookbook.github.io/ides/remote/</p>
+<p><strong>[ASIDE: Demonstrate remote-ssh connection to Alma in VSCode. Show how to open a terminal and navigate the file system on Alma.]</strong></p>
+<p><strong>[ASIDE: Also, as an alternative show using the terminal in git and also using scratch for git pull]</strong></p>
+<h2 id="session-wrap-up-homework">Session Wrap-up &amp; Homework</h2>
+<blockquote>
+<p>You've learned how to use the command line, log into Alma, and set up a basic project folder. Next time, we'll go deeper into project structure and data sensitivity.</p>
+</blockquote>
+<h4 id="homework-session-consolidation">Homework (Session Consolidation):</h4>
+<ul>
+<li>Practice opening your terminal and running the basic commands (<code>pwd</code>, <code>ls</code>, <code>mkdir</code>, <code>cd</code>)</li>
+<li>Try logging into Alma if you have access</li>
+<li>Create a simple project folder and open it in VSCode</li>
+</ul>
+<p><strong>See you next session!</strong></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../../..", "features": ["content.code.copy"], "search": "../../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

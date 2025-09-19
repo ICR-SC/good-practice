@@ -1,0 +1,1222 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../wednesday/">
+      
+      
+        <link rel="next" href="../friday/">
+      
+      
+      <link rel="icon" href="../../assets/icr_svg_logo.svg">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Thursday - Research Software Good Practice</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="deep-orange">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#thursday-overview-r-for-reproducible-research" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="Research Software Good Practice" class="md-header__button md-logo" aria-label="Research Software Good Practice" data-md-component="logo">
+      
+  <img src="../../assets/icr_svg_logo.svg" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Research Software Good Practice
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Thursday
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="Research Software Good Practice" class="md-nav__button md-logo" aria-label="Research Software Good Practice" data-md-component="logo">
+      
+  <img src="../../assets/icr_svg_logo.svg" alt="logo">
+
+    </a>
+    Research Software Good Practice
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Webinar Series
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Webinar Series
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_1" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2_1" id="__nav_2_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Good-practice
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_1_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2_1">
+            <span class="md-nav__icon md-icon"></span>
+            Good-practice
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../setup/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Setup
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../monday/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Monday
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tuesday/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Tuesday
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../wednesday/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Wednesday
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Thursday
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Thursday
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-we-cover" class="md-nav__link">
+    <span class="md-ellipsis">
+      What We Cover
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#videos-of-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      Videos of session
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#session-cheat-sheet-thursday" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session Cheat Sheet: Thursday
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Session Cheat Sheet: Thursday">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bashterminal-and-rstudio-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bash/Terminal and RStudio Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r-environment-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      R Environment Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-download-and-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Download and Extraction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r-code-snippets" class="md-nav__link">
+    <span class="md-ellipsis">
+      R Code Snippets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="R Code Snippets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#srcranalysisr" class="md-nav__link">
+    <span class="md-ellipsis">
+      src/R/analysis.R
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testsrtest_analysisr" class="md-nav__link">
+    <span class="md-ellipsis">
+      tests/R/test_analysis.R
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-a-readme-to-your-analysis-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add a README to your analysis folder
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../friday/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Friday
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2_2" id="__nav_2_2_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Vibe-coding
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_2_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2_2">
+            <span class="md-nav__icon md-icon"></span>
+            Vibe-coding
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../vibe/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Overview
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Admin
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Admin
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3_1" >
+        
+          
+          <label class="md-nav__link" for="__nav_3_1" id="__nav_3_1_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    Instructors
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="2" aria-labelledby="__nav_3_1_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3_1">
+            <span class="md-nav__icon md-icon"></span>
+            Instructors
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../instructor/overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Good-practice
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#what-we-cover" class="md-nav__link">
+    <span class="md-ellipsis">
+      What We Cover
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-takeaways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Key Takeaways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#videos-of-session" class="md-nav__link">
+    <span class="md-ellipsis">
+      Videos of session
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#session-cheat-sheet-thursday" class="md-nav__link">
+    <span class="md-ellipsis">
+      Session Cheat Sheet: Thursday
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Session Cheat Sheet: Thursday">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#bashterminal-and-rstudio-commands" class="md-nav__link">
+    <span class="md-ellipsis">
+      Bash/Terminal and RStudio Commands
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r-environment-setup" class="md-nav__link">
+    <span class="md-ellipsis">
+      R Environment Setup
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#data-download-and-extraction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Download and Extraction
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#r-code-snippets" class="md-nav__link">
+    <span class="md-ellipsis">
+      R Code Snippets
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="R Code Snippets">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#srcranalysisr" class="md-nav__link">
+    <span class="md-ellipsis">
+      src/R/analysis.R
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#testsrtest_analysisr" class="md-nav__link">
+    <span class="md-ellipsis">
+      tests/R/test_analysis.R
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-a-readme-to-your-analysis-folder" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add a README to your analysis folder
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="thursday-overview-r-for-reproducible-research">Thursday Overview: R for Reproducible Research</h1>
+<p><strong>Goal:</strong><br />
+Learn how to set up a reproducible research project in R, manage your code and data responsibly, and build a simple, tested analysis pipeline using RStudio.</p>
+<hr />
+<h3 id="what-we-cover">What We Cover</h3>
+<ul>
+<li><strong>Project Setup &amp; Data Privacy:</strong>  </li>
+<li>Reviewed a sensible folder structure for research projects.</li>
+<li>
+<p>Discussed the importance of <code>.gitignore</code> to keep sensitive or unnecessary files (like raw data and environment folders) out of version control.</p>
+</li>
+<li>
+<p><strong>Version Control with Git &amp; RStudio:</strong>  </p>
+</li>
+<li>
+<p>Used Git (with RStudio or command line) to track project changes and collaborate safely.</p>
+</li>
+<li>
+<p><strong>Reproducible R Environments:</strong>  </p>
+</li>
+<li>
+<p>Used <code>renv</code> to manage project-specific R packages, ensuring reproducibility.</p>
+</li>
+<li>
+<p><strong>Downloading and Preparing Data:</strong>  </p>
+</li>
+<li>Downloaded a real-world dataset from cBioPortal.</li>
+<li>
+<p>Used bash commands to organize and extract data into the project.</p>
+</li>
+<li>
+<p><strong>Building a Simple R Pipeline:</strong>  </p>
+</li>
+<li>Wrote clear, well-documented R functions to:<ul>
+<li>Load tabular data</li>
+<li>Clean/filter relevant columns</li>
+<li>Save processed data</li>
+<li>Analyze and plot the top 10 mutated genes</li>
+</ul>
+</li>
+<li>
+<p>Saved results and plots to the appropriate folders.</p>
+</li>
+<li>
+<p><strong>Testing Your Code:</strong>  </p>
+</li>
+<li>Wrote a basic test (using testthat) to check that the pipeline runs end-to-end and produces expected outputs.</li>
+<li>
+<p>Discussed the value of both unit and smoke tests for research code.</p>
+</li>
+<li>
+<p><strong>Ethical Coding &amp; Documentation:</strong>  </p>
+</li>
+<li>Emphasized the importance of documentation and code reuse.</li>
+<li>Added a README to the analysis folder to explain what each script does.</li>
+</ul>
+<hr />
+<h3 id="key-takeaways">Key Takeaways</h3>
+<ul>
+<li>Organize your project folders and use <code>.gitignore</code> to protect sensitive data.</li>
+<li>Use version control (Git) for all your code and documentation.</li>
+<li>Always use a reproducible environment for R projects (e.g., renv).</li>
+<li>Write modular, well-documented code for each step of your analysis.</li>
+<li>Test your code to catch errors early and ensure reproducibility.</li>
+<li>Document your scripts and results for yourself and others.</li>
+</ul>
+<h3 id="videos-of-session">Videos of session</h3>
+<ul>
+<li><a href="https://youtu.be/-PgKyz9yLwY?feature=shared">Section 1/3</a> 15.55  </li>
+<li><a href="https://youtu.be/jlOzBGM64RU?feature=shared">Section 2/3</a> 17.21  </li>
+<li><a href="https://youtu.be/ayg84ireSFs?feature=shared">Section 3/3</a> 17.15 </li>
+</ul>
+<hr />
+<p><strong>Homework:</strong><br />
+- Practice writing a simple R function for data loading or analysis.
+- Write a short test to check your function works.
+- Add a brief README or comments to explain your code.
+- Explore The Turing Way’s code reuse checklist for more ideas.</p>
+<hr />
+<h2 id="session-cheat-sheet-thursday">Session Cheat Sheet: Thursday</h2>
+<h3 id="bashterminal-and-rstudio-commands">Bash/Terminal and RStudio Commands</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># List files and check .gitignore</span>
+ls
+cat<span class="w"> </span>.gitignore
+
+<span class="c1"># Add common R exclusions to .gitignore</span>
+<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;.Rhistory\n.RData\n.Rproj.user/\nrenv/&quot;</span><span class="w"> </span>&gt;&gt;<span class="w"> </span>.gitignore
+cat<span class="w"> </span>.gitignore
+
+<span class="c1"># Create folders for R code and tests</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>src/R<span class="w"> </span>tests/R
+ls
+
+<span class="c1"># Check git status</span>
+git<span class="w"> </span>status
+</code></pre></div>
+<h3 id="r-environment-setup">R Environment Setup</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Using the R console in RStudio</span>
+<span class="nf">install.packages</span><span class="p">(</span><span class="s">&quot;renv&quot;</span><span class="p">)</span>
+<span class="n">renv</span><span class="o">::</span><span class="nf">init</span><span class="p">()</span>
+<span class="nf">install.packages</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;tidyverse&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;testthat&quot;</span><span class="p">))</span>
+<span class="n">renv</span><span class="o">::</span><span class="nf">snapshot</span><span class="p">()</span>
+</code></pre></div>
+<h3 id="data-download-and-extraction">Data Download and Extraction</h3>
+<div class="highlight"><pre><span></span><code><span class="c1"># Using the bash terminal in R Studio or your system terminal</span>
+mkdir<span class="w"> </span>-p<span class="w"> </span>data/raw
+wget<span class="w"> </span>-O<span class="w"> </span>data/raw/aml_tcga_gdc.tar.gz<span class="w"> </span>https://cbioportal-datahub.s3.amazonaws.com/aml_tcga_gdc.tar.gz
+tar<span class="w"> </span>-xzvf<span class="w"> </span>data/raw/aml_tcga_gdc.tar.gz<span class="w"> </span>-C<span class="w"> </span>data/raw
+</code></pre></div>
+<hr />
+<h3 id="r-code-snippets">R Code Snippets</h3>
+<h4 id="srcranalysisr">src/R/analysis.R</h4>
+<div class="highlight"><pre><span></span><code><span class="c1">#!/usr/bin/env Rscript</span>
+
+<span class="nf">library</span><span class="p">(</span><span class="n">readr</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">dplyr</span><span class="p">)</span>
+<span class="nf">library</span><span class="p">(</span><span class="n">ggplot2</span><span class="p">)</span>
+
+<span class="n">load_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">filepath</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">read_tsv</span><span class="p">(</span><span class="n">filepath</span><span class="p">,</span><span class="w"> </span><span class="n">skip</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">2</span><span class="p">)</span>
+<span class="w">  </span><span class="kr">return</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">clean_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">df</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">    </span><span class="nf">select</span><span class="p">(</span><span class="n">Hugo_Symbol</span><span class="p">,</span><span class="w"> </span><span class="n">Variant_Classification</span><span class="p">,</span><span class="w"> </span><span class="n">Tumor_Sample_Barcode</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">    </span><span class="nf">na.omit</span><span class="p">()</span>
+<span class="w">  </span><span class="kr">return</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">save_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="w"> </span><span class="n">output_path</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nf">write_csv</span><span class="p">(</span><span class="n">df</span><span class="p">,</span><span class="w"> </span><span class="n">output_path</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="n">analyze_data</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="kr">function</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">summary</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="n">df</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">    </span><span class="nf">count</span><span class="p">(</span><span class="n">Hugo_Symbol</span><span class="p">,</span><span class="w"> </span><span class="n">sort</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kc">TRUE</span><span class="p">)</span><span class="w"> </span><span class="o">%&gt;%</span>
+<span class="w">    </span><span class="nf">head</span><span class="p">(</span><span class="m">10</span><span class="p">)</span>
+<span class="w">  </span><span class="nf">print</span><span class="p">(</span><span class="s">&quot;Top 10 mutated genes:&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="nf">print</span><span class="p">(</span><span class="n">summary</span><span class="p">)</span>
+<span class="w">  </span><span class="n">p</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">ggplot</span><span class="p">(</span><span class="n">summary</span><span class="p">,</span><span class="w"> </span><span class="nf">aes</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">reorder</span><span class="p">(</span><span class="n">Hugo_Symbol</span><span class="p">,</span><span class="w"> </span><span class="o">-</span><span class="n">n</span><span class="p">),</span><span class="w"> </span><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">n</span><span class="p">))</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">geom_bar</span><span class="p">(</span><span class="n">stat</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;identity&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">xlab</span><span class="p">(</span><span class="s">&quot;Gene&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">ylab</span><span class="p">(</span><span class="s">&quot;Mutation Count&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">ggtitle</span><span class="p">(</span><span class="s">&quot;Top 10 Mutated Genes&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">+</span>
+<span class="w">    </span><span class="nf">theme</span><span class="p">(</span><span class="n">axis.text.x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">element_text</span><span class="p">(</span><span class="n">angle</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">45</span><span class="p">,</span><span class="w"> </span><span class="n">hjust</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="m">1</span><span class="p">))</span>
+<span class="w">  </span><span class="kr">return</span><span class="p">(</span><span class="n">p</span><span class="p">)</span>
+<span class="p">}</span>
+
+<span class="c1"># Example usage</span>
+<span class="c1"># df &lt;- load_data(&quot;data/raw/aml_tcga_gdc/data_mutations.txt&quot;)</span>
+<span class="c1"># cleaned_df &lt;- clean_data(df)</span>
+<span class="c1"># save_data(cleaned_df, &quot;data/processed/cleaned_mutations.csv&quot;)</span>
+<span class="c1"># p &lt;- analyze_data(cleaned_df)</span>
+<span class="c1"># ggsave(&quot;results/top10_mutated_genes.png&quot;, plot = p, width = 8, height = 5)</span>
+</code></pre></div>
+<hr />
+<h4 id="testsrtest_analysisr">tests/R/test_analysis.R</h4>
+<div class="highlight"><pre><span></span><code><span class="nf">library</span><span class="p">(</span><span class="n">testthat</span><span class="p">)</span>
+<span class="nf">source</span><span class="p">(</span><span class="s">&quot;../../src/R/analysis.R&quot;</span><span class="p">)</span>
+
+<span class="nf">test_that</span><span class="p">(</span><span class="s">&quot;pipeline smoke test&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="n">df</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">data.frame</span><span class="p">(</span>
+<span class="w">    </span><span class="n">Hugo_Symbol</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;TP53&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;BRCA1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;TP53&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;EGFR&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="n">Variant_Classification</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;Missense&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Nonsense&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Missense&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Silent&quot;</span><span class="p">),</span>
+<span class="w">    </span><span class="n">Tumor_Sample_Barcode</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;S1&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;S2&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;S3&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;S4&quot;</span><span class="p">)</span>
+<span class="w">  </span><span class="p">)</span>
+<span class="w">  </span><span class="n">cleaned</span><span class="w"> </span><span class="o">&lt;-</span><span class="w"> </span><span class="nf">clean_data</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="w">  </span><span class="nf">expect_true</span><span class="p">(</span><span class="nf">nrow</span><span class="p">(</span><span class="n">cleaned</span><span class="p">)</span><span class="w"> </span><span class="o">&gt;</span><span class="w"> </span><span class="m">0</span><span class="p">)</span>
+<span class="w">  </span><span class="nf">expect_true</span><span class="p">(</span><span class="nf">all</span><span class="p">(</span><span class="nf">c</span><span class="p">(</span><span class="s">&quot;Hugo_Symbol&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Variant_Classification&quot;</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Tumor_Sample_Barcode&quot;</span><span class="p">)</span><span class="w"> </span><span class="o">%in%</span><span class="w"> </span><span class="nf">colnames</span><span class="p">(</span><span class="n">cleaned</span><span class="p">)))</span>
+<span class="p">})</span>
+</code></pre></div>
+<hr />
+<h4 id="add-a-readme-to-your-analysis-folder">Add a README to your analysis folder</h4>
+<p><code>bash</code>
+<div class="highlight"><pre><span></span><code><span class="nb">echo</span><span class="w"> </span>-e<span class="w"> </span><span class="s2">&quot;# Analysis Scripts\nThis folder contains R scripts for data analysis. Each script is documented and tested.&quot;</span><span class="w"> </span>&gt;<span class="w"> </span>src/R/README.md
+cat<span class="w"> </span>src/R/README.md
+</code></pre></div></p>
+<hr />
+<h2 id="references">References</h2>
+<ul>
+<li>Cerami et al. The cBio Cancer Genomics Portal: An Open Platform for Exploring Multidimensional Cancer Genomics Data. Cancer Discovery. May 2012; 401. <a href="https://www.ncbi.nlm.nih.gov/pubmed/22588877">PubMed</a></li>
+<li>Gao et al. Integrative analysis of complex cancer genomics and clinical profiles using the cBioPortal. Sci. Signal. 6, pl1 (2013). <a href="https://www.ncbi.nlm.nih.gov/pubmed/23550210">PubMed</a></li>
+<li>de Bruijn et al. Analysis and Visualization of Longitudinal Genomic and Clinical Data from the AACR Project GENIE Biopharma Collaborative in cBioPortal. Cancer Res (2023). <a href="https://pubmed.ncbi.nlm.nih.gov/37668528/">PubMed</a></li>
+<li>DataSet: https://www.cbioportal.org/study/plots?id=aml_tcga_gdc</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.copy"], "search": "../../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>
