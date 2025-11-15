@@ -41,7 +41,8 @@ Key differences include:
 
 Given these challenges, it can be difficult to apply standard software development practices to research software.
 
-However, there are a number of good practices that can be applied to research software development to ensure that the software is of high quality, maintainable, and reusable. These practices include:
+However, there are a number of good practices that can be applied to research software development to ensure that the software is of high quality, maintainable, and reusable.  
+These practices include:  
 - Writing clean, readable code  
 - Using version control  
 - Documenting the software  
