@@ -9,7 +9,7 @@ There are many initiatives in the research software community to develop trainin
 ## ICR Internal Training  
 The ICR runs some courses on research software development best practices, covering training through the [carpentries organisation](https://carpentries.org/), usually in-person and can be found on the [ICR training website](https://training.icr.ac.uk/) (search *carpentry*). 
 
-### Webinar Series: Good-Practice in Research Software
+### Webinar Series: Good-Practice in Research Coding
 This is a series of webinars run by the ICR Research Software Engineering team, covering good practices in research software development. The webinars are recorded and available on (link to come soon).  
 The [overview page is here](good/overview.md), and in summary it covers:  
 - Monday: Bash and VScode  
@@ -21,7 +21,7 @@ The [overview page is here](good/overview.md), and in summary it covers:
 ### Webinar Series: Vibe-Coding
 Coming soon in February 2026  
 
-## Challenges in Research Software
+## Challenges in Research Coding
 
 Research software development differs from standard software development in some core ways. This resource aims to help with good practices that can be applied to research software development to ensure that the software is of high quality, maintainable, reusable and reproducible.
 
